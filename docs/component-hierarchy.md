@@ -1,36 +1,36 @@
 ## Component Hierarchy
 
 **AuthFormContainer**
-  -AuthForm
+  *AuthForm
 
 **HomeContainer**
-  -Feed
-    -FeedItem
-  -FeedSidebar
-    -UserBox
-    -FollowBoxContainer
-      -FollowBoxItem
-        -PhotoDetail
+  * Feed
+    * FeedItem
+  * FeedSidebar
+    * UserBox
+    * FollowBoxContainer
+      * FollowBoxItem
+        * PhotoDetail
 
 **UserPageContainer**
-  -UserHeader
-  -PhotoCollection
-    -PhotoItem
-      -PhotoDetail
+  * UserHeader
+  * PhotoCollection
+    * PhotoItem
+      * PhotoDetail
 
 **DiscoverPageContainer**
-  -DiscoverIndex
-    -DiscoverIndexItem
+  * DiscoverIndex
+    * DiscoverIndexItem
 
 
 **PhotoDetail**
-  -PhotoLikes
-  -PhotoComments
-    -PhotoCommentsIndex
-      -PhotoCommentsForm
-      -PhotoCommentsDetail
-  -PhotoTags
-    -PhotoTagIndexItem
+  * PhotoLikes
+  * PhotoComments
+    * PhotoCommentsIndex
+      * PhotoCommentsForm
+      * PhotoCommentsDetail
+  * PhotoTags
+    * PhotoTagIndexItem
 
 
 
