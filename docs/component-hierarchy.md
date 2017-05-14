@@ -1,7 +1,7 @@
 ## Component Hierarchy
 
 **AuthFormContainer**
-  *AuthForm
+  * AuthForm
 
 **HomeContainer**
   * Feed
