@@ -1,4 +1,4 @@
-# Nighscapes
+# Nightscapes
 
 [Heroku link][heroku]
 
