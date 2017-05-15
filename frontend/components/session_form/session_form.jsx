@@ -3,14 +3,14 @@ import { Link, withRouter } from 'react-router-dom';
 
 
 class SessionForm extends React.Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			username: "",
-			password: "",
+  constructor(props) {
+    super(props);
+    this.state = {
+      username: "",
+      password: "",
       first_name: "",
       last_name: ""
-		};
+    };
 
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -28,57 +28,59 @@ class SessionForm extends React.Component {
   }
 
   renderErrors() {
-    return(
-      <ul>
-        {this.props.errors.map((error, i) => (
-          <li key={`error-${i}`}>
-            {error}
-          </li>
-        ))}
-      </ul>
-    );
+    if (this.props.errors){
+      return(
+        <ul>
+          {this.props.errors.map((error, i) => (
+            <li key={`error-${i}`}>
+              {error}
+            </li>
+          ))}
+        </ul>
+      );  
+    }
   }
 
   navLink() {
-      if (this.props.formType === 'login') {
-        return <Link to="/signup">sign up instead</Link>;
+    if (this.props.formType === 'login') {
+      return <Link to="/signup">sign up instead</Link>;
       } else {
         return <Link to="/login">log in instead</Link>;
+        }
+      }
+
+      render() {
+        return (
+          <div className="login-form-container">
+            <form onSubmit={this.handleSubmit}>
+              Welcome to Nightscapes!
+              <br/>
+              Please {this.props.formType} or {this.navLink()}
+              {this.renderErrors()}
+              <div className="login-form">
+                <br/>
+                <label>Username:
+                  <input type="text"
+                    value={this.state.username}
+                    onChange={this.update('username')}
+                    className="login-input"
+                    />
+                </label>
+                <br/>
+                <label>Password:
+                  <input type="password"
+                    value={this.state.password}
+                    onChange={this.update('password')}
+                    className="login-input"
+                    />
+                </label>
+                <br/>
+                <input type="submit" value="Submit" />
+              </div>
+            </form>
+          </div>
+        );
       }
     }
 
-  render() {
-    return (
-      <div className="login-form-container">
-        <form onSubmit={this.handleSubmit}>
-          Welcome to Nightscapes!
-          <br/>
-          Please {this.props.formType} or {this.navLink()}
-          {this.renderErrors()}
-          <div className="login-form">
-            <br/>
-            <label>Username:
-              <input type="text"
-                value={this.state.username}
-                onChange={this.update('username')}
-                className="login-input"
-              />
-            </label>
-            <br/>
-            <label>Password:
-              <input type="password"
-                value={this.state.password}
-                onChange={this.update('password')}
-                className="login-input"
-              />
-            </label>
-            <br/>
-            <input type="submit" value="Submit" />
-          </div>
-        </form>
-      </div>
-    );
-  }
-}
-
-export default withRouter(SessionForm);
+    export default withRouter(SessionForm);
