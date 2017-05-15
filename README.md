@@ -46,7 +46,7 @@ By the end of Week 9, this app will, at a minimum, satisfy the following criteri
 
   **Objective:** Once the user has logged in, the navbar redirects to home, user and upload photo pages. Photos can be created and viewed through the API. Feed renders.
 
-### Phase 3: Feed Sidebar and Photos (CR)UP (2 days)
+### Phase 3: Feed Sidebar and Photos (CR)UD (2 days)
 
   **Objective:** Feed Sidebar shows information about the current user, and suggestions of other users to follow.
 
