@@ -20,7 +20,6 @@ By the end of Week 9, this app will, at a minimum, satisfy the following criteri
   5. Home Feed
   6. Follow/Unfollow of Users
   7. Profile Page
-  8. Infinite Scroll
 
 ## Design Docs
   * [View Wireframes][wireframes]
@@ -64,6 +63,8 @@ By the end of Week 9, this app will, at a minimum, satisfy the following criteri
 
 
 ### Bonus Features (TBD)
+  - [ ] Infinite Scroll
+  - [ ] Feed Sidebar
   - [ ] Discover
   - [ ] Likes
   - [ ] Comments

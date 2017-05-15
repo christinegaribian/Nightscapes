@@ -10,8 +10,6 @@ session_token   | string    | not null, indexed, unique
 first_name      | string    | not null
 last_name       | string    | not null
 views           | integer   | default: 0
-photo_count     | integer   | default: 0
-follower_count  | integer   | default: 0
 user_img_url    | string    | default: (url to guest image)
 
 ## photos
@@ -28,6 +26,7 @@ height      | integer   | not null, default: false
 ## follows
 column name | data type | details
 ------------|-----------|-----------------------
+id          | integer   | not null, primary key
 follower_id | integer   | not null, foreign key (references users), indexed
 followed_id | integer   | not null, foreign key (references users), indexed
 
@@ -42,6 +41,6 @@ photo_id    | integer   | not null, foreign key (references users), indexed
 column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
-author_id   | integer   | not null, foreign key (references notes), indexed
+user_id     | integer   | not null, foreign key (references notes), indexed
 photo_id    | integer   | not null, foreign key (references photos), indexed
 body        | text      | not null

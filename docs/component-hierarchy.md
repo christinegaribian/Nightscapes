@@ -42,7 +42,6 @@
 | "/sign-in" | "AuthFormContainer" |
 | "/home" | "HomeContainer" |
 | "/users/:userId" | "UserPageContainer" |
-| "/users/:userId/photos" | "PhotoCollection" |
 | "/users/:userId/edit" | "Edit Profile Modal Container" |
 | "/upload" | "Upload Photo Modal Container" |
 | "/photos/:photoId" | "PhotoDetail" |
