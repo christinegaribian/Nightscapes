@@ -27,6 +27,8 @@ ActiveRecord::Schema.define(version: 20170515015811) do
     t.string   "user_img_url",    default: "https://openclipart.org/download/247320/abstract-user-flat-4.svg"
     t.datetime "created_at",                                                                                   null: false
     t.datetime "updated_at",                                                                                   null: false
+    t.index ["session_token"], name: "index_users_on_session_token", using: :btree
+    t.index ["username"], name: "index_users_on_username", using: :btree
   end
 
 end
