@@ -56,8 +56,8 @@ class SessionForm extends React.Component {
       <div className="login-form-container">
         {this.renderErrors()}
 
-        <form onSubmit={this.handleSubmit} >
-          <div className="login-form">
+        <form onSubmit={this.handleSubmit}  className="login-form">
+          <div>
             <input type="text"
               value={this.state.username}
               onChange={this.update('username')}
@@ -76,7 +76,7 @@ class SessionForm extends React.Component {
               <input type="submit" value="Log In"/>
             </div>
           </div>
-          <Link to="/signup" >>>Sign up for an account</Link>
+          <Link to="/signup" className="link">>>Sign up for an account</Link>
         </form>
       </div>
     )
@@ -87,8 +87,8 @@ class SessionForm extends React.Component {
       <div className="signup-form-container">
         {this.renderErrors()}
 
-        <form onSubmit={this.handleSubmit}>
-          <div className="signup-form">
+        <form onSubmit={this.handleSubmit} className="signup-form">
+          <div >
             <input type="text"
               value={this.state.first_name}
               onChange={this.update('first_name')}
@@ -121,7 +121,7 @@ class SessionForm extends React.Component {
               <input type="submit" value="Sign Up"/>
             </div>
           </div>
-          <Link to="/login">>>Already a member?</Link>
+          <Link to="/login" className="link">>>Already a member?</Link>
         </form>
       </div>
     )
