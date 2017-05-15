@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170515015811) do
+ActiveRecord::Schema.define(version: 20170515025456) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,8 +19,8 @@ ActiveRecord::Schema.define(version: 20170515015811) do
     t.string   "username",                                                                                     null: false
     t.string   "session_token",                                                                                null: false
     t.string   "password_digest",                                                                              null: false
-    t.string   "first_name",                                                                                   null: false
-    t.string   "last_name",                                                                                    null: false
+    t.string   "first_name"
+    t.string   "last_name"
     t.integer  "views",           default: 0
     t.integer  "photo_count",     default: 0
     t.integer  "follower_count",  default: 0
