@@ -76,7 +76,7 @@ class SessionForm extends React.Component {
               <input type="submit" value="Log In"/>
             </div>
           </div>
-          <Link to="/signup" className="link">>>Sign up for an account</Link>
+          <Link to="/signup">>>Sign up for an account</Link>
         </form>
       </div>
     )
@@ -121,7 +121,7 @@ class SessionForm extends React.Component {
               <input type="submit" value="Sign Up"/>
             </div>
           </div>
-          <Link to="/login" className="link">>>Already a member?</Link>
+          <Link to="/login">>>Already a member?</Link>
         </form>
       </div>
     )
