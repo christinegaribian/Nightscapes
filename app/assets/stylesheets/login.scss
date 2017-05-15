@@ -1,0 +1,36 @@
+.main-app{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.auth-form{
+  background: black;
+  text-align: center;
+
+  h1 {
+    font-family: 'Julius Sans One', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    color: white;
+  }
+
+}
+
+.login-form-container, .signup-form-container {
+
+}
+
+.login-form input, .sigup-form input {
+  background-color: black;
+  border: none;
+  border-bottom: 2px solid white;
+  padding: 7px 5px;
+}
+
+.login-form, .signup-form {
+  height: 100%;
+  color: white;
+  opacity: 0.6;
+  padding: 35px;
+}

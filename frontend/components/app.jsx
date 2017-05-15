@@ -5,7 +5,7 @@ import { AuthRoute } from '../util/route_util.jsx'
 import GreetingContainer from './greeting/greeting_container';
 
 const App = () => (
-  <div>
+  <div className="main-app">
     <header>
       <h1>Nightscapes</h1>
       <GreetingContainer/>
