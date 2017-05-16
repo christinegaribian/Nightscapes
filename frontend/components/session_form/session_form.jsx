@@ -120,6 +120,7 @@ class SessionForm extends React.Component {
       return (
         <div className="auth-form">
           <h1>Explore the Universe</h1>
+          <h2>with photography</h2>
           {this.renderLogin()}
         </div>
       )
@@ -127,6 +128,7 @@ class SessionForm extends React.Component {
       return (
         <div className="auth-form">
           <h1>Explore the Universe</h1>
+          <h2>with photography</h2>
           {this.renderSignUp()}
         </div>
       )
