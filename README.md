@@ -4,7 +4,7 @@
 
 [Trello link][trello]
 
-[heroku]: http://www.herokuapp.com
+[heroku]: https://nightscapes.herokuapp.com/
 [trello]: https://trello.com/b/vwohinzI/nightscapes
 
 ## Minimum Viable Product
