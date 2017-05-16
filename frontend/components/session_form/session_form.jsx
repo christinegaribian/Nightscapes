@@ -35,6 +35,7 @@ class SessionForm extends React.Component {
   }
 
   handleGuest(e){
+    debugger
     e.preventDefault();
     this.props.login(
       {username: "CaptainJaneway", password: "password"}
@@ -102,7 +103,7 @@ class SessionForm extends React.Component {
             </form>
           </div>
         </div>
-      )
+      );
   }
 }
 
