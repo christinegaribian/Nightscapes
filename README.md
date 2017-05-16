@@ -35,31 +35,32 @@ By the end of Week 9, this app will, at a minimum, satisfy the following criteri
   [schema]: docs/schema.md
 
 
-## Implementation Timeline
 
-### Phase 1: Backend setup and Front End User Authentication (2 days)
+  ## Implementation Timeline
 
-  **Objective:** Functioning rails project with front-end Authentication
+  ### Phase 1: Backend setup and Front End User Authentication (2 days)
 
-### Phase 2: Navbar, Photos CR(UD), Feed (2 days)
+    **Objective:** Functioning rails project with front-end Authentication
 
-  **Objective:** Once the user has logged in, the navbar redirects to home, user and upload photo pages. Photos can be created and viewed through the API. Feed renders.
+  ### Phase 2: Navbar, Photos CR(UD), Feed (2 days)
 
-### Phase 3: Feed Sidebar and Photos (CR)UD (2 days)
+    **Objective:** Once the user has logged in, the navbar redirects to home, user and upload photo pages. Photos can be created and viewed through the API. Feed renders.
 
-  **Objective:** Feed Sidebar shows information about the current user, and suggestions of other users to follow.
+  ### Phase 3: Photo CR(UD) (2 days)
 
-### Phase 4: User Profile Page (1 day)
+    **Objective:** Clicking on a photo renders the photo with its associated details.
 
-  **Objective:** User page displays navbar, user information, and the user's photo collection in a grid.
+  ### Phase 4: User Profile Page (1 day)
 
-### Phase 5: Follows (1 day)
+    **Objective:** User page displays navbar, user information, and the user's photo collection in a grid.
 
-  **Objective:** Clicking 'followers'/'following' brings up the follow popup, which users can use to follow/unfollow each other.
+  ### Phase 5: Follows (1 day)
 
-### Phase 6: - Pagination / infinite scroll for Feed Index (1 day)
+    **Objective:** Clicking 'followers'/'following' brings up the follow popup, which users can use to follow/unfollow each other.
 
-  **Objective:** Add infinite scroll to Feed
+  ### Phase 6: - Pagination / infinite scroll for Feed Index (1 day)
+
+    **Objective:** Add infinite scroll to Feed
 
 
 ### Bonus Features (TBD)
