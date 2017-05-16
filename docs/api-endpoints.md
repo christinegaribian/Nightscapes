@@ -22,6 +22,7 @@
 ### Photos
 - GET /api/users/:userId/photos
 - POST /api/users/:userId/photos
+- GET /api/photos
 - GET /api/photos/:id
 - PATCH /api/photos/:id
 - DELETE /api/photos/:id
