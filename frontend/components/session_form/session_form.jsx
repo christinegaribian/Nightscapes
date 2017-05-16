@@ -13,6 +13,7 @@ class SessionForm extends React.Component {
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleGuest = this.handleGuest.bind(this);
     this.renderLogin = this.renderLogin.bind(this);
     this.renderErrors = this.renderErrors.bind(this);
   }
@@ -33,14 +34,21 @@ class SessionForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const user = Object.assign({}, this.state);
-    debugger
     this.props.processForm(user);
+  }
+
+  handleGuest(e){
+    e.persist();
+
+    this.setState({username: "CaptainJaneway", password: "password"});
+
+    setTimeout(function(){this.handleSubmit(e);}.bind(this), 300);
   }
 
   renderErrors() {
     if (this.props.errors){
       return(
-        <ul>
+        <ul className="error">
           {this.props.errors.map((error, i) => (
             <li key={`error-${i}`}>
               {error}
@@ -48,6 +56,8 @@ class SessionForm extends React.Component {
           ))}
         </ul>
       );
+    } else {
+      return null;
     }
   }
 
@@ -56,7 +66,7 @@ class SessionForm extends React.Component {
       <div className="login-form-container">
         {this.renderErrors()}
 
-        <form onSubmit={this.handleSubmit}  className="login-form">
+        <form className="login-form">
           <div>
             <input type="text"
               value={this.state.username}
@@ -73,7 +83,8 @@ class SessionForm extends React.Component {
               />
             <br/>
             <div className="button-container">
-              <input type="submit" value="Log In"/>
+              <input type="submit" value="Log In" onClick={this.handleSubmit}/>
+              <input type="submit" value="Guest" onClick={this.handleGuest}/>
             </div>
           </div>
           <Link to="/signup">>>Sign up for an account</Link>

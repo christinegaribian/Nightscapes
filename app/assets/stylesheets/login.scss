@@ -4,18 +4,19 @@ input[type='text'], input[type="password"], textarea {
   border: none;
   background-color: black;
   color: white;
-  width: 95%;
+  width: calc(95% - 20px);
   height: 45px;
   font-size: 20px;
   font-weight: 300;
-  padding: 3px 20px;
+  padding: 3px 18px;
+  border-bottom: 1px solid white;
 }
 
 .login-form-container, .signup-form-container {
   margin-top: 80px;
   width: 45%;
   color: white;
-  opacity: 0.6;
+  opacity: 0.55;
   background: black;
 
   a {
@@ -46,8 +47,8 @@ textarea:focus, input:focus{
 
 input[type="submit"] {
   padding: 9px 3px;
-  width: 40%;
-  border-radius: 15px;
+  width: 35%;
+  border-radius: 8px;
   border: 1px solid #cccccc;
   background-color: black;
   color: #cccccc;
@@ -56,6 +57,15 @@ input[type="submit"] {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 200;
 }
+
+.button-container {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 60px;
+  align-items: center;
+}
+
+
 
 .auth-form {
   height: 100%;
@@ -76,4 +86,6 @@ input[type="submit"] {
 
 .error {
   font-size: 20px;
+  color: #c058ce;
+  margin: 20px 20px 0 20px;
 }
