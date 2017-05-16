@@ -38,11 +38,8 @@ class SessionForm extends React.Component {
   }
 
   handleGuest(e){
-    e.persist();
-
-    this.setState({username: "CaptainJaneway", password: "password"});
-
-    setTimeout(function(){this.handleSubmit(e);}.bind(this), 300);
+    e.preventDefault();
+    this.props.processForm({username: "CaptainJaneway", password: "password"});
   }
 
   renderErrors() {
@@ -56,8 +53,6 @@ class SessionForm extends React.Component {
           ))}
         </ul>
       );
-    } else {
-      return null;
     }
   }
 
@@ -67,7 +62,6 @@ class SessionForm extends React.Component {
         {this.renderErrors()}
 
         <form className="login-form">
-          <div>
             <input type="text"
               value={this.state.username}
               onChange={this.update('username')}
@@ -86,7 +80,6 @@ class SessionForm extends React.Component {
               <input type="submit" value="Log In" onClick={this.handleSubmit}/>
               <input type="submit" value="Guest" onClick={this.handleGuest}/>
             </div>
-          </div>
           <Link to="/signup">>>Sign up for an account</Link>
         </form>
       </div>
@@ -99,7 +92,6 @@ class SessionForm extends React.Component {
         {this.renderErrors()}
 
         <form onSubmit={this.handleSubmit} className="signup-form">
-          <div >
             <input type="text"
               value={this.state.first_name}
               onChange={this.update('first_name')}
@@ -131,7 +123,6 @@ class SessionForm extends React.Component {
             <div className="button-container">
               <input type="submit" value="Sign Up"/>
             </div>
-          </div>
           <Link to="/login">>>Already a member?</Link>
         </form>
       </div>
