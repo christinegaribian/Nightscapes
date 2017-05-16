@@ -12,7 +12,6 @@ class SessionForm extends React.Component {
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleGuest = this.handleGuest.bind(this);
-    this.renderLogin = this.renderLogin.bind(this);
     this.renderErrors = this.renderErrors.bind(this);
   }
 
@@ -54,85 +53,52 @@ class SessionForm extends React.Component {
     }
   }
 
-  renderLogin () {
-    return (
-      <div className="login-form-container">
-        {this.renderErrors()}
-
-        <form className="login-form">
-            <input type="text"
-              value={this.state.username}
-              onChange={this.update('username')}
-              className="login-input"
-              placeholder="Username"
-              />
-            <br/>
-            <input type="password"
-              value={this.state.password}
-              onChange={this.update('password')}
-              className="login-input"
-              placeholder="Password"
-              />
-            <br/>
-            <div className="button-container">
-              <input type="submit" value="Log In" onClick={this.handleSubmit}/>
-              <input type="submit" value="Guest" onClick={this.handleGuest}/>
-            </div>
-          <Link to="/signup">>>Sign up for an account</Link>
-        </form>
-      </div>
-    )
-  }
-
-  renderSignUp () {
-    return (
-      <div className="signup-form-container">
-        {this.renderErrors()}
-
-        <form onSubmit={this.handleSubmit} className="signup-form">
-
-            <input type="text"
-              value={this.state.username}
-              onChange={this.update('username')}
-              className="signup-input"
-              placeholder="Username"
-              />
-            <br/>
-            <input type="password"
-              value={this.state.password}
-              onChange={this.update('password')}
-              className="signup-input"
-              placeholder="Password"
-              />
-            <br/>
-            <div className="button-container">
-              <input type="submit" value="Sign Up"/>
-            </div>
-          <Link to="/login">>>Already a member?</Link>
-        </form>
-      </div>
-    )
-  }
-
   render() {
     let formType = this.props.formType;
-    if (formType === 'login') {
-      return (
-        <div className="auth-form">
-          <h1>Explore the Universe</h1>
-          <h2>with photography</h2>
-          {this.renderLogin()}
-        </div>
-      )
+    let link;
+    let button_text;
+    if (formType === 'login'){
+      link = <Link to="/signup">>>Sign up for an account</Link>;
+      button_text = "Sign Up"
     } else {
-      return (
-        <div className="auth-form">
-          <h1>Explore the Universe</h1>
-          <h2>with photography</h2>
-          {this.renderSignUp()}
+      link = <Link to="/login">>>Already a member?</Link>;
+      button_text = "Sign Up"
+    }
+    return (
+      <div className="auth-form">
+        <h1>Explore the Universe</h1>
+        <h2>with photography</h2>
+          <div className="form-container">
+            {this.renderErrors()}
+
+            <form onSubmit={this.handleSubmit} className="form">
+
+                <input type="text"
+                  value={this.state.username}
+                  onChange={this.update('username')}
+                  placeholder="Username"
+                  />
+                <br/>
+                <input type="password"
+                  value={this.state.password}
+                  onChange={this.update('password')}
+                  placeholder="Password"
+                  />
+                <br/>
+                <div className="button-container">
+                  <input type="submit"
+                    value={button_text}
+                    />
+                  <input type="submit"
+                    value="Guest"
+                    onClick={this.handleGuest}
+                    />
+                </div>
+                {link}
+            </form>
+          </div>
         </div>
       )
-    }
   }
 }
 

@@ -8,9 +8,9 @@ import Feed from './home/feed';
 
 const App = () => (
   <div className="main-app">
-    <ProtectedRoute path="/" component={Feed}/>
     <AuthRoute path="/login" component={SessionFormContainer} />
     <AuthRoute path="/signup" component={SessionFormContainer} />
+    <ProtectedRoute path="/" exact component={Feed} />
   </div>
 );
 
