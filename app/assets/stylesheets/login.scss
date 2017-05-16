@@ -73,12 +73,19 @@ input[type="submit"]:hover {
 }
 
 
-.auth-form  {
+
+.headings{
+  margin-bottom: 90px;
+
   h1 {
     font-size: 9vmin;
   }
   h2 {
-    font-size: 5vmin;
+    font-size: 6vmin;
+    margin-bottom: 10px;
+  }
+  h3 {
+    font-size: 2.3vmin;
   }
 }
 

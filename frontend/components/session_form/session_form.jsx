@@ -69,9 +69,10 @@ class SessionForm extends React.Component {
     }
     return (
       <div className="auth-form">
-        <div>
+        <div className = "headings">
           <h1>Explore the Universe</h1>
-          <h2>with photography</h2>
+          <h2>with Nightscapes</h2>
+          <h3>The premier astrophotography community</h3>
         </div>
           <div className="form-container">
             {this.renderErrors()}
