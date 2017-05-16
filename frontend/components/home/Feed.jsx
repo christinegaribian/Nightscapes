@@ -3,9 +3,9 @@ import React from 'react';
 class Feed extends React.Component {
   render(){
     return (
-    <div>it workssss</div>
+    <h1>it workssss</h1>
     )
-}
+  }
 
 }
 

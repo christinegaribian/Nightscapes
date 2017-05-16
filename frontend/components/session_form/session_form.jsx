@@ -36,7 +36,9 @@ class SessionForm extends React.Component {
 
   handleGuest(e){
     e.preventDefault();
-    this.props.processForm({username: "CaptainJaneway", password: "password"});
+    this.props.login(
+      {username: "CaptainJaneway", password: "password"}
+    );
   }
 
   renderErrors() {
@@ -59,15 +61,17 @@ class SessionForm extends React.Component {
     let button_text;
     if (formType === 'login'){
       link = <Link to="/signup">>>Sign up for an account</Link>;
-      button_text = "Sign Up"
+      button_text = "Sign In"
     } else {
       link = <Link to="/login">>>Already a member?</Link>;
       button_text = "Sign Up"
     }
     return (
       <div className="auth-form">
-        <h1>Explore the Universe</h1>
-        <h2>with photography</h2>
+        <div>
+          <h1>Explore the Universe</h1>
+          <h2>with photography</h2>
+        </div>
           <div className="form-container">
             {this.renderErrors()}
 

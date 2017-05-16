@@ -10,7 +10,7 @@ const App = () => (
   <div className="main-app">
     <AuthRoute path="/login" component={SessionFormContainer} />
     <AuthRoute path="/signup" component={SessionFormContainer} />
-    <ProtectedRoute path="/" exact component={Feed} />
+    <ProtectedRoute path="/" component={Feed} />
   </div>
 );
 
