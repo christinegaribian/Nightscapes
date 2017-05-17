@@ -3,10 +3,7 @@ import Home from './home';
 import { logout } from '../../actions/session_actions';
 
 const  mapStateToProps = (state) => ({
-  loggedIn: Boolean(state.session.currentUser),
-  profile_picture_url: state.session.currentUser.user_img_url,
-  username: state.session.currentUser.username,
-  errors: state.session.errors
+  session: state.session
 });
 
 const mapDispatchToProps = (dispatch, ownProps) => {

@@ -1,23 +1,35 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
+class Navbar extends React.Component {
+  constructor(props){
+    super(props);
+  }
 
-const sessionLinks = () => (
-  <nav className="login-signup">
-    <Link to="/login">Login</Link>
-    &nbsp;or&nbsp;
-    <Link to="/signup">Sign up!</Link>
-  </nav>
-);
+  render(){
+    let currentUser = this.props.currentUser;
+    return (
+      <nav className="navbar">
+        <div className="left">
+          <img className="logo" src="file:///Users/christinegaribian/Desktop/Nightscapes/Nightscapes/app/assets/images/planet.jpeg"/>
+          <Link to="/">NIGHTSCAPES</Link>
+        </div>
 
-const personalGreeting = (currentUser, logout) => (
-	<hgroup className="header-group">
-    <h2 className="header-name">Hi, {currentUser.username}!</h2>
-    <button className="header-button" onClick={logout}>Log Out</button>
-	</hgroup>
-);
-
-const Navbar = ({ currentUser, logout }) => (
-  currentUser ? personalGreeting(currentUser, logout) : sessionLinks()
-);
+        <div className="right">
+          <Link to="/users/:userId"><img src={currentUser.user_img_url} className="user-img-url"/></Link>
+          <h1>{currentUser.username}</h1>
+          <i className="fa fa-cloud-upload"
+            aria-hidden="true"
+            id="upload-icon"
+            ></i>
+          <i className="fa fa-sign-out"
+            aria-hidden="true"
+            onClick={this.props.logout}
+            id="logout-icon"
+            ></i>
+        </div>
+      </nav>
+    )
+  }
+}
 
 export default Navbar;

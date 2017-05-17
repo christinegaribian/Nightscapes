@@ -1,0 +1,38 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  width: 100%;
+  padding: 16px 40px 15px 40px;
+  opacity: 0.95;
+
+  div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  i, .user-img-url {
+    padding: 8px;
+    margin: 0 7px 0 7px;
+  }
+
+  .logo {
+    margin-right: 7px;
+    color: white;
+  }
+}
+
+
+
+i:hover, .user-img-url:hover {
+  background-color: rgba(255,255,255,0.2);
+  cursor: pointer;
+}
+
+.user-img-url {
+  width: 35px;
+  position: relative;
+  top: -2px;
+}

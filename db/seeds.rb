@@ -7,4 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-guest_user = User.create(username: "CaptainJaneway", password: "password")
+guest_user = User.create(
+  username: "CaptainJaneway",
+  password: "password",
+  user_img_url: 'http://members.tripod.com/~Neelix_4/janeway1.jpg',
+  user_site_url: 'http://memory-alpha.wikia.com/wiki/Kathryn_Janeway'
+  )

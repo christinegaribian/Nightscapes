@@ -5,6 +5,7 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util.jsx'
 import GreetingContainer from './greeting/greeting_container';
 // Can add greeting container back in later as nav bar
 import HomeContainer from './home/home_container';
+import UserPageContainer from './user_page/user_page_container';
 
 const App = () => (
   <div className="main-app">
@@ -12,7 +13,8 @@ const App = () => (
       <AuthRoute path="/login" component={SessionFormContainer} />
       <AuthRoute path="/signup" component={SessionFormContainer} />
       <ProtectedRoute path="/home" component={HomeContainer}/>
-      <ProtectedRoute exact path="/" component={SessionFormContainer} />
+      <ProtectedRoute path="/users/:userId" component={UserPageContainer}/>
+      <ProtectedRoute exact path="/" component={HomeContainer} />
     </Switch>
   </div>
 );

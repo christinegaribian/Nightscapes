@@ -15,6 +15,9 @@ class SessionForm extends React.Component {
     this.renderErrors = this.renderErrors.bind(this);
   }
 
+  // componentWillUnmount(){
+  //   this.props.clearErrors();
+  // }
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.loggedIn) {
@@ -60,10 +63,10 @@ class SessionForm extends React.Component {
     let link;
     let button_text;
     if (formType === 'login'){
-      link = <Link to="/signup">>>Sign up for an account</Link>;
+      link = <Link to="/signup" onClick={this.props.clearErrors}>>>Sign up for an account</Link>;
       button_text = "Sign In"
     } else {
-      link = <Link to="/login">>>Already a member?</Link>;
+      link = <Link to="/login" onClick={this.props.clearErrors}>>>Already a member?</Link>;
       button_text = "Sign Up"
     }
     return (

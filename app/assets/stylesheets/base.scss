@@ -1,5 +1,9 @@
-html, .main-app, main, body {
+html, .main-app, #root, body {
   height: 100%;
   font-family: 'Julius Sans One', sans-serif;
   font-weight: 180;
+}
+
+body {
+  background: black;
 }
