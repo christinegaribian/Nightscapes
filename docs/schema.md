@@ -19,8 +19,8 @@ user_id     | integer   | not null, foreign key (references users), indexed
 img_url     | string    | not null
 title       | string    | not null
 description | text      |
-width       | integer   | not null, default: false
-height      | integer   | not null, default: false
+width       | integer   | not null
+height      | integer   | not null
 
 ## follows
 column name | data type | details

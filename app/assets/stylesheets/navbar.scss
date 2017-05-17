@@ -4,7 +4,7 @@
   align-items: center;
   color: white;
   width: 100%;
-  padding: 16px 40px 15px 40px;
+  padding: 35px 40px 15px 40px;
   opacity: 0.95;
 
   div {
@@ -22,6 +22,14 @@
     margin-right: 7px;
     color: white;
   }
+
+  .left {
+    justify-content: flex-start;
+  }
+
+  .right h1 {
+    
+  }
 }
 
 
@@ -35,4 +43,8 @@ i:hover, .user-img-url:hover {
   width: 35px;
   position: relative;
   top: -2px;
+}
+
+.logo {
+  width: 5%;
 }
