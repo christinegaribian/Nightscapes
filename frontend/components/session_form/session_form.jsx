@@ -15,10 +15,6 @@ class SessionForm extends React.Component {
     this.renderErrors = this.renderErrors.bind(this);
   }
 
-  // componentWillUnmount(){
-  //   this.props.clearErrors();
-  // }
-
   componentWillReceiveProps(nextProps) {
     if (nextProps.loggedIn) {
       this.props.history.push('/');
