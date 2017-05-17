@@ -9,7 +9,7 @@
     logIn: {errors: []},
     postPhoto: {errors: ["title can't be blank"]}
   },
-  sampleUser: {
+  targetUser: {
     username: 'username',
     profilePictureUrl: "http://...",
     views: 35,
