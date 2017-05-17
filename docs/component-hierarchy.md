@@ -1,7 +1,10 @@
 ## Component Hierarchy
 
-**AuthFormContainer**
-  * AuthForm
+**SessionFormContainer**
+  * SessionForm
+
+**NavbarContainer**
+  * Navbar
 
 **HomeContainer**
   * Feed

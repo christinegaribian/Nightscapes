@@ -16,8 +16,8 @@ const personalGreeting = (currentUser, logout) => (
 	</hgroup>
 );
 
-const Greeting = ({ currentUser, logout }) => (
+const Navbar = ({ currentUser, logout }) => (
   currentUser ? personalGreeting(currentUser, logout) : sessionLinks()
 );
 
-export default Greeting;
+export default Navbar;

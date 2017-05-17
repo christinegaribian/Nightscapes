@@ -7,6 +7,7 @@ import Root from './components/root';
 
 import * as APIUtil from './util/session_api_util';
 window.APIUtil = APIUtil;
+
 document.addEventListener('DOMContentLoaded', () => {
   let store;
   if (window.currentUser) {

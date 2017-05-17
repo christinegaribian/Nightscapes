@@ -6,6 +6,7 @@ git_source(:github) do |repo_name|
 end
 
 gem 'pg', '~> 0.18'
+gem "font-awesome-rails"
 
 gem 'pry-rails'
 gem 'annotate'
@@ -53,6 +54,7 @@ end
 
 group :production do
   gem 'rails_12factor'
+
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

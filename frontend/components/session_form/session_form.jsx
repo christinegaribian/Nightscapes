@@ -35,7 +35,6 @@ class SessionForm extends React.Component {
   }
 
   handleGuest(e){
-    debugger
     e.preventDefault();
     this.props.login(
       {username: "CaptainJaneway", password: "password"}
@@ -103,6 +102,12 @@ class SessionForm extends React.Component {
                 {link}
             </form>
           </div>
+          <div className="video-background">
+              <div className="video-foreground">
+                <iframe src='//gifs.com/embed/iss-timelapse-the-english-channel-and-beyond-pgA10p' frameBorder='0' scrolling='no' width='640px' height='360px' ></iframe>
+              </div>
+          </div>
+
         </div>
       );
   }
