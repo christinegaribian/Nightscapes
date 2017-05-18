@@ -9,7 +9,8 @@ class UserPage extends React.Component {
   render(){
     let currentUser = this.props.currentUser;
     return (
-      <div>THIS IS THE USER PAGE</div>
+      <div>THIS IS THE USER PAGE.
+       </div>
     )
   }
 }

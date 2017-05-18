@@ -59,14 +59,6 @@ class PhotoUploadForm extends React.Component {
           <p>Drop an image or click to select a file to upload.</p>
         </Dropzone>
       </div>
-
-      <div>
-        {this.state.uploadedFileCloudinaryUrl === '' ? null :
-        <div>
-          <p>{this.state.uploadedFile.name}</p>
-          <img src={this.state.uploadedFileCloudinaryUrl} />
-        </div>}
-      </div>
     </form>
     )
   }
