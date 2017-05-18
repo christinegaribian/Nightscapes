@@ -7,7 +7,7 @@ end
 
 gem 'figaro'
 gem 'pg', '~> 0.18'
-gem "font-awesome-rails"
+gem 'font-awesome-rails'
 
 gem 'pry-rails'
 gem 'annotate'

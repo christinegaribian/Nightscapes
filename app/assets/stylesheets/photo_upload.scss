@@ -1,0 +1,49 @@
+.photo-upload {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  margin: 0 auto;
+  padding: 40px;
+  border: 1px solid white;
+  margin: 80px 50px 80px 50px;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.file-drop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding-right: 10%;
+
+  i {
+    font-size: 90px;
+  }
+
+  p {
+    margin-bottom: 8%;
+  }
+}
+
+.file-drop:hover {
+  cursor: pointer;
+}
+
+
+.info-upload {
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid grey;
+  padding-left: 10%;
+
+  input, textarea {
+    font-size: 1.8vmin;
+    width: 100%;
+  }
+
+  input[type="submit"]{
+    font-size: 2.2vmin;
+  }
+}

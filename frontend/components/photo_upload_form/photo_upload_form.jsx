@@ -29,8 +29,8 @@ class PhotoUploadForm extends React.Component {
 
     let file = this.state.uploadedFile;
     let upload = request.post(CLOUDINARY_UPLOAD_URL)
-                  .field('upload_preset', CLOUDINARY_UPLOAD_PRESET)
-                  .field('file', file);
+    .field('upload_preset', CLOUDINARY_UPLOAD_PRESET)
+    .field('file', file);
 
     upload.end((err, response) => {
       if (err) {
@@ -38,61 +38,73 @@ class PhotoUploadForm extends React.Component {
       }
 
       if (response.body.secure_url !== '') {
-        this.setState({
-          uploadedFileCloudinaryUrl: response.body.secure_url
-        });
+        // this.setState({
+        //   uploadedFileCloudinaryUrl: response.body.secure_url
+        // });
         this.props.postPhoto({
-                    img_url: this.state.uploadedFileCloudinaryUrl,
-                    title: this.state.title,
-                    description: this.state.description
-                  }
-              );
-        // Add the other parameters in here too
-        this.props.history.push('/home');
-      }
-    });
-  }
+          user_id: this.props.currentUser.id,
+          img_url: response.body.secure_url,
+          title: this.state.title,
+          description: this.state.description
+        }
+      );
+      // Add the other parameters in here too
+      this.props.history.push('/home');
+    }
+  });
+}
 
-  handleImageDrop(files) {
-    this.setState({
-      uploadedFile: files[0]
-    });
-  }
+handleImageDrop(files) {
+  this.setState({
+    uploadedFile: files[0]
+  });
+}
 
-  update(field) {
-    return e => this.setState({
-      [field]: e.currentTarget.value
-    });
-  }
+update(field) {
+  return e => this.setState({
+    [field]: e.currentTarget.value
+  });
+}
 
 
-  render(){
-    return (
-      <form className="PhotoUpload" onSubmit={this.upload}>
-        <div className="FileUpload">
-          <Dropzone
-            multiple={false}
-            accept="image/*"
-            onDrop={this.handleImageDrop}>
-            <p>Drop an image or click to select a file.</p>
-          </Dropzone>
-        </div>
+render(){
+  return (
+    <form className="photo-upload" onSubmit={this.upload}>
+      <div className="file-upload">
+        <Dropzone className="file-drop"
+          multiple={false}
+          accept="image/*"
+          onDrop={this.handleImageDrop}>
+          <p>Drop an image or click to select a file.</p>
+          <i className="fa fa-camera-retro"
+            aria-hidden="true"
+            id="camera-icon"></i>
+        </Dropzone>
+      </div>
 
-        <div className="InfoUpload">
-          <h1>Upload A Photo</h1>
-          <input type="text"
-                 placeholder="Title"
-                 value={this.state.title}
-                 onChange={this.update('title')}
-                 ></input>
-          <textarea placeholder="Description"
-                  value={this.state.description}
-                  onChange={this.update('description')}
-                  ></textarea>
-                <input type="submit" value="Upload" />
-        </div>
-      </form>
-    )
-  }
+      <div className="info-upload">
+        <h1>Upload A Photo</h1>
+        <br/>
+
+        <input type="text"
+          placeholder="Title"
+          value={this.state.title}
+          onChange={this.update('title')}
+          ></input>
+        <br/>
+
+        <textarea placeholder="Description"
+          value={this.state.description}
+          onChange={this.update('description')}
+          ></textarea>
+        <br/>
+        <br/>
+        <br/>
+
+        <input type="submit" value="Upload" />
+      </div>
+    </form>
+  )
+}
 }
 export default PhotoUploadForm;

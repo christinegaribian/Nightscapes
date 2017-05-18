@@ -25,8 +25,9 @@ export const postPhoto = photo => dispatch => (
   PhotoAPIUtil.postPhoto(photo).then(photo => {
     dispatch(receiveNewPhoto(photo));
     return photo;
-  }).fail(err => dispatch(receivePhotosErrors(err.responseJSON)))
+  })
 );
+// .fail(err => dispatch(receivePhotosErrors(err.responseJSON)))
 
 export const receiveAllPhotos = photos => ({
   type: RECEIVE_ALL_PHOTOS,

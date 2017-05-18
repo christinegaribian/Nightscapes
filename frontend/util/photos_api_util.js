@@ -8,15 +8,15 @@ export const fetchAllPhotos = () => (
 export const fetchUserPhotos  = (id) => (
 	$.ajax({
 		method: 'GET',
-		url: '/api/users/'+id+'/photos'
+		url: `/api/users/${id}/photos`
 	})
 );
 
 export const postPhoto =  (photo) => (
 	$.ajax({
 		method:'POST',
-		url: `/api/users/${id}/photos`,
-		data: photo
+		url: `/api/users/${photo.user_id}/photos`,
+		data: {photo}
 	})
 );
 
