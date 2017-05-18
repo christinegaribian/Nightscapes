@@ -10,6 +10,7 @@ class Home extends React.Component {
     super(props);
   }
 
+  // refactor this into switch statement
   render(){
       if (this.props.location.pathname.slice(1).includes('users')) {
         return (

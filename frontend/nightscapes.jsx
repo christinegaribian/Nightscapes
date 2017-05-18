@@ -8,6 +8,9 @@ import Root from './components/root';
 import * as APIUtil from './util/session_api_util';
 window.APIUtil = APIUtil;
 
+import * as PhotoAPIUtil from './util/photos_api_util';
+window.PhotoAPIUtil = PhotoAPIUtil;
+
 document.addEventListener('DOMContentLoaded', () => {
   let store;
   if (window.currentUser) {

@@ -34,6 +34,8 @@ class PhotoUploadForm extends React.Component {
         this.setState({
           uploadedFileCloudinaryUrl: response.body.secure_url
         });
+        // this.props.postPhoto(img_url: this.state.uploadedFileCloudinaryUrl);
+        // Add the other parameters in here too 
         this.props.history.push('/home');
       }
     });

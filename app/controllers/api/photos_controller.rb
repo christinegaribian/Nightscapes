@@ -14,10 +14,15 @@ class Api::PhotosController < ApplicationController
   end
 
   def index
+    @photos = Photo.all
+  end
 
+  def user_index
+    @photos = Photo.where('user_id = ?', params[:photo][:user_id])
   end
 
   def update
+
   end
 
   def destroy
