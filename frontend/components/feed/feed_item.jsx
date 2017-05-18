@@ -6,11 +6,14 @@ class FeedItem extends React.Component {
   }
 
   render(){
-     console.log(this.props);
-
+    let {img_url, title, description} = this.props.photo;
      return (
        <li className="feed-item">
-         {feedItems}
+         <img src={img_url}></img>
+         <div>
+           <h2 className="feed-item-title">{title}</h2>
+           <h3 className="feed-item-description">{description}</h3>
+         </div>
        </li>
      );
   }
