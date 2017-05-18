@@ -69,41 +69,43 @@ update(field) {
 
 render(){
   return (
-    <form className="photo-upload" onSubmit={this.upload}>
-      <div className="file-upload">
-        <Dropzone className="file-drop"
-          multiple={false}
-          accept="image/*"
-          onDrop={this.handleImageDrop}>
-          <p>Drop an image or click to select a file.</p>
-          <i className="fa fa-camera-retro"
-            aria-hidden="true"
-            id="camera-icon"></i>
-        </Dropzone>
-      </div>
+    <section className="photo-upload-container">
+      <form className="photo-upload" onSubmit={this.upload}>
+        <div className="file-upload">
+          <Dropzone className="file-drop"
+            multiple={false}
+            accept="image/*"
+            onDrop={this.handleImageDrop}>
+            <p>Drop an image or click to select a file.</p>
+            <i className="fa fa-camera-retro"
+              aria-hidden="true"
+              id="camera-icon"></i>
+          </Dropzone>
+        </div>
 
-      <div className="info-upload">
-        <h1>Upload A Photo</h1>
-        <br/>
+        <div className="info-upload">
+          <h1>Upload A Photo</h1>
+          <br/>
 
-        <input type="text"
-          placeholder="Title"
-          value={this.state.title}
-          onChange={this.update('title')}
-          ></input>
-        <br/>
+          <input type="text"
+            placeholder="Title"
+            value={this.state.title}
+            onChange={this.update('title')}
+            ></input>
+          <br/>
 
-        <textarea placeholder="Description"
-          value={this.state.description}
-          onChange={this.update('description')}
-          ></textarea>
-        <br/>
-        <br/>
-        <br/>
+          <textarea placeholder="Description"
+            value={this.state.description}
+            onChange={this.update('description')}
+            ></textarea>
+          <br/>
+          <br/>
+          <br/>
 
-        <input type="submit" value="Upload" />
-      </div>
-    </form>
+          <input type="submit" value="Upload" />
+        </div>
+      </form>
+    </section>
   )
 }
 }

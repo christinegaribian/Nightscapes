@@ -1,3 +1,8 @@
+.photo-upload-container {
+  margin-top: 180px;
+}
+
+
 .photo-upload {
   display: flex;
   align-items: flex-start;
@@ -41,6 +46,8 @@
   input, textarea {
     font-size: 1.8vmin;
     width: 100%;
+    width: 176px;
+    max-width: 176px;
   }
 
   input[type="submit"]{

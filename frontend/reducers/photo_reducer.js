@@ -11,6 +11,7 @@ const PhotoReducer = (state = {}, action) => {
     case RECEIVE_ALL_PHOTOS:
       return merge({}, action.photos);
     case RECEIVE_NEW_PHOTO:
+      debugger
       return merge({}, state, {
         [action.photo.id]: action.photo
       });
