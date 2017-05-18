@@ -25,7 +25,6 @@ class Feed extends React.Component {
     // let feedItems = this.state.photos.map((photo) => (
     //   <FeedItem photo={photo} key={photo.created_at} />
     //  ));
-    debugger
     let items = this.props.photos.map((photo) => (<li key={photo.created_at}>{photo.title}</li>));
 
      return (
