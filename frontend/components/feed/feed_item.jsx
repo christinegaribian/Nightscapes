@@ -15,18 +15,20 @@ const my_custom_style = {
     justifyContent   : 'center'
   },
   content : {
-    position                   : 'absolute',
+    position                   : 'initial',
     top                        : '150px',
     left                       : '150px',
     right                      : '150px',
     bottom                     : '150px',
-    border                     : 'none',
+    border                     : '1px solid grey',
     background                 : 'black',
     overflow                   : 'none',
     WebkitOverflowScrolling    : 'touch',
     borderRadius               : '4px',
     outline                    : 'none',
-    padding                    : '20px'
+    padding                    : '20px',
+    width                      : '60%',
+    boxShadow                 : 'white 10px 10px 20px 0px'
 
   },
   'content:hover' : {
@@ -47,7 +49,7 @@ class FeedItem extends React.Component {
   onOpenModal() {
     this.setState({ open: true });
   }
-  
+
   onCloseModal() {
     this.setState({ open: false });
   }
