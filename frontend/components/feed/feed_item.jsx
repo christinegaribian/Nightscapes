@@ -28,7 +28,7 @@ const my_custom_style = {
     outline                    : 'none',
     padding                    : '20px',
     width                      : '60%',
-    boxShadow                 : 'white 10px 10px 20px 0px'
+    boxShadow                 : 'white 5px 5px 5px 0px'
 
   },
   'content:hover' : {
