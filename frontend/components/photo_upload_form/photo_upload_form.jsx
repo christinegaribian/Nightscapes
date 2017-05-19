@@ -1,7 +1,7 @@
 import React from 'react';
 import Dropzone from 'react-dropzone';
 import request from 'superagent';
-import { Redirect } from 'react-router'
+import { Redirect } from 'react-router';
 
 const CLOUDINARY_UPLOAD_PRESET = 'iyrokfbk';
 const CLOUDINARY_UPLOAD_URL = 'https://api.cloudinary.com/v1_1/dl091hw7z/upload';
