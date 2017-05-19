@@ -91,7 +91,10 @@ class Navbar extends React.Component {
             onRequestClose={this.onCloseModal}
             contentLabel="Modal"
             style={my_custom_style}>
-            <PhotoUploadFormContainer currentUser={currentUser}/>
+            <PhotoUploadFormContainer
+              currentUser={currentUser}
+              closeModal={this.onCloseModal}
+              />
           </Modal>
 
           <i className="fa fa-sign-out"

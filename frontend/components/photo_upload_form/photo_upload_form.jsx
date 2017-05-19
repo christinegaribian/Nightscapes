@@ -68,6 +68,7 @@ class PhotoUploadForm extends React.Component {
           description: this.state.description
         }
       );
+      this.props.closeModal();
       // Add the other parameters in here too
       this.props.history.push('/');
     }

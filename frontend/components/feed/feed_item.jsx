@@ -16,6 +16,7 @@ const my_custom_style = {
   },
   content : {
     position                   : 'initial',
+    fontFamily                 : '"Julius Sans One", sans-serif',
     top                        : '150px',
     left                       : '150px',
     right                      : '150px',
@@ -24,11 +25,11 @@ const my_custom_style = {
     background                 : 'black',
     overflow                   : 'none',
     WebkitOverflowScrolling    : 'touch',
-    borderRadius               : '4px',
+    borderRadius               : '20px',
     outline                    : 'none',
-    padding                    : '20px',
+    padding                    : '40px',
     width                      : '60%',
-    boxShadow                 : 'white 5px 5px 5px 0px'
+    boxShadow                 : 'rgba(169, 169, 169, 0.37) 5px 5px 5px 0px'
 
   },
   'content:hover' : {
