@@ -47,15 +47,15 @@ class FeedItem extends React.Component {
   onOpenModal() {
     this.setState({ open: true });
   }
-
+  
   onCloseModal() {
     this.setState({ open: false });
   }
 
 
-    componentWillMount(){
-      Modal.setAppElement('body')
-    }
+  componentWillMount(){
+    Modal.setAppElement('body')
+  }
 
 
 
@@ -64,14 +64,14 @@ class FeedItem extends React.Component {
     let {id, img_url, title, description} = this.props.photo;
     return (
       <li className="feed-item">
-          <img src={img_url} alt={title} onClick={this.onOpenModal}/>
+        <img src={img_url} alt={title} onClick={this.onOpenModal}/>
 
         <Modal isOpen={open}
           onRequestClose={this.onCloseModal}
           contentLabel="Modal"
           style={my_custom_style}>
 
-            <PhotoDetailContainer
+          <PhotoDetailContainer
             photo={this.props.photo}
             className="modal-picture"
             />
@@ -88,7 +88,7 @@ class FeedItem extends React.Component {
 
 
 //   <Link to={`/photos/${id}`} onClick={this.onOpenModal}>
-  //   <img src={img_url} alt={title}/>
-  // </Link>
+//   <img src={img_url} alt={title}/>
+// </Link>
 
 export default FeedItem;

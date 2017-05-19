@@ -26,7 +26,7 @@ export const requestSinglePhoto = (id) => (dispatch) => {
 
 export const postPhoto = photo => dispatch => (
   PhotoAPIUtil.postPhoto(photo).then(photo => {
-    dispatch(receiveNewPhoto(photo));
+    dispatch(receiveSinglePhoto(photo));
     return photo;
   })
 );

@@ -1,12 +1,70 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import Modal from 'react-modal';
+import PhotoUploadFormContainer from '../photo_upload_form/photo_upload_form_container';
+
+
+const my_custom_style = {
+  overlay : {
+    position          : 'fixed',
+    top               : 0,
+    left              : 0,
+    right             : 0,
+    bottom            : 0,
+    backgroundColor   : 'rgba(0, 0, 0, 0.85)',
+    display           : 'flex',
+    alignItems       : 'center',
+    justifyContent   : 'center'
+  },
+  content : {
+    position                   : 'absolute',
+    top                        : '150px',
+    left                       : '150px',
+    right                      : '150px',
+    bottom                     : '150px',
+    border                     : 'none',
+    background                 : 'black',
+    overflow                   : 'none',
+    WebkitOverflowScrolling    : 'touch',
+    borderRadius               : '4px',
+    outline                    : 'none',
+    padding                    : '20px'
+
+  },
+  'content:hover' : {
+    cursor : 'pointer'
+  }
+}
+
+
+
 class Navbar extends React.Component {
   constructor(props){
     super(props);
+    this.onOpenModal = this.onOpenModal.bind(this);
+    this.onCloseModal = this.onCloseModal.bind(this);
+    this.state = {
+      open: false,
+    };
+  }
+
+  onOpenModal() {
+    this.setState({ open: true });
+  }
+
+  onCloseModal() {
+    this.setState({ open: false });
+  }
+
+
+  componentWillMount(){
+    Modal.setAppElement('body')
   }
 
   render(){
     let currentUser = this.props.currentUser;
+    const { open } = this.state;
+
     return (
       <nav className="navbar">
         <div className="left">
@@ -23,13 +81,20 @@ class Navbar extends React.Component {
               className="user-img-url"/>
           </Link>
           <h1>{currentUser.username}</h1>
-          <Link to="/upload">
-            <i className="fa fa-cloud-upload"
-                aria-hidden="true"
-                id="upload-icon"
-                alt="Upload Image"
-                ></i>
-          </Link>
+
+          <i className="fa fa-cloud-upload"
+            aria-hidden="true"
+            id="upload-icon"
+            alt="Upload Image"
+            onClick={this.onOpenModal}
+            ></i>
+          <Modal isOpen={open}
+            onRequestClose={this.onCloseModal}
+            contentLabel="Modal"
+            style={my_custom_style}>
+            <PhotoUploadFormContainer currentUser={currentUser}/>
+          </Modal>
+
           <i className="fa fa-sign-out"
             aria-hidden="true"
             onClick={this.props.logout}
