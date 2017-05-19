@@ -1,18 +1,19 @@
 import { connect } from 'react-redux';
 import PhotoDetail from './photo_detail';
 import { withRouter } from 'react-router-dom';
-import { receiveSinglePhoto } from '../../actions/photo_actions';
+import { requestSinglePhoto } from '../../actions/photo_actions';
+import { selectPhoto } from '../../reducers/selectors';
 
-// const mapStateToProps = ( state ) => ({
-// });
-//
-// const mapDispatchToProps = dispatch => ({
-//   postPhoto: photo => dispatch(postPhoto(photo)),
-//   clearErrors: ([]) => dispatch(receiveErrors([]))
-// });
-//
-//
-// export default withRouter(connect(
-//   mapStateToProps,
-//   mapDispatchToProps
-// )(PhotoDetail));
+const mapStateToProps = ( state, ownProps ) => ({
+  photo: selectPhoto(ownProps.match.params.photoId, state)
+});
+
+const mapDispatchToProps = dispatch => ({
+  requestSinglePhoto: id => dispatch(requestSinglePhoto(id))
+});
+
+
+export default withRouter(connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(PhotoDetail));

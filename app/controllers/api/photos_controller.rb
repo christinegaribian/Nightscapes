@@ -11,7 +11,7 @@ class Api::PhotosController < ApplicationController
   end
 
   def show
-
+    @photo = Photo.find(params[:id])
   end
 
   def index

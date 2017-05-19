@@ -67,7 +67,7 @@ class PhotoUploadForm extends React.Component {
         }
       );
       // Add the other parameters in here too
-      this.props.history.push('/home');
+      this.props.history.push('/');
     }
   });
 }

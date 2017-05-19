@@ -18,7 +18,7 @@ class Navbar extends React.Component {
         </div>
 
         <div className="right">
-          <Link to="/users/:userId">
+          <Link to={`/users/${currentUser.id}`}>
             <img src={currentUser.user_img_url}
               className="user-img-url"/>
           </Link>
@@ -33,7 +33,7 @@ class Navbar extends React.Component {
           <i className="fa fa-sign-out"
             aria-hidden="true"
             onClick={this.props.logout}
-            alt="Sign Out" 
+            alt="Sign Out"
             id="logout-icon"
             ></i>
         </div>

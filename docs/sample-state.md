@@ -4,12 +4,12 @@
     id: 1,
     username: "Christine"
   },
-  forms: {
+  errors: {
     signUp: {errors: []},
     logIn: {errors: []},
     postPhoto: {errors: ["title can't be blank"]}
   },
-  sampleUser: {
+  targetUser: {
     username: 'username',
     profilePictureUrl: "http://...",
     views: 35,
