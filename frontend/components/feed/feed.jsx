@@ -23,7 +23,7 @@ class Feed extends React.Component {
 
   render(){
     let feedItems = this.props.photos.map((photo) => (
-      <FeedItem photo={photo} key={photo.created_at} />
+        <FeedItem photo={photo} key={photo.created_at} />
      ));
     // let items = this.props.photos.map((photo) => (<li key={photo.created_at}>{photo.title}</li>));
 

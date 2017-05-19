@@ -5,18 +5,25 @@ class PhotoDetail extends React.Component {
     super(props);
   }
 
-  componentWillReceiveProps(nextProps){
+  // componentWillReceiveProps(nextProps){
+  //
+  //   if (this.props.match.params.photoId !== nextProps.match.params.photoId) {
+  //     this.props.requestSinglePhoto(nextProps.match.params.photoId);
+  //   }
+  // }
+  //
+  // componentDidMount(){
+  //   this.props.requestSinglePhoto(this.props.match.params.photoId)
+  // }
+  //
+  // componentWillMount(){
+  //   debugger
+  //   this.props.requestSinglePhoto(this.props.photo.id)
+  // }
 
-    if (this.props.match.params.photoId !== nextProps.match.params.photoId) {
-      this.props.requestSinglePhoto(nextProps.match.params.photoId);
-    }
-  }
-
-  componentDidMount(){
-    this.props.requestSinglePhoto(this.props.match.params.photoId)
-  }
 
   render(){
+
     let { img_url, title, description, user } = this.props.photo;
     return (
       <section className="photo-detail">

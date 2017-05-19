@@ -4,16 +4,32 @@ import { withRouter } from 'react-router-dom';
 import { requestSinglePhoto } from '../../actions/photo_actions';
 import { selectPhoto } from '../../reducers/selectors';
 
-const mapStateToProps = ( state, ownProps ) => ({
-  photo: selectPhoto(ownProps.match.params.photoId, state)
-});
-
-const mapDispatchToProps = dispatch => ({
-  requestSinglePhoto: id => dispatch(requestSinglePhoto(id))
-});
-
+// const mapStateToProps = ( state, ownProps ) => ({
+//   photo: state.photo
+// });
+//
+// const mapDispatchToProps = dispatch => ({
+//   requestSinglePhoto: id => dispatch(requestSinglePhoto(id))
+// });
+//
 
 export default withRouter(connect(
-  mapStateToProps,
-  mapDispatchToProps
+  null,
+  null
 )(PhotoDetail));
+
+
+//
+// const mapStateToProps = ( state, ownProps ) => ({
+//   photo: selectPhoto(ownProps.match.params.photoId, state)
+// });
+//
+// const mapDispatchToProps = dispatch => ({
+//   requestSinglePhoto: id => dispatch(requestSinglePhoto(id))
+// });
+//
+//
+// export default withRouter(connect(
+//   mapStateToProps,
+//   mapDispatchToProps
+// )(PhotoDetail));
