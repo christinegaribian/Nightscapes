@@ -22,12 +22,30 @@ class PhotoUploadForm extends React.Component {
     this.handleImageDrop = this.handleImageDrop.bind(this);
     this.upload = this.upload.bind(this);
     this.update = this.update.bind(this);
+    this.renderErrors = this.renderErrors.bind(this);
+  }
+
+
+  renderErrors() {
+    if (this.props.errors){
+      return(
+        <ul className="error">
+          {this.props.errors.map((error, i) => (
+            <li key={`error-${i}`}>
+              {error}
+            </li>
+          ))}
+        </ul>
+      );
+    }
   }
 
   upload(e){
     e.preventDefault();
 
     let file = this.state.uploadedFile;
+
+    // if (file) {}
     let upload = request.post(CLOUDINARY_UPLOAD_URL)
     .field('upload_preset', CLOUDINARY_UPLOAD_PRESET)
     .field('file', file);
@@ -70,6 +88,7 @@ update(field) {
 render(){
   return (
     <section className="photo-upload-container">
+      {this.renderErrors()}
       <form className="photo-upload" onSubmit={this.upload}>
         <div className="file-upload">
           <Dropzone className="file-drop"

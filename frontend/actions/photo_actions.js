@@ -3,6 +3,7 @@ export const RECEIVE_SINGLE_PHOTO = 'RECEIVE_SINGLE_PHOTO';
 export const POST_PHOTO = 'POST_PHOTO';
 export const RECEIVE_NEW_PHOTO = 'RECEIVE_NEW_PHOTO';
 export const RECEIVE_USER_PHOTOS = 'RECEIVE_USER_PHOTOS';
+export const RECEIVE_PHOTO_ERRORS = 'RECEIVE_PHOTO_ERRORS';
 
 import * as PhotoAPIUtil from '../util/photos_api_util';
 
@@ -42,4 +43,9 @@ export const receiveSinglePhoto = photo => ({
 export const receiveNewPhoto = photo => ({
   type: RECEIVE_NEW_PHOTO,
   photo
+});
+
+export const receivePhotoErrors = errors => ({
+  type: RECEIVE_PHOTO_ERRORS,
+  errors
 });

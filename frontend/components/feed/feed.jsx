@@ -13,7 +13,7 @@ class Feed extends React.Component {
   postImage(url){
     var photo = {
       user_id: this.props.currentUser.id,
-      url: url,
+      img_url: url,
 
     }
     this.props.postPhoto(photo);

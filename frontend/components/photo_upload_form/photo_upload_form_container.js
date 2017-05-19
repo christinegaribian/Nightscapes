@@ -1,14 +1,16 @@
 import { connect } from 'react-redux';
 import PhotoUploadForm from './photo_upload_form';
 import { withRouter } from 'react-router-dom';
-import { postPhoto } from '../../actions/photo_actions';
+import { postPhoto, receiveErrors } from '../../actions/photo_actions';
 
 const mapStateToProps = ({ session }) => ({
-  currentUser: session.currentUser
+  currentUser: session.currentUser,
+  errors: session.errors
 });
 
 const mapDispatchToProps = dispatch => ({
-  postPhoto: photo => dispatch(postPhoto(photo))
+  postPhoto: photo => dispatch(postPhoto(photo)),
+  clearErrors: ([]) => dispatch(receiveErrors([]))
 });
 
 

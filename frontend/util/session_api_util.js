@@ -1,6 +1,6 @@
 import {
   receiveCurrentUser,
-  receiveErrors
+  receiveSessionErrors
 } from '../actions/session_actions';
 
 export const signup = user => (
