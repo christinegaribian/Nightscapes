@@ -21,13 +21,16 @@ const my_custom_style = {
     right                      : '150px',
     bottom                     : '150px',
     border                     : 'none',
-    background                 : 'none',
+    background                 : 'black',
     overflow                   : 'none',
     WebkitOverflowScrolling    : 'touch',
     borderRadius               : '4px',
     outline                    : 'none',
-    padding                    : '0'
+    padding                    : '20px'
 
+  },
+  'content:hover' : {
+    cursor : 'pointer'
   }
 }
 
