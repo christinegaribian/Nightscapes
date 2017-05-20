@@ -11,6 +11,9 @@ window.APIUtil = APIUtil;
 import * as PhotoAPIUtil from './util/photos_api_util';
 window.PhotoAPIUtil = PhotoAPIUtil;
 
+import * as UserAPIUtil from './util/users_api_util';
+window.UserAPIUtil = UserAPIUtil;
+
 document.addEventListener('DOMContentLoaded', () => {
   let store;
   if (window.currentUser) {

@@ -11,10 +11,7 @@ class Api::UsersController < ApplicationController
 
 
   def show
-    @user = User.find_by_credentials(
-      params[:user][:username],
-      params[:user][:password]
-    )
+    @user = User.find(params["id"])
 
     if @user
       render 'api/users/show'
@@ -25,6 +22,11 @@ class Api::UsersController < ApplicationController
 
   private
   def user_params
-    params.require(:user).permit(:username, :password, :user_img_url, :user_site_url)
+    params.require(:user).permit(:username,
+                                 :password,
+                                 :views,
+                                 :user_img_url,
+                                 :user_site_url
+                                 )
   end
 end

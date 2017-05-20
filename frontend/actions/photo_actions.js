@@ -24,6 +24,13 @@ export const requestSinglePhoto = (id) => (dispatch) => {
 // return photo;
 
 
+export const requestUserPhotos = (id) => (dispatch) => {
+  return PhotoAPIUtil.fetchUserPhotos(id)
+    .then(photos => (
+    dispatch(receiveAllPhotos(photos))
+  ));
+}
+
 export const postPhoto = photo => dispatch => (
   PhotoAPIUtil.postPhoto(photo).then(photo => {
     dispatch(receiveSinglePhoto(photo));
