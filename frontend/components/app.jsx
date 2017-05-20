@@ -13,7 +13,7 @@ const App = () => (
       <AuthRoute path="/login" component={SessionFormContainer} />
       <AuthRoute path="/signup" component={SessionFormContainer} />
       // <ProtectedRoute path="/home" component={HomeContainer}/>
-      <ProtectedRoute path="/users/" component={HomeContainer}/>
+      <ProtectedRoute path="/users/:userId" component={HomeContainer}/>
       <ProtectedRoute path="/photos/:photoId" component={HomeContainer}/>
       <ProtectedRoute path="/upload" component={HomeContainer}/>
       <ProtectedRoute path="/" component={HomeContainer} />

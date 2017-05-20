@@ -18,9 +18,9 @@ class Home extends React.Component {
       <div className="homepage">
         <NavbarContainer />
         <Switch>
-          <Route exact path='/' component={FeedContainer}/>
-          <Route path='/users' component={UserPageContainer}/>
+          <Route path='/users/:userId' component={UserPageContainer}/>
           <Route path='/photos/:photoId' component={PhotoDetailContainer}/>
+          <Route exact path='/' component={FeedContainer}/>
           // <Route path='/home' component={FeedContainer}/>
         </Switch>
         <Route exact path='/upload' component={PhotoUploadFormContainer}/>
