@@ -1,0 +1,14 @@
+.image-grid {
+  margin: 40px;
+}
+
+.grid-item {
+  width: 33.33%;
+  float: left;
+  margin: 5px;
+
+  img {
+    display: block;
+    width: 100.5%
+  }
+}
