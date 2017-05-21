@@ -28,7 +28,8 @@ const my_custom_style = {
     WebkitOverflowScrolling    : 'touch',
     borderRadius               : '4px',
     outline                    : 'none',
-    padding                    : '20px'
+    padding                    : '20px',
+    transition      : 'opacity 2.5s'
   },
   'content:hover' : {
     cursor : 'pointer'
