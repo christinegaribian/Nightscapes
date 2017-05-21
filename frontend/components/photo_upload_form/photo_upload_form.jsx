@@ -8,7 +8,7 @@ const CLOUDINARY_UPLOAD_URL = 'https://api.cloudinary.com/v1_1/dl091hw7z/upload'
 // later change these to private
 
 
-//can remove thumbnail, because it's going to redirect to main feed instead
+//add thumbnail
 class PhotoUploadForm extends React.Component {
   constructor(props){
     super(props);
@@ -16,7 +16,9 @@ class PhotoUploadForm extends React.Component {
       uploadedFileCloudinaryUrl: '',
       uploadedFile: null,
       title: "",
-      description: ""
+      description: "",
+      height: "",
+      width: ""
     };
 
     this.handleImageDrop = this.handleImageDrop.bind(this);
@@ -44,8 +46,6 @@ class PhotoUploadForm extends React.Component {
     e.preventDefault();
 
     let file = this.state.uploadedFile;
-
-    // if (file) {}
     let upload = request.post(CLOUDINARY_UPLOAD_URL)
     .field('upload_preset', CLOUDINARY_UPLOAD_PRESET)
     .field('file', file);
@@ -57,19 +57,18 @@ class PhotoUploadForm extends React.Component {
 
       if (response.body.secure_url !== '') {
         this.setState({
-          uploadedFileCloudinaryUrl: response.body.secure_url,
-          width: response.body.width,
-          height: response.body.height
+          uploadedFileCloudinaryUrl: response.body.secure_url
         });
         this.props.postPhoto({
           user_id: this.props.currentUser.id,
           img_url: response.body.secure_url,
           title: this.state.title,
-          description: this.state.description
+          description: this.state.description,
+          width: response.body.width,
+          height: response.body.height
         }
       );
       this.props.closeModal();
-      // Add the other parameters in here too
       this.props.history.push('/');
     }
   });

@@ -1,6 +1,7 @@
 import React from 'react';
 import PhotoCollectionItem from './photo_collection_item';
 import { values } from 'lodash';
+import JustifiedLayout from 'justified-layout';
 
 class PhotoCollection extends React.Component {
   constructor(props) {
@@ -11,14 +12,19 @@ class PhotoCollection extends React.Component {
     let photos = this.props.photos;
     let photoCollectionItems = []
     if (!(Object.keys(photos).length === 0 && photos.constructor === Object)) {
-      debugger
-       photoCollectionItems = values(this.props.photos).map(photo =>
-         <PhotoCollectionItem photo={photo} key={photo.created_at} />
-       );
-     }
+      photoCollectionItems = values(photos).map(photo =>
+        <PhotoCollectionItem
+          photo={photo}
+          key={photo.created_at}
+          className="grid-item"
+          />
+      );
+    }
     return (
-      <ul className="grid" id="user-photo-collection">
-       {photoCollectionItems}
+      <ul className="image-grid">
+        <ul className="justified-layout">
+          {photoCollectionItems}
+        </ul>
       </ul>
     );
 
@@ -26,14 +32,11 @@ class PhotoCollection extends React.Component {
   }
 }
 // <li>{user.follower_count}<br />Followers</li>
+// aspectRatio={photo.width / photo.height}
 
-// <PhotoCollectionItem photo={photo} key={photo.created_at} />
-
-
-// <ul className="grid" id="user-photo-collection">
-//  {photoCollectionItems}
-// </ul>
-
+// <JustifiedLayout className="justified-layout" containerWidth={900}>
+//   {photoCollectionItems}
+// </JustifiedLayout>
 
 
 export default PhotoCollection;
