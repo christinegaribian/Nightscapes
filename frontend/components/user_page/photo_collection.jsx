@@ -1,7 +1,12 @@
 import React from 'react';
 import PhotoCollectionItem from './photo_collection_item';
 import { values } from 'lodash';
-import JustifiedLayout from 'justified-layout';
+// import JustifiedLayout from 'justified-layout';
+import Masonry from 'react-masonry-component';
+
+var masonryOptions = {
+    transitionDuration: 0
+};
 
 class PhotoCollection extends React.Component {
   constructor(props) {
@@ -21,11 +26,12 @@ class PhotoCollection extends React.Component {
       );
     }
     return (
-      <ul className="image-grid">
-        <ul className="justified-layout">
+      <Masonry
+        className={'image-grid'}
+        elementType={'ul'}
+        options={masonryOptions}>
           {photoCollectionItems}
-        </ul>
-      </ul>
+      </Masonry>
     );
 
 
