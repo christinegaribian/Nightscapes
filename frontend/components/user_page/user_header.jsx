@@ -6,10 +6,10 @@ class UserHeader extends React.Component {
     super(props);
   }
   //
-  componentDidMount() {
-    debugger
-    this.props.requestTargetUser(this.props.targetUserId);
-  }
+  // componentDidMount() {
+  //   debugger
+  //   this.props.requestTargetUser(this.props.targetUserId);
+  // }
 
   render() {
     let user = this.props.targetUser;

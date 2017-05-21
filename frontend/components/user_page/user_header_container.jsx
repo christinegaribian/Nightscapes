@@ -7,15 +7,14 @@ import { requestTargetUser,
 
 const mapStateToProps = (state, ownProps) => ({
   currentUser: state.session.currentUser,
-  targetUser: state.targetUser,
-  targetUserId: ownProps.targetUserId
+  targetUser: ownProps.targetUser
 });
-
-const mapDispatchToProps = dispatch => ({
-  requestTargetUser : (id) => dispatch(requestTargetUser(id))
-});
+//
+// const mapDispatchToProps = dispatch => ({
+//   requestTargetUser : (id) => dispatch(requestTargetUser(id))
+// });
 
 export default connect(
   mapStateToProps,
-  mapDispatchToProps
+  null
 )(UserHeader);

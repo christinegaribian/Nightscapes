@@ -17,8 +17,7 @@ class UserPage extends React.Component {
       <div className="user-page">
         <div className="user-page-header">
           <UserHeader
-            targetUserId={this.props.match.params.userId}
-            requestTargetUser={this.props.requestTargetUser}
+            targetUser={this.props.targetUser}
             />
         </div>
 
