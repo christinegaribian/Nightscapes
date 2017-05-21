@@ -19,7 +19,7 @@ class Api::PhotosController < ApplicationController
   end
 
   def user_index
-    @photos = Photo.where('user_id = ?', params[:photo][:user_id])
+    @photos = Photo.where('user_id = ?', params[:user_id])
   end
 
   def update
