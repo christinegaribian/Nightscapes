@@ -5,40 +5,31 @@ class UserHeader extends React.Component {
   constructor(props) {
     super(props);
   }
-  //
-  // componentDidMount() {
-  //   debugger
-  //   this.props.requestTargetUser(this.props.targetUserId);
-  // }
 
   render() {
     let user = this.props.targetUser;
 
-    debugger
     if (user === undefined) {
       user = [];
     }
 
-
     return (
       <div className="user-header">
-        <div className="user-header-user">
-          <img
-            className="user-header-badge"
-            src={user.user_img_url}
-          />
-          <div
-            className="user-header-username"
-          >{user.username}</div>
-        </div>
-        <ul>
+        <img className="user-header-avatar"
+          src={user.user_img_url}
+        />
+        <h1 className="user-header-username">
+          {user.username}
+        </h1>
+        <ul className="user-header-stats">
           <li>{user.photo_count}<br />Photos</li>
-          <li>{user.follower_count}<br />Followers</li>
           <li>{user.views}<br />Views</li>
         </ul>
       </div>
     );
   }
 }
+// <li>{user.follower_count}<br />Followers</li>
+
 
 export default UserHeader;

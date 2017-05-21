@@ -1,6 +1,5 @@
 import { connect } from 'react-redux';
 import UserPage from './user_page';
-import { logout } from '../../actions/session_actions';
 import { requestTargetUserPhotos } from '../../actions/photo_actions';
 import { requestTargetUser
        } from '../../actions/user_actions';
