@@ -1,9 +1,12 @@
-import { REQUEST_TARGET_USER,
+import {
          RECEIVE_TARGET_USER
        } from '../actions/user_actions';
 import merge from 'lodash/merge';
 
-const UserReducer = function(state = {}, action){
+
+
+const UserReducer = (state = {}, action) => {
+  Object.freeze(state);
   switch(action.type){
     case RECEIVE_TARGET_USER:
       return action.targetUser;

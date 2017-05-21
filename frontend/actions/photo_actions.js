@@ -24,7 +24,7 @@ export const requestSinglePhoto = (id) => (dispatch) => {
 // return photo;
 
 
-export const requestUserPhotos = (id) => (dispatch) => {
+export const requestTargetUserPhotos = (id) => (dispatch) => {
   return PhotoAPIUtil.fetchUserPhotos(id)
     .then(photos => (
     dispatch(receiveAllPhotos(photos))

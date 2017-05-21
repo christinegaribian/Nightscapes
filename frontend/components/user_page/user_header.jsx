@@ -5,7 +5,7 @@ class UserHeader extends React.Component {
   constructor(props) {
     super(props);
   }
-
+  //
   componentDidMount() {
     debugger
     this.props.requestTargetUser(this.props.targetUserId);
@@ -15,9 +15,10 @@ class UserHeader extends React.Component {
     let user = this.props.targetUser;
 
     debugger
-    if (this.props.targetUserId === undefined) {
+    if (user === undefined) {
       user = [];
     }
+
 
     return (
       <div className="user-header">

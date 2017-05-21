@@ -7,10 +7,13 @@ class UserPage extends React.Component {
     super(props);
   }
 
+  componentDidMount() {
+    this.props.requestTargetUser(this.props.match.params.userId);
+  }
+
   render(){
     let currentUser = this.props.currentUser;
-    debugger
-    return ( 
+    return (
       <div className="user-page">
         <div className="user-page-header">
           <UserHeader

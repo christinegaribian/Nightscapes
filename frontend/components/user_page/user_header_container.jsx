@@ -1,22 +1,21 @@
 import { connect } from 'react-redux';
-import UserPage from './user_page';
-import { logout } from '../../actions/session_actions';
+import UserHeader from './user_header';
 import { requestTargetUserPhotos } from '../../actions/photo_actions';
-import { requestTargetUser
+import { requestTargetUser,
+         receiveTargetUser
        } from '../../actions/user_actions';
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = (state, ownProps) => ({
   currentUser: state.session.currentUser,
-  photos: state.photos,
-  targetUser: state.targetUser
+  targetUser: state.targetUser,
+  targetUserId: ownProps.targetUserId
 });
 
 const mapDispatchToProps = dispatch => ({
-  requestTargetUserPhotos : (id) => dispatch(requestTargetUserPhotos(id)),
   requestTargetUser : (id) => dispatch(requestTargetUser(id))
 });
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(UserPage);
+)(UserHeader);

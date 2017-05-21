@@ -10,13 +10,12 @@ export const RECEIVE_TARGET_USER = 'RECEIVE_TARGET_USER';
 //   id
 // })
 
-export const receieveTargetUser = user => ({
+export const receiveTargetUser = user => ({
   type: RECEIVE_TARGET_USER,
-  user
+  targetUser: user
 })
 
 export const requestTargetUser = (id) => (dispatch) => {
-  return UserAPIUtil.fetchTargetUser(id).then(user => {
-    dispatch(receiveTargetUser(user));
-  });
+  return UserAPIUtil.fetchTargetUser(id).then(user =>
+    dispatch(receiveTargetUser(user)));
 }
