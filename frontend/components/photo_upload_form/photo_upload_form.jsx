@@ -97,10 +97,16 @@ render(){
             multiple={false}
             accept="image/*"
             onDrop={this.handleImageDrop}>
-            <p>Drop an image or click to select a file.</p>
-            <i className="fa fa-camera-retro"
-              aria-hidden="true"
-              id="camera-icon"></i>
+            {this.state.uploadedFile === null ?
+              <div className="pre-uploading">
+                <div className="upload-text">Drop an image or click to select a file.</div>
+                <i className="fa fa-camera-retro"
+                  aria-hidden="true"
+                  id="camera-icon"></i>
+              </div>
+              :
+              <img className="image-thumbnail" src={this.state.uploadedFile.preview}/>
+            }
           </Dropzone>
         </div>
 
