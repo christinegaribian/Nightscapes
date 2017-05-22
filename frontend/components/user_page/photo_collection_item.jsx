@@ -69,7 +69,7 @@ class PhotoCollectionItem extends React.Component {
     return (
       <li className="grid-item">
         <img src={img_url} alt={title} onClick={this.onOpenModal}/>
-
+        <p>{title}</p>
         <Modal isOpen={open}
           onRequestClose={this.onCloseModal}
           contentLabel="Modal"

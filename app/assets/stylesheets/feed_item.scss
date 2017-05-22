@@ -26,3 +26,11 @@
     font-size: 15px;
   }
 }
+
+
+.feed-item img:hover {
+  color: black;
+  cursor: pointer;
+  opacity: 0.3;
+  transition: all .20s ease-in-out;
+}
