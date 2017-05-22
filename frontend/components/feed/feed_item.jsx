@@ -29,9 +29,10 @@ const my_custom_style = {
     outline                    : 'none',
     padding                    : '40px',
     width                      : '900px',
-    boxShadow                 : 'rgba(169, 169, 169, 0.37) 5px 5px 5px 0px',
+    boxShadow                  : 'rgba(169, 169, 169, 0.37) 5px 5px 5px 0px',
     opacity                    : '100',
-    transition: 'opacity 2.5s ease'
+    maxWidth                   : '50%',
+    transition                 : 'opacity 2.5s ease'
 
   },
   'content:hover' : {

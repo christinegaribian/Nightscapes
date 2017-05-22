@@ -32,12 +32,11 @@ export const requestTargetUserPhotos = (id) => (dispatch) => {
 }
 
 export const postPhoto = photo => dispatch => (
-  PhotoAPIUtil.postPhoto(photo).then(photo => {
-    dispatch(receiveSinglePhoto(photo));
-    return photo;
-  })
-);
-// .fail(err => dispatch(receivePhotosErrors(err.responseJSON)))
+    PhotoAPIUtil.postPhoto(photo).then(photo => (
+      dispatch(receiveSinglePhoto(photo))
+    )
+  ).fail(err => dispatch(receivePhotoErrors(err.responseJSON)))
+)
 
 export const receiveAllPhotos = photos => ({
   type: RECEIVE_ALL_PHOTOS,

@@ -4,7 +4,7 @@ class Api::PhotosController < ApplicationController
     # @photo.user_id = current_user.id
 
     if @photo.save
-      render 'api/photos/show'
+      render "api/photos/show"
     else
       render json: @photo.errors.full_messages, status: 422
     end

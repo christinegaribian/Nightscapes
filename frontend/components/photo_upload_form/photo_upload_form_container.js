@@ -3,9 +3,9 @@ import PhotoUploadForm from './photo_upload_form';
 import { withRouter } from 'react-router-dom';
 import { postPhoto, receiveErrors } from '../../actions/photo_actions';
 
-const mapStateToProps = ({ session }, {closeModal}) => ({
-  currentUser: session.currentUser,
-  errors: session.errors,
+const mapStateToProps = (state, {closeModal}) => ({
+  currentUser: state.session.currentUser,
+  errors: state.errors,
   closeModal
 });
 
