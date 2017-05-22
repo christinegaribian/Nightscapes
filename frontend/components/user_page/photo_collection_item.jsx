@@ -67,8 +67,8 @@ class PhotoCollectionItem extends React.Component {
     const { open } = this.state;
     let {id, img_url, title, description} = this.props.photo;
     return (
-      <li className="grid-item">
-        <img src={img_url} alt={title} onClick={this.onOpenModal}/>
+      <li className="grid-item" onClick={this.onOpenModal}>
+        <img src={img_url} alt={title} />
         <p>{title}</p>
         <Modal isOpen={open}
           onRequestClose={this.onCloseModal}

@@ -14,7 +14,6 @@ const my_custom_style = {
     display           : 'flex',
     alignItems       : 'center',
     justifyContent   : 'center',
-    width :'100%',
     padding            : '10px'
   },
   content : {
@@ -31,13 +30,12 @@ const my_custom_style = {
     borderRadius               : '20px',
     outline                    : 'none',
     padding                    : '40px',
-    maxWidth                      : '1024px',
     marginBottom              : '0px',
+    marginTop                  : '50px',
     boxShadow                  : 'rgba(169, 169, 169, 0.37) 5px 5px 5px 0px',
     opacity                    : '100',
-    maxWidth                   : '50%',
-    transition                 : 'opacity 2.5s ease'
-
+    transition                 : 'opacity 2.5s ease',
+    width                      : '80vh'
   },
   'content:hover' : {
     cursor : 'pointer'

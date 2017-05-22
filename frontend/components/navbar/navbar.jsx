@@ -60,7 +60,7 @@ class Navbar extends React.Component {
   componentWillMount(){
     Modal.setAppElement('body')
   }
-  
+
   componentDidMount () {
     window.scrollTo(0, 0)
   }
