@@ -43,9 +43,11 @@ class Navbar extends React.Component {
     super(props);
     this.onOpenModal = this.onOpenModal.bind(this);
     this.onCloseModal = this.onCloseModal.bind(this);
+    this.handleLogoClick = this.handleLogoClick.bind(this);
     this.state = {
       open: false,
     };
+
   }
 
   onOpenModal() {
@@ -61,8 +63,16 @@ class Navbar extends React.Component {
     Modal.setAppElement('body')
   }
 
-  componentDidMount () {
+  componentDidMount (){
     window.scrollTo(0, 0)
+  }
+
+  handleLogoClick(){
+    if (this.props.location.pathname === "/"){
+      window.scrollTo(0, 0);
+    } else {
+      this.props.history.push("/");
+    }
   }
 
   render(){
@@ -71,12 +81,12 @@ class Navbar extends React.Component {
 
     return (
       <nav className="navbar">
-        <div className="left">
+        <div className="left" onClick={this.handleLogoClick}>
           <img className="logo"
             alt="Nightscapes logo"
             src="http://res.cloudinary.com/dl091hw7z/image/upload/v1495057579/white_planet_epysbv.png"
             />
-          <Link to="/">NIGHTSCAPES</Link>
+          <p >NIGHTSCAPES</p>
         </div>
 
         <div className="right">

@@ -28,6 +28,7 @@ class Feed extends React.Component {
 
      return (
        <ul className="feed">
+         <li id="top"></li>
         {feedItems}
        </ul>
      );
