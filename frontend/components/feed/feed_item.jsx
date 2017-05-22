@@ -69,7 +69,7 @@ class FeedItem extends React.Component {
 
   render(){
     const { open } = this.state;
-    let {id, img_url, title, description} = this.props.photo;
+    let {id, img_url, title, description, user} = this.props.photo;
     return (
       <li className="feed-item">
         <img src={img_url} alt={title} onClick={this.onOpenModal}/>
@@ -86,7 +86,13 @@ class FeedItem extends React.Component {
         </Modal>
 
         <div>
-          <h2 className="feed-item-title">{title}</h2>
+          <div className="feed-item-header">
+            <h2 className="feed-item-title">{title}</h2>
+            <div className="feed-item-author">
+              <img src={user.img_url}></img>
+              <h3>{user.username}</h3>
+            </div>
+          </div>
           <h3 className="feed-item-description">{description}</h3>
         </div>
       </li>

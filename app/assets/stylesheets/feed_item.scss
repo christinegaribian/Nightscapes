@@ -34,3 +34,21 @@
   opacity: 0.3;
   transition: all .20s ease-in-out;
 }
+
+.feed-item-author img {
+  width: 8%;
+}
+
+.feed-item-header {
+  display: flex;
+
+  .feed-item-title, .feed-item-author {
+    flex: 1
+  }
+
+  .feed-item-author {
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-end;
+  }
+}
