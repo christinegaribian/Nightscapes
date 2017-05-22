@@ -25,7 +25,6 @@ class PhotoUploadForm extends React.Component {
     this.upload = this.upload.bind(this);
     this.update = this.update.bind(this);
     this.renderErrors = this.renderErrors.bind(this);
-    this.handleClosingModal = this.handleClosingModal.bind(this);
   }
 
 
@@ -46,43 +45,36 @@ class PhotoUploadForm extends React.Component {
     let file = this.state.uploadedFile;
     if (!file){
       alert('Please select an image to upload, or wait for your image to finish uploading.');
-    } else {
-
-      let upload = request.post(CLOUDINARY_UPLOAD_URL)
-      .field('upload_preset', CLOUDINARY_UPLOAD_PRESET)
-      .field('file', file);
-
-      upload.end((err, response) => {
-        if (err) {
-          console.error(err);
-        }
-        if (response.body.secure_url !== '' && !err){
-          this.setState({
-            uploadedFileCloudinaryUrl: response.body.secure_url
-          });
-          this.props.postPhoto({
-            user_id: this.props.currentUser.id,
-            img_url: response.body.secure_url,
-            title: this.state.title,
-            description: this.state.description,
-            width: response.body.width,
-            height: response.body.height
-          }, (e) => {
-            this.handleClosingModal();
-          });
-        }
-      });
+      return;
     }
-  }
-
-  handleClosingModal(){
-    debugger
-    if (this.props.errors[0] != null){
-      this.renderErrors();
-    } else {
-      this.props.closeModal();
-      this.props.history.push('/');
+    if (this.state.title === ""){
+      alert('Title can\'t be blank')
+      return;
     }
+
+    let upload = request.post(CLOUDINARY_UPLOAD_URL)
+    .field('upload_preset', CLOUDINARY_UPLOAD_PRESET)
+    .field('file', file);
+
+    upload.end((err, response) => {
+      if (err) {
+        console.error(err);
+      }
+      if (response.body.secure_url !== '' && !err){
+        this.setState({
+          uploadedFileCloudinaryUrl: response.body.secure_url
+        });
+        this.props.postPhoto({
+          user_id: this.props.currentUser.id,
+          img_url: response.body.secure_url,
+          title: this.state.title,
+          description: this.state.description,
+          width: response.body.width,
+          height: response.body.height
+        });
+      }
+    });
+    this.props.closeModal();
   }
 
   handleImageDrop(files) {

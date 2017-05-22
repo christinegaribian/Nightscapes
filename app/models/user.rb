@@ -11,6 +11,10 @@ class User < ApplicationRecord
 
   has_many :photos
 
+  def photo_count
+    self.photos.count
+  end
+
 	def password=(password)
 		self.password_digest = BCrypt::Password.create(password)
 		@password = password
