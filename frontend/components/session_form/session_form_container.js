@@ -4,7 +4,7 @@ import { login, logout, signup, receiveSessionErrors } from '../../actions/sessi
 
 const  mapStateToProps = (state) => ({
   loggedIn: Boolean(state.session.currentUser),
-  errors: state.session.errors
+  errors: state.errors
 });
 
 const mapDispatchToProps = (dispatch, ownProps) => {

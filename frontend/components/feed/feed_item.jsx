@@ -70,9 +70,19 @@ class FeedItem extends React.Component {
   render(){
     const { open } = this.state;
     let {id, img_url, title, description, user} = this.props.photo;
+    let user_url;
+    if (!!user) {
+      user_url = `/users/${user.id}`;
+    } else {
+      user_url = "";
+    }
     return (
       <li className="feed-item">
-        <img src={img_url} alt={title} onClick={this.onOpenModal}/>
+        <img src={img_url}
+          className="main-image"
+          alt={title}
+          onClick={this.onOpenModal}
+          />
 
         <Modal isOpen={open}
           onRequestClose={this.onCloseModal}
@@ -88,11 +98,11 @@ class FeedItem extends React.Component {
         <div>
           <div className="feed-item-header">
             <h2 className="feed-item-title">{title}</h2>
-            <div className="feed-item-author">
+            <Link to={user_url}>
               <img src={user.img_url}></img>
-              <h3>{user.username}</h3>
-            </div>
+            </Link>
           </div>
+
           <h3 className="feed-item-description">{description}</h3>
         </div>
       </li>
