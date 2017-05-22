@@ -12,7 +12,6 @@ class UserHeader extends React.Component {
     if (user === undefined) {
       user = [];
     }
-    debugger
     return (
       <div className="user-header">
         <img className="user-header-avatar"

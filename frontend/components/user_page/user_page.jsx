@@ -14,7 +14,9 @@ class UserPage extends React.Component {
     let targetUserId = this.props.match.params.userId;
     this.props.requestTargetUser(targetUserId);
     this.props.requestTargetUserPhotos(targetUserId);
+    window.scrollTo(0, 0)
   }
+
 
   render(){
     let currentUser = this.props.currentUser;

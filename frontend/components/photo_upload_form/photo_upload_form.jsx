@@ -29,7 +29,6 @@ class PhotoUploadForm extends React.Component {
 
 
   renderErrors() {
-    debugger
     if (this.props.errors[0] != null){
       alert(`Error! ${this.props.errors}`)
     }
