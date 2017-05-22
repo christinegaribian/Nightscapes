@@ -8,26 +8,31 @@ const my_custom_style = {
     left              : 0,
     right             : 0,
     bottom            : 0,
+    height             : '100%',
     backgroundColor   : 'rgba(0, 0, 0, 0.85)',
     display           : 'flex',
     alignItems       : 'center',
-    justifyContent   : 'center'
+    justifyContent   : 'center',
+    padding            : '10px'
+
   },
   content : {
-    position                   : 'initial',
+    position                   : 'relative',
     fontFamily                 : '"Julius Sans One", sans-serif',
-    top                        : '150px',
-    left                       : '150px',
-    right                      : '150px',
-    bottom                     : '150px',
+    top                        : '0',
+    left                       : '0',
+    right                      : '0',
+    bottom                     : '0',
     border                     : '1px solid grey',
     background                 : 'black',
     overflow                   : 'none',
+    height                      : '80%',
     WebkitOverflowScrolling    : 'touch',
     borderRadius               : '20px',
     outline                    : 'none',
     padding                    : '40px',
-    width                      : '900px',
+    marginTop                   : '50px',
+    width                      : '80vh',
     boxShadow                 : 'rgba(169, 169, 169, 0.37) 5px 5px 5px 0px',
     opacity                    : '100',
     transition: 'opacity 2.5s ease'
@@ -74,7 +79,7 @@ class PhotoCollectionItem extends React.Component {
           onRequestClose={this.onCloseModal}
           contentLabel="Modal"
           style={my_custom_style}>
-          <img src={img_url} alt={title}/>
+          <img src={img_url} alt={title} className="grid-item-image"/>
         </Modal>
       </li>
     );
