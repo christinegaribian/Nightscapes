@@ -26,7 +26,7 @@ const my_custom_style = {
     border                     : '1px solid grey',
     background                 : 'black',
     overflow                   : 'none',
-    height                      : '80%',
+    height                      : '70%',
     WebkitOverflowScrolling    : 'touch',
     borderRadius               : '20px',
     outline                    : 'none',
@@ -79,7 +79,7 @@ class PhotoCollectionItem extends React.Component {
           onRequestClose={this.onCloseModal}
           contentLabel="Modal"
           style={my_custom_style}>
-          <img src={img_url} alt={title} className="grid-item-image"/>
+          <img src={img_url} alt={title} className="grid-item-modal-image"/>
         </Modal>
       </li>
     );
