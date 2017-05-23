@@ -5,14 +5,14 @@ import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import Root from './components/root';
 
-import * as APIUtil from './util/session_api_util';
+import * as APIUtil from './util/follow_api_util';
 window.APIUtil = APIUtil;
-
-import * as PhotoAPIUtil from './util/photos_api_util';
-window.PhotoAPIUtil = PhotoAPIUtil;
-
-import * as UserAPIUtil from './util/users_api_util';
-window.UserAPIUtil = UserAPIUtil;
+//
+// import * as PhotoAPIUtil from './util/photos_api_util';
+// window.PhotoAPIUtil = PhotoAPIUtil;
+//
+// import * as UserAPIUtil from './util/users_api_util';
+// window.UserAPIUtil = UserAPIUtil;
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;

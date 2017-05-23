@@ -8,7 +8,7 @@ export const unfollow = id => (
 
 export const changeFollowStatus = (id, method) => (
   $.ajax({
-    url: `api/users/${id}/follow`,
+    url: `api/users/${id}/follows`,
     method
   })
 );
