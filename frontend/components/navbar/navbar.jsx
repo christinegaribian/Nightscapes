@@ -84,7 +84,7 @@ class Navbar extends React.Component {
         <div className="left" onClick={this.handleLogoClick}>
           <img className="logo"
             alt="Nightscapes logo"
-            src="http://res.cloudinary.com/dl091hw7z/image/upload/v1495057579/white_planet_epysbv.png"
+            src="http://res.cloudinary.com/dl091hw7z/image/upload/v1495504658/apxpfouv5ikgzfk94ljf.png"
             />
           <p >NIGHTSCAPES</p>
         </div>
