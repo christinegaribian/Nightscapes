@@ -12,6 +12,8 @@ class Api::UsersController < ApplicationController
 
   def show
     @user = User.find(params["id"])
+    # @user.add_one_view
+    render 'api/users/show'
   end
 
   private

@@ -13,9 +13,9 @@ const ErrorReducer = (state = [], action) => {
   const errors = action.errors;
   switch (action.type) {
     case RECEIVE_PHOTO_ERRORS:
-      return merge({}, state, errors);
+      return merge([], state, errors);
     case RECEIVE_SESSION_ERRORS:
-      return merge({}, state, errors);
+      return merge([], state, errors);
     default:
       return state;
   }

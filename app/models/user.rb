@@ -15,6 +15,12 @@ class User < ApplicationRecord
     self.photos.count
   end
 
+  def add_one_view
+    self.views += 1
+    self.save
+    self
+  end
+
 	def password=(password)
 		self.password_digest = BCrypt::Password.create(password)
 		@password = password

@@ -34,7 +34,6 @@ const my_custom_style = {
     marginTop                  : '50px',
     boxShadow                  : 'rgba(169, 169, 169, 0.37) 5px 5px 5px 0px',
     opacity                    : '100',
-    transition                 : 'opacity 2.5s ease',
     width                      : '80vh'
   },
   'content:hover' : {
@@ -85,6 +84,7 @@ class FeedItem extends React.Component {
           />
 
         <Modal isOpen={open}
+          className="photo-show-modal"
           onRequestClose={this.onCloseModal}
           contentLabel="Modal"
           style={my_custom_style}>

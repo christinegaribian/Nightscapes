@@ -60,9 +60,6 @@ class PhotoUploadForm extends React.Component {
         console.error(err);
       }
       if (response.body.secure_url !== '' && !err){
-        this.setState({
-          uploadedFileCloudinaryUrl: response.body.secure_url
-        });
         this.props.postPhoto({
           user_id: this.props.currentUser.id,
           img_url: response.body.secure_url,
