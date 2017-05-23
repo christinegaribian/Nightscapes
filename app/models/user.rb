@@ -29,7 +29,6 @@ class User < ApplicationRecord
     through: :follows,
     source: :followee
 
-
   def photo_count
     self.photos.count
   end
