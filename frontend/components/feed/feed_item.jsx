@@ -98,7 +98,7 @@ class FeedItem extends React.Component {
         <div>
           <div className="feed-item-header">
             <h2 className="feed-item-title">{title}</h2>
-            <Link to={user_url}>
+            <Link to={user_url} className="feed-item-user">
               <h3>{user.username}</h3>
               <img src={user.img_url}></img>
             </Link>
