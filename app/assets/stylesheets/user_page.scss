@@ -15,15 +15,16 @@
 
 .user-header-stats {
   display: flex;
+  width: 40%;
   border: 1px solid grey;
   margin-top: 20px;
 
 
   li {
     font-size: 80%;
+    flex: 1;
     text-align: center;
     padding: 10px 20px;
-    width: 50%;
   }
 
   li:first-child {

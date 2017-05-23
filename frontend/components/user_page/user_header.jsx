@@ -23,12 +23,12 @@ class UserHeader extends React.Component {
         <ul className="user-header-stats">
           <li>{user.photo_count}<br />Photos</li>
           <li>{user.views}<br />Views</li>
+          <li>{user.follower_count}<br />Followers</li>
         </ul>
       </div>
     );
   }
 }
-// <li>{user.follower_count}<br />Followers</li>
 
 
 export default UserHeader;
