@@ -4,9 +4,9 @@ Rails.application.routes.draw do
 
   namespace :api, defaults: {format: :json} do
     resources :users, only: [:create, :update, :show] do
+      resource :follow, only: [:destroy, :create]
       resources :photos, only: [:create]
       get '/photos', to: 'photos#user_index'
-      resources :follows, only: [:create, :destroy]
     end
     resource :session, only: [:create, :destroy, :show]
     resources :photos, except: [:create]

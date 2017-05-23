@@ -4,6 +4,7 @@ import * as FollowAPIUtil from '../util/follow_api_util';
 export const CREATE_FOLLOW = 'CREATE_FOLLOW';
 export const DELETE_FOLLOW = 'DELETE_FOLLOW';
 
+
 export const createFollow = follow => ({
   type: CREATE_FOLLOW,
   follow
