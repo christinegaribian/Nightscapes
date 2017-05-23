@@ -23,7 +23,7 @@
   }
 
   h3 {
-    font-size: 15px;
+    font-size: 16px;
   }
 }
 
@@ -39,7 +39,7 @@
 .feed-item-header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 
   img {
     width: 100%;
@@ -47,5 +47,8 @@
 
   a {
     width: 30px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
   }
 }
