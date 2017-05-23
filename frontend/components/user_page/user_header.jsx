@@ -1,5 +1,5 @@
 import React from 'react';
-
+import FollowButtonContainer from '../follow_button/follow_button_container';
 
 class UserHeader extends React.Component {
   constructor(props) {
@@ -8,7 +8,6 @@ class UserHeader extends React.Component {
 
   render() {
     let user = this.props.targetUser;
-
     if (user === undefined) {
       user = [];
     }
@@ -25,6 +24,7 @@ class UserHeader extends React.Component {
           <li>{user.views}<br />Views</li>
           <li>{user.follower_count}<br />Followers</li>
         </ul>
+        <FollowButtonContainer targetUser={this.props.targetUser}/>
       </div>
     );
   }

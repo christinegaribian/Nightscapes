@@ -1,5 +1,5 @@
 import * as FollowAPIUtil from '../util/follow_api_util';
-
+import { receiveTargetUser } from './user_actions';
 
 export const CREATE_FOLLOW = 'CREATE_FOLLOW';
 export const DELETE_FOLLOW = 'DELETE_FOLLOW';
@@ -18,10 +18,10 @@ export const deleteFollow = follow => ({
 
 export const followUser = id => dispatch => (
   FollowAPIUtil.follow(id)
-    .then(follow => dispatch(createFollow(follow)))
+    .then(user => dispatch(receiveTargetUser(user)))
 );
 
 export const unfollowUser = id => dispatch => (
   FollowAPIUtil.unfollow(id)
-    .then(follow => dispatch(deleteFollow(follow)))
+    .then(user => dispatch(receiveTargetUser(user)))
 )

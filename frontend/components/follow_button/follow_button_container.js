@@ -1,15 +1,23 @@
-import React from 'react';
 
-class FollowButton extends React.Component {
-  constructor(props){
-    super(props);
-  }
+import { connect } from 'react-redux';
+import FollowButton from './follow_button';
+import { followUser,
+         unfollowUser
+       } from '../../actions/follow_actions';
+import {idsSelector} from '../../util/selectors';
 
-  render(){
-    return (
-      <h1>I am a follow button!</h1>
-    )
-  }
-}
+const mapStateToProps = (state, ownProps) => ({
+  currentUserId: state.session.currentUser.id,
+  targetUser: ownProps.targetUser
+});
+// followerIds: idsSelector(state.targetUser.followers)
 
-export default FollowButton;
+const mapDispatchToProps = (dispatch) =>  ({
+    followUser: (id) => dispatch(followUser(id)),
+    unfollowUser: (id) => dispatch(unfollowUser(id))
+});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(FollowButton);
