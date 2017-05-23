@@ -1,0 +1,2 @@
+class ChangeDefaultUserPicture < ApplicationRecord
+end
