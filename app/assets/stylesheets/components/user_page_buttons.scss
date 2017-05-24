@@ -1,5 +1,5 @@
 
-.follow-button {
+.follow-button, .edit-profile-button {
   padding: 9px 9px;
   border-radius: 8px;
   background-color: black;
@@ -10,11 +10,11 @@
 }
 
 
-.follow-button:hover {
+.follow-button:hover, .edit-profile-button:hover {
   border: 1px solid #FFFFFF;
   color: #FFFFFF;
   box-shadow: 0px 0px 0px 1px;
 }
-.follow-button:focus{
+.follow-button:focus, .edit-profile-button:focus {
     outline: none;
 }

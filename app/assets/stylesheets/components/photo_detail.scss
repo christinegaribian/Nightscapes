@@ -8,9 +8,27 @@
 //   margin-bottom: 30px;
 // }
 
+.photo-detail-user {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  img {
+    width: 7%;
+    margin-bottom: 20px;
+
+  }
+}
+
+.photo-detail-user:hover {
+  cursor: pointer;
+  opacity: 0.3;
+  transition: all .20s ease-in-out;
+}
+
 .photo-detail-figure {
   max-height: 75vmin;
-  max-width: 50%;
+  max-width: 70%;
   // padding-right: 8%;
   // border-right: 1px solid lightgray;
 }
@@ -23,6 +41,19 @@
 
 .photo-detail-info {
   text-align: right;
+
+
+    h1 {
+      font-size: 5vmin;
+      margin-bottom: 20px;
+
+    }
+
+    h2 {
+      font-size: 3vmin;
+      margin-bottom: 20px;
+
+    }
 }
 
 .photo-detail-info li:nth-of-type(1){

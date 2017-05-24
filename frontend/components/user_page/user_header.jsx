@@ -1,5 +1,6 @@
 import React from 'react';
 import FollowButtonContainer from '../follow_button/follow_button_container';
+import EditProfileButton from './edit_profile_button';
 
 class UserHeader extends React.Component {
   constructor(props) {
@@ -11,6 +12,7 @@ class UserHeader extends React.Component {
     if (user === undefined) {
       user = [];
     }
+
     return (
       <div className="user-header">
         <img className="user-header-avatar"
@@ -19,7 +21,10 @@ class UserHeader extends React.Component {
         <div className="user-header-info">
           <div className="user-header-username-follow">
             <h1>{user.username}</h1>
-            <FollowButtonContainer targetUser={this.props.targetUser}/>
+            <div>
+              <EditProfileButton targetUser={this.props.targetUser} currentUser={this.props.currentUser}/>
+              <FollowButtonContainer targetUser={this.props.targetUser}/>
+            </div>
           </div>
 
           <ul className="user-header-stats">
@@ -28,7 +33,7 @@ class UserHeader extends React.Component {
             <li>{user.follower_count}<br />Followers</li>
           </ul>
 
-          <p>{user.bio}</p>
+          <p className="user-bio">About Me: {user.bio}</p>
         </div>
       </div>
     );

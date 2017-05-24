@@ -19,25 +19,19 @@ const my_custom_style = {
     zIndex                     : '1'
   },
   content : {
-    position                   : 'relative',
+    position                   : 'absolute',
     fontFamily                 : '"Julius Sans One", sans-serif',
-    top                        : '0',
-    left                       : '0',
-    right                      : '0',
-    bottom                     : '0',
+    top                        : '40px',
+    left                       : '40px',
+    right                      : '40px',
+    bottom                     : '40px',
     border                     : '1px solid grey',
     background                 : 'black',
-    overflow                   : 'none',
-    height                      : '70%',
+    overflow                   : 'auto',
     WebkitOverflowScrolling    : 'touch',
     borderRadius               : '20px',
     outline                    : 'none',
-    padding                    : '40px',
-    marginBottom              : '0px',
-    opacity                    : '100',
-    width                      : '60%',
-    height                  : '75%',
-    marginTop                  : '8vmin'
+    padding                    : '20px'
   },
   'content:hover' : {
     cursor : 'pointer'

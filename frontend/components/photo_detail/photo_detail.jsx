@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class PhotoDetail extends React.Component {
   constructor(props){
@@ -28,10 +29,14 @@ class PhotoDetail extends React.Component {
     return (
       <section className="photo-detail">
         <img className="photo-detail-figure" src={img_url} alt={title}/>
-        <ul className="photo-detail-info">
-          <li>{title}</li>
-          <li>{description}</li>
-        </ul>
+        <section className="photo-detail-info">
+            <Link to={`/users/${user.id}`} className="photo-detail-user">
+              <span>{user.username}</span>
+              <img src={user.img_url}/>
+            </Link>
+          <h1>{title}</h1>
+          <h2>{description}</h2>
+        </section>
       </section>
     );
   }

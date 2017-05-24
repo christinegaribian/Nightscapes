@@ -28,7 +28,6 @@ const my_custom_style = {
     border                     : '1px solid grey',
     background                 : 'black',
     overflow                   : 'none',
-    height                      : '70%',
     WebkitOverflowScrolling    : 'touch',
     borderRadius               : '20px',
     outline                    : 'none',
@@ -43,6 +42,7 @@ const my_custom_style = {
     cursor : 'pointer'
   }
 }
+
 
 class PhotoCollectionItem extends React.Component {
   constructor(props){
