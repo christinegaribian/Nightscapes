@@ -13,10 +13,13 @@ class PhotoCollection extends React.Component {
   componentDidMount(){
     $("#gallery").justifiedGallery({
       rowHeight : 250,
+      maxRowHeight: 0,
       lastRow : 'justify',
       margins : 15,
       border: 150,
-      captions : false
+      cssAnimation: true,
+      captions : false,
+      refreshtime: 100
     });
   }
 

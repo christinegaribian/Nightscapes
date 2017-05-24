@@ -28,8 +28,7 @@ const my_custom_style = {
     background                 : 'black',
     border                     : 'none',
     overflow                   : 'none',
-    WebkitOverflowScrolling    : 'touch',
-    opacity                    : '100'
+    WebkitOverflowScrolling    : 'touch'
   },
   'content:hover' : {
     cursor : 'pointer'
