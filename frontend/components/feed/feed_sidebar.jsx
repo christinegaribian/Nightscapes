@@ -15,9 +15,20 @@ class FeedSidebar extends React.Component {
           targetUser={this.props.currentUser}/>
         <FollowBoxContainer className="follow-header"
           targetUser={this.props.currentUser}/>
+        <div className="personal-info">
+
+          <p>Check out the Github</p>
+          <p>Check out my LinkedIn</p>
+          <p>Check out my Site</p>
+        </div>
       </div>
     )
   }
 }
+
+// // <span className="about">
+//   <h1>About Nightscapes:</h1>
+//   <p>Nightscapes was born from ......</p>
+// </span>
 
 export default FeedSidebar;
