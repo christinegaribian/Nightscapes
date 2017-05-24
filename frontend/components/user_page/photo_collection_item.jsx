@@ -10,7 +10,7 @@ const my_custom_style = {
     bottom            : 0,
     height             : '100%',
     width             : '100%',
-    backgroundColor   : 'rgba(87, 87, 87, 0.54)',
+    backgroundColor   : 'rgba(216,216,216, 0.1)',
     display           : 'flex',
     alignItems       : 'center',
     justifyContent   : 'center',

@@ -8,5 +8,6 @@ json.extract! @user, :id,
                      :photo_count,
                      :follower_count,
                      :followers,
-                     :followees
+                     :followees,
+                     :bio
 # json.extract! @user, :username, :user_img_url

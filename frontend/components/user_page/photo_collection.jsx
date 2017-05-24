@@ -6,9 +6,9 @@ class PhotoCollection extends React.Component {
   constructor(props) {
     super(props);
   }
-  componentDidUpdate() {
-    $("#gallery").justifiedGallery("norewind");
-  }
+  // componentDidUpdate() {
+  //   $("#gallery").justifiedGallery("norewind");
+  // }
 
   componentDidMount(){
     $("#gallery").justifiedGallery({

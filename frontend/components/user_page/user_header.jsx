@@ -21,12 +21,14 @@ class UserHeader extends React.Component {
             <h1>{user.username}</h1>
             <FollowButtonContainer targetUser={this.props.targetUser}/>
           </div>
-          
+
           <ul className="user-header-stats">
             <li>{user.photo_count}<br />Photos</li>
             <li>{user.views}<br />Views</li>
             <li>{user.follower_count}<br />Followers</li>
           </ul>
+
+          <p>{user.bio}</p>
         </div>
       </div>
     );
