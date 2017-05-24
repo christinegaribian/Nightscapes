@@ -33,7 +33,7 @@ class UserHeader extends React.Component {
             <li>{user.follower_count}<br />Followers</li>
           </ul>
 
-          <p className="user-bio">About Me: {user.bio}</p>
+          <p className="user-bio">>> {user.bio}</p>
         </div>
       </div>
     );

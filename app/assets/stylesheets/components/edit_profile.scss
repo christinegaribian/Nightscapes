@@ -1,0 +1,27 @@
+.edit-profile {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.bio-container {
+  text-align: left;
+
+  input[type="text"] {
+    background: white;
+    color: black;
+    width: 100%;
+  }
+}
+.edit-profile-container {
+  height: 100%;
+}
+
+.profile-button-container {
+  text-align: center;
+  button, input[type="submit"] {
+    width: 80%;
+  }
+}

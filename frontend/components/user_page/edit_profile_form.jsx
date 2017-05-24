@@ -42,18 +42,21 @@ class EditProfileForm extends React.Component {
     return (
       <section className="edit-profile-container">
         <form className="edit-profile" onSubmit={this.handleSubmit}>
-            <button className="change-profile-button">Change Profile Picture</button>
-
+          <div className="bio-container">
             <h1>Bio:</h1>
             <br/>
-
             <input type="text"
               placeholder="Bio"
               value={this.state.bio}
               onChange={this.update('bio')}
               ></input>
-            <br/>
+          </div>
+
+
+          <div className="profile-button-container">
+            <button className="change-profile-button">Change Profile Picture</button>
             <input type="submit" value="Save" />
+          </div>
         </form>
       </section>
 
@@ -63,13 +66,13 @@ class EditProfileForm extends React.Component {
 
 
 
-      //
-      // <div >
-      // FORM THIS IS IT
-      //
-      // 1) UPLOAD NEW PROF PIC
-      // 2) EDIT BIO (ALREADY FILLED)
-      // 3) SAVE BUTTON
-      // </div>
+//
+// <div >
+// FORM THIS IS IT
+//
+// 1) UPLOAD NEW PROF PIC
+// 2) EDIT BIO (ALREADY FILLED)
+// 3) SAVE BUTTON
+// </div>
 
 export default EditProfileForm;
