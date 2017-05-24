@@ -1,24 +1,26 @@
-
+//
 .follow-button, .edit-profile-button {
   padding: 9px 9px;
+  width: 100%;
   border-radius: 8px;
   background-color: black;
   color: #cccccc;
-  font-size: 1.1vmin;
+  font-size: 1.2vmin;
+  margin: 0;
   cursor: pointer;
   font-family: inherit;
 }
-
-
-.follow-button:hover, .edit-profile-button:hover {
-  border: 1px solid #FFFFFF;
-  color: #FFFFFF;
-  box-shadow: 0px 0px 0px 1px;
-}
+//
+//
+// .follow-button:hover, .edit-profile-button:hover {
+//   border: 1px solid #FFFFFF;
+//   color: #FFFFFF;
+//   box-shadow: 0px 0px 0px 1px;
+// }
 .follow-button:focus, .edit-profile-button:focus {
     outline: none;
 }
 
-.change-profile-button, .edit-profile input[type="submit"] {
-  width: 90%;
-}
+// .change-profile-button, .edit-profile input[type="submit"] {
+//   width: 90%;
+// }
