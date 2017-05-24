@@ -36,7 +36,7 @@ const my_custom_style = {
     opacity                    : '100',
     width                      : '90%',
     height                  : '75%',
-    marginTop                  : '7%'
+    marginTop                  : '8vmin'
   },
   'content:hover' : {
     cursor : 'pointer'

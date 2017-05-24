@@ -33,7 +33,7 @@ const my_custom_style = {
     outline                    : 'none',
     padding                    : '40px',
     marginBottom              : '0px',
-    marginTop                   : '7%',
+    marginTop                   : '8vmin',
     opacity                    : '100',
     width                      : '90%',
     height                  : '75%'
