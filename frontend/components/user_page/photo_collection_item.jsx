@@ -19,24 +19,17 @@ const my_custom_style = {
 
   },
   content : {
-    position                   : 'relative',
+    position                   : 'absolute',
     fontFamily                 : '"Julius Sans One", sans-serif',
-    top                        : '0',
-    left                       : '0',
-    right                      : '0',
-    bottom                     : '0',
-    border                     : '1px solid grey',
+    left                       : '',
+    top                        : '',
+    right                      : '',
+    bottom                     : '',
     background                 : 'black',
+    border                     : 'none',
     overflow                   : 'none',
     WebkitOverflowScrolling    : 'touch',
-    borderRadius               : '20px',
-    outline                    : 'none',
-    padding                    : '40px',
-    marginBottom              : '0px',
-    marginTop                   : '8vmin',
-    opacity                    : '100',
-    width                      : '50%',
-    height                  : '75%'
+    opacity                    : '100'
   },
   'content:hover' : {
     cursor : 'pointer'

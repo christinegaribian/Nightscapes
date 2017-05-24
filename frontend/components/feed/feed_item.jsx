@@ -21,17 +21,11 @@ const my_custom_style = {
   content : {
     position                   : 'absolute',
     fontFamily                 : '"Julius Sans One", sans-serif',
-    top                        : '40px',
     left                       : '40px',
     right                      : '40px',
-    bottom                     : '40px',
-    border                     : '1px solid grey',
     background                 : 'black',
     overflow                   : 'auto',
-    WebkitOverflowScrolling    : 'touch',
-    borderRadius               : '20px',
-    outline                    : 'none',
-    padding                    : '20px'
+    WebkitOverflowScrolling    : 'touch'
   },
   'content:hover' : {
     cursor : 'pointer'
