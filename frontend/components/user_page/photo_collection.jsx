@@ -16,7 +16,6 @@ class PhotoCollection extends React.Component {
       lastRow : 'justify',
       margins : 15,
       border: 150,
-      cssAnimation: true,
       captions : false
     });
   }

@@ -23,6 +23,7 @@ const my_custom_style = {
     fontFamily                 : '"Julius Sans One", sans-serif',
     left                       : '40px',
     right                      : '40px',
+    border                     : 'none',
     background                 : 'black',
     overflow                   : 'auto',
     WebkitOverflowScrolling    : 'touch'
