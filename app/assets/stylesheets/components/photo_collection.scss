@@ -28,6 +28,10 @@
 
 }
 
+#gallery {
+  height: 100%;
+}
+
 #gallery a:hover {
   color: black;
   cursor: pointer;
@@ -41,7 +45,7 @@
   transition: all .20s ease-in-out;
 
 }
-// 
+//
 //
 // .grid-item-modal-image {
 //   max-height: 100%;

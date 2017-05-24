@@ -10,6 +10,10 @@ class UserPage extends React.Component {
     super(props);
   }
 
+  componentWillUnmount(){
+    this.props.clearTargetUser();
+  }
+
   componentDidMount() {
     let targetUserId = this.props.match.params.userId;
     this.props.requestTargetUser(targetUserId);

@@ -5,6 +5,7 @@ class EditProfileForm extends React.Component {
     super(props);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.update = this.update.bind(this);
+    this.handleImageDrop = this.handleImageDrop.bind(this);
     this.state = {
       bio: "",
       img_url: ""
@@ -25,6 +26,12 @@ class EditProfileForm extends React.Component {
     this.props.closeModal();
   }
 
+  handleImageDrop(files) {
+    this.setState({
+      uploadedFile: files[0]
+    });
+  }
+
   update(field) {
     return e => this.setState({
       [field]: e.currentTarget.value
@@ -35,6 +42,7 @@ class EditProfileForm extends React.Component {
     return (
       <section className="edit-profile-container">
         <form className="edit-profile" onSubmit={this.handleSubmit}>
+            <button className="change-profile-button">Change Profile Picture</button>
 
             <h1>Bio:</h1>
             <br/>

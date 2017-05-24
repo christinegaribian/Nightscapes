@@ -1,7 +1,8 @@
 import { connect } from 'react-redux';
 import UserPage from './user_page';
 import { requestTargetUserPhotos } from '../../actions/photo_actions';
-import { requestTargetUser
+import { requestTargetUser,
+        receiveTargetUser
        } from '../../actions/user_actions';
 
 const mapStateToProps = (state) => ({
@@ -12,7 +13,8 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = dispatch => ({
   requestTargetUserPhotos : (id) => dispatch(requestTargetUserPhotos(id)),
-  requestTargetUser : (id) => dispatch(requestTargetUser(id))
+  requestTargetUser : (id) => dispatch(requestTargetUser(id)),
+  clearTargetUser : () => dispatch(receiveTargetUser({}))
 });
 
 export default connect(

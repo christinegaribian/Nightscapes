@@ -10,16 +10,23 @@ class PhotoCollection extends React.Component {
     $("#gallery").justifiedGallery("norewind");
   }
 
-  componentDidMount(){
+  componentWillReceiveProps(){
     $("#gallery").justifiedGallery({
       rowHeight : 250,
-      maxRowHeight: 0,
       lastRow : 'justify',
       margins : 15,
       border: 150,
-      cssAnimation: true,
-      captions : false,
-      refreshtime: 100
+      captions : false
+    });
+  }
+
+  componentDidMount(){
+    $("#gallery").justifiedGallery({
+      rowHeight : 250,
+      lastRow : 'justify',
+      margins : 15,
+      border: 150,
+      captions : false
     });
   }
 
@@ -41,10 +48,12 @@ class PhotoCollection extends React.Component {
       noPhotos = "You haven't taken any pictures yet!";
     }
     return (
-      <div id="gallery"
-        className='image-grid'>
-        <h2 className="no-photo-message">{noPhotos}</h2>
-        {photoCollectionItems}
+      <div className="gallery-container">
+        <div id="gallery"
+          className='image-grid'>
+          <h2 className="no-photo-message">{noPhotos}</h2>
+          {photoCollectionItems}
+        </div>
       </div>
     );
   }

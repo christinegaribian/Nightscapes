@@ -18,3 +18,7 @@
 .follow-button:focus, .edit-profile-button:focus {
     outline: none;
 }
+
+.change-profile-button, .edit-profile input[type="submit"] {
+  width: 90%;
+}
