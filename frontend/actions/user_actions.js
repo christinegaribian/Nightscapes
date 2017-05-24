@@ -19,3 +19,8 @@ export const requestTargetUser = (id) => (dispatch) => {
   return UserAPIUtil.fetchTargetUser(id).then(user =>
     dispatch(receiveTargetUser(user)));
 }
+
+export const updateUser = user => dispatch => (
+  UserAPIUtil.updateUser(user)
+      .then(res => dispatch(receiveTargetUser(res)))
+);

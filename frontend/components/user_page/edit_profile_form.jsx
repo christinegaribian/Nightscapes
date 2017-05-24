@@ -3,18 +3,26 @@ import React from 'react';
 class EditProfileForm extends React.Component {
   constructor(props) {
     super(props);
-    this.editProfile = this.editProfile.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
     this.update = this.update.bind(this);
-
     this.state = {
-      user_img_url: "",
-      bio: ""
+      bio: "",
+      img_url: ""
     }
   }
 
-  editProfile(){
+  componentDidMount(){
+    this.setState({
+      id: this.props.targetUser.id,
+      user_img_url: this.props.targetUser.user_img_url,
+      bio: this.props.targetUser.bio
+    })
+  }
+
+  handleSubmit(e){
     e.preventDefault();
-    
+    this.props.updateUser(this.state);
+    this.props.closeModal();
   }
 
   update(field) {
@@ -24,26 +32,20 @@ class EditProfileForm extends React.Component {
   }
 
   render(){
-    debugger
     return (
       <section className="edit-profile-container">
-        <form className="edit-profile" onSubmit={this.editProfile}>
-          <div className="file-upload">
+        <form className="edit-profile" onSubmit={this.handleSubmit}>
 
-          </div>
-
-          <div>
             <h1>Bio:</h1>
             <br/>
 
             <input type="text"
               placeholder="Bio"
-              value={this.props.targetUser.bio}
-              onChange={this.update('title')}
+              value={this.state.bio}
+              onChange={this.update('bio')}
               ></input>
             <br/>
             <input type="submit" value="Save" />
-          </div>
         </form>
       </section>
 

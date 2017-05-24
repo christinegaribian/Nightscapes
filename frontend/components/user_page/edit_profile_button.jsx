@@ -1,6 +1,6 @@
 import React from 'react';
 import Modal from 'react-modal';
-import EditProfileFormContainer from './edit_profile_form_contianer';
+import EditProfileFormContainer from './edit_profile_form_container';
 const my_custom_style = {
   overlay : {
     position          : 'fixed',
@@ -87,6 +87,7 @@ class EditProfileButton extends React.Component {
 
           <EditProfileFormContainer
             targetUser={this.props.targetUser}
+            closeModal={this.onCloseModal}
             className="modal-edit-form"
             />
         </Modal>
