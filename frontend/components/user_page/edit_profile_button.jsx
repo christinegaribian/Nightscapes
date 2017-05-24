@@ -1,6 +1,6 @@
 import React from 'react';
 import Modal from 'react-modal';
-import EditProfileForm from './edit_profile_form';
+import EditProfileFormContainer from './edit_profile_form_contianer';
 const my_custom_style = {
   overlay : {
     position          : 'fixed',
@@ -10,7 +10,7 @@ const my_custom_style = {
     bottom            : 0,
     height            : '100%',
     width             : '100%',
-    backgroundColor   : 'rgba(216,216,216, 0.1)',
+    backgroundColor   : 'rgba(10, 10, 15, 0.8)',
     display           : 'flex',
     alignItems       : 'center',
     justifyContent   : 'center',
@@ -24,11 +24,11 @@ const my_custom_style = {
     left                       : '30%',
     right                      : '30%',
     bottom                     : '30%',
-    border                     : '1px solid grey',
+    border                     : '1px solid white',
     background                 : 'black',
     overflow                   : 'auto',
     WebkitOverflowScrolling    : 'touch',
-    borderRadius               : '20px',
+    borderRadius               : '10px',
     outline                    : 'none',
     padding                    : '20px'
   },
@@ -75,7 +75,6 @@ class EditProfileButton extends React.Component {
 
   render(){
     const { open } = this.state;
-
     return (
       <div className="ButtonContainer">
         {this.editButton()}
@@ -86,7 +85,7 @@ class EditProfileButton extends React.Component {
           contentLabel="Modal"
           style={my_custom_style}>
 
-          <EditProfileForm
+          <EditProfileFormContainer
             targetUser={this.props.targetUser}
             className="modal-edit-form"
             />
