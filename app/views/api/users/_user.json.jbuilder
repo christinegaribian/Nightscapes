@@ -3,4 +3,5 @@ json.extract! user, :id,
                     :user_img_url,
                     :views,
                     :user_site_url,
-                    :photo_count
+                    :photo_count,
+                    :follower_count
