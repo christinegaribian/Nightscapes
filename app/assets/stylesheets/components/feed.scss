@@ -1,8 +1,86 @@
 .feed {
   width: 50%;
-  margin: 0 auto;
+  // margin: 0 auto;
+  margin: 0;
   margin-top: 100px;
 
   display: flex;
   flex-direction: column-reverse;
+}
+
+.feed-container {
+  display: flex;
+  justify-content: space-around;
+}
+//
+// .feed-sidebar {
+//   margin-top: 130px;
+//   //
+//   // .user-header {
+//   //   margin-left: 0;
+//   //   font-size: 2vmin;
+//   //   margin: 0;
+//   //
+//   //
+//   //
+//   //   .ButtonContainer {
+//   //     display: none;
+//   //   }
+//   //
+//   //
+//   //
+//   // }
+// }
+
+
+.feed-sidebar {
+  float:right;
+  width: 30%;
+  margin-top: 130px;
+}
+
+.user-box {
+  border: 1px solid white;
+  height: 111px;
+  box-sizing: border-box;
+  background-color: black;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.user-box-user {
+  border-bottom: 1px solid white;
+  width: 100%;
+  padding: 10px;
+  height: 50px;
+}
+
+.user-box-username {
+  display: inline-block;
+  float: left;
+  margin-top: 6px;
+}
+
+.user-box-badge {
+  margin-right: 7px;
+  float: left;
+}
+
+.user-box li {
+  border-left: 1px solid white;
+  width: 33.33%;
+  float: left;
+  height: 60px;
+  text-align: center;
+  padding: 10px;
+}
+
+.user-box li:first-child {
+  border: 0;
+}
+
+.user-box-badge {
+  width: 25px;
+  border-radius: 20px;
+  display: inline-block;
 }

@@ -1,6 +1,5 @@
 import React from 'react';
 import Dropzone from 'react-dropzone';
-import ProfilePictureUploadContainer from '../photo_upload_form/profile_picture_upload_container';
 import request from 'superagent';
 
 const CLOUDINARY_UPLOAD_PRESET = 'iyrokfbk';
@@ -11,7 +10,7 @@ class EditProfileForm extends React.Component {
     super(props);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.update = this.update.bind(this);
-    this.upload = this.upload.bind(this);
+    // this.upload = this.upload.bind(this);
     // this.handleImageDrop = this.handleImageDrop.bind(this);
     // this.handleImageDrop = this.handleImageDrop.bind(this);
     this.state = {
@@ -36,8 +35,8 @@ class EditProfileForm extends React.Component {
 
 
   upload(files){
-    files.preventDefault();
     debugger
+    // files.preventDefault();
     let file = files[0];
 
     let upload = request.post(CLOUDINARY_UPLOAD_URL)
@@ -81,7 +80,7 @@ class EditProfileForm extends React.Component {
             <Dropzone className="file-drop"
               multiple={false}
               accept="image/*"
-              onDrop={this.upload}>
+              onDrop={this.upload.bind(this)}>
               <button
                 className="change-profile-button"
                 >

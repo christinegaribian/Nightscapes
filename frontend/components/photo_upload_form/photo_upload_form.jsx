@@ -74,6 +74,7 @@ class PhotoUploadForm extends React.Component {
   }
 
   handleImageDrop(files) {
+    debugger
     this.setState({
       uploadedFile: files[0]
     });
