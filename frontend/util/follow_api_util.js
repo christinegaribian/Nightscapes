@@ -12,3 +12,10 @@ export const changeFollowStatus = (id, method) => (
     method
   })
 );
+
+export const fetchAllUsers = () => (
+	$.ajax({
+		method: 'GET',
+		url: '/api/users'
+	})
+);

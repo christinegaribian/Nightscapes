@@ -8,6 +8,7 @@ class UserBox extends React.Component {
 
   render() {
     let user = this.props.targetUser;
+    
     if (this.props.targetUser === null) {
       user = {
         user_img_url: "",

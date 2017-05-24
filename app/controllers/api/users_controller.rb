@@ -25,14 +25,19 @@ class Api::UsersController < ApplicationController
     end
   end
 
+  def index
+    users = User.all - [current_user]
+    @users = users.shuffle.take(5)
+  end
+
   private
   def user_params
     params.require(:user).permit(:username,
-                                 :password,
-                                 :views,
-                                 :user_img_url,
-                                 :user_site_url,
-                                 :bio
-                                 )
+    :password,
+    :views,
+    :user_img_url,
+    :user_site_url,
+    :bio
+    )
   end
 end

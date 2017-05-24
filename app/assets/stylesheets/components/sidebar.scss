@@ -1,0 +1,165 @@
+
+
+// USER BOX
+.feed-sidebar {
+  float:right;
+  width: 340px;
+  margin-top: 130px;
+
+  position: fixed;
+  right: 80px;
+}
+
+.user-box {
+  border: 1px solid gray;
+  height: 111px;
+  box-sizing: border-box;
+  background-color: black;
+  margin-bottom: 20px;
+  color: gray;
+}
+
+.user-box-user {
+  border-bottom: 1px solid gray;
+  width: 100%;
+  padding: 10px;
+  height: 50px;
+}
+
+.user-box-user:hover {
+  background: gray;
+
+  div {
+    color: black;
+  }
+}
+
+.user-box-username {
+  display: inline-block;
+  float: left;
+  margin-top: 6px;
+}
+
+.user-box-badge {
+  margin-right: 7px;
+  float: left;
+}
+
+.user-box li {
+  border-left: 1px solid gray;
+  width: 33.33%;
+  float: left;
+  height: 60px;
+  text-align: center;
+  padding: 10px;
+}
+
+.user-box li:first-child {
+  border: 0;
+}
+
+.user-box-badge {
+  width: 25px;
+  border-radius: 20px;
+  display: inline-block;
+}
+
+
+// FOLLOW BOX
+.follow-box {
+  background: black;
+  border: 1px solid gray;
+  padding: 20px;
+}
+
+.follow-box-title {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+img.follow-item-badge {
+  margin-right: 10px;
+  border-radius: 20px;
+  width: 30px;
+  float: left;
+}
+
+.follow-item-username {
+  float: left;
+}
+
+li.follow-item-image {
+  width: 40px;
+}
+
+li.follow-item-image img {
+  width: 100%;
+  height: 100%;
+}
+//
+// ul.follow-item-images {
+//   display: flex;
+//   justify-content: space-around;
+// }
+
+.follow-item-meta {
+  display: inline-block;
+}
+
+.follow-info-container {
+  display: inline-block;
+}
+
+.follow-info-container:hover {
+  opacity: .5;
+  cursor: pointer;
+}
+
+.ButtonContainer {
+  float: right;
+}
+
+.follow-item-upper .button {
+  border: 1px solid gray ;
+  padding: 3px 5px;
+  border-radius: 4px;
+  font-size: 12px;
+  color: gray;
+}
+
+.button.unfollow:hover {
+  border: 1px solid red;
+  color: red;
+  cursor: pointer;
+}
+
+.button.follow:hover {
+  border: 1px solid #57ec57;
+  color: #57ec57;
+  cursor: pointer;
+}
+
+
+span.username {
+  font-size: 14px;
+  font-weight: 300;
+  margin-bottom: -15px;
+}
+
+span.photo-count {
+  font-size: 12px;
+  color: grey;
+}
+
+.follow-item-lower {
+  height: 40px;
+  margin-bottom: 25px;
+}
+
+.follow-item-lower img:hover {
+  opacity: .8;
+}
+
+.follow-item-upper {
+  margin-bottom: 10px;
+}
