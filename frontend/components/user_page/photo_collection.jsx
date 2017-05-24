@@ -6,12 +6,15 @@ class PhotoCollection extends React.Component {
   constructor(props) {
     super(props);
   }
+  componentDidUpdate() {
+    $("#gallery").justifiedGallery("norewind");
+  }
 
   componentDidMount(){
     $("#gallery").justifiedGallery({
       rowHeight : 300,
       lastRow : 'justify',
-      margins : 15,
+      margins : 9,
       cssAnimation: true,
       captions : false
     });
@@ -32,7 +35,7 @@ class PhotoCollection extends React.Component {
     return (
       <div id="gallery"
         className='image-grid'>
-          {photoCollectionItems}
+        {photoCollectionItems}
       </div>
     );
   }

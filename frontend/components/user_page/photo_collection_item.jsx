@@ -9,11 +9,12 @@ const my_custom_style = {
     right             : 0,
     bottom            : 0,
     height             : '100%',
-    backgroundColor   : 'rgba(0, 0, 0, 0.85)',
+    width             : '100%',
+    backgroundColor   : 'rgba(87, 87, 87, 0.54)',
     display           : 'flex',
     alignItems       : 'center',
     justifyContent   : 'center',
-    padding            : '10px'
+    padding            : '0'
 
   },
   content : {
@@ -31,11 +32,11 @@ const my_custom_style = {
     borderRadius               : '20px',
     outline                    : 'none',
     padding                    : '40px',
-    marginTop                   : '50px',
-    width                      : '80vh',
+    marginBottom              : '0px',
+    marginTop                   : '7%',
     opacity                    : '100',
-    transition: 'opacity 2.5s ease'
-
+    width                      : '90%',
+    height                  : '75%'
   },
   'content:hover' : {
     cursor : 'pointer'
