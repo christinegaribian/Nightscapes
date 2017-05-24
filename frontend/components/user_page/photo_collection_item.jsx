@@ -33,7 +33,6 @@ const my_custom_style = {
     padding                    : '40px',
     marginTop                   : '50px',
     width                      : '80vh',
-    boxShadow                 : 'rgba(169, 169, 169, 0.37) 5px 5px 5px 0px',
     opacity                    : '100',
     transition: 'opacity 2.5s ease'
 

@@ -27,9 +27,7 @@ class PhotoDetail extends React.Component {
     let { img_url, title, description, user } = this.props.photo;
     return (
       <section className="photo-detail">
-        <figure className="photo-detail-figure">
-          <img src={img_url} alt={title}/>
-        </figure>
+        <img className="photo-detail-figure" src={img_url} alt={title}/>
         <ul className="photo-detail-info">
           <li>{title}</li>
           <li>{description}</li>
