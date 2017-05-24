@@ -1,13 +1,6 @@
 import React from 'react';
 import PhotoCollectionItem from './photo_collection_item';
 import { values } from 'lodash';
-// import JustifiedLayout from 'justified-layout';
-// import Masonry from 'react-masonry-component';
-//
-// var masonryOptions = {
-//     transitionDuration: 0
-// };
-// import {justifiedGallery} from 'justified-gallery';
 
 class PhotoCollection extends React.Component {
   constructor(props) {
@@ -18,8 +11,9 @@ class PhotoCollection extends React.Component {
     $("#gallery").justifiedGallery({
       rowHeight : 300,
       lastRow : 'justify',
-      margins : 9,
+      margins : 15,
       cssAnimation: true,
+      captions : false
     });
   }
 
