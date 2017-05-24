@@ -11,11 +11,12 @@ const my_custom_style = {
     bottom            : 0,
     height            : '100%',
     width             : '100%',
-    backgroundColor   : 'rgba(87, 87, 87, 0.54)',
+    backgroundColor   : 'rgba(216,216,216, 0.1)',
     display           : 'flex',
     alignItems       : 'center',
     justifyContent   : 'center',
-    padding            : '0'
+    padding            : '0',
+    zIndex                     : '1'
   },
   content : {
     position                   : 'relative',
@@ -34,7 +35,7 @@ const my_custom_style = {
     padding                    : '40px',
     marginBottom              : '0px',
     opacity                    : '100',
-    width                      : '90%',
+    width                      : '60%',
     height                  : '75%',
     marginTop                  : '8vmin'
   },

@@ -14,7 +14,8 @@ const my_custom_style = {
     display           : 'flex',
     alignItems       : 'center',
     justifyContent   : 'center',
-    padding            : '0'
+    padding            : '0',
+    zIndex              : '1'
 
   },
   content : {
@@ -35,7 +36,7 @@ const my_custom_style = {
     marginBottom              : '0px',
     marginTop                   : '8vmin',
     opacity                    : '100',
-    width                      : '90%',
+    width                      : '50%',
     height                  : '75%'
   },
   'content:hover' : {

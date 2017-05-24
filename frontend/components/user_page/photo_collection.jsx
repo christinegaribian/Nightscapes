@@ -12,9 +12,10 @@ class PhotoCollection extends React.Component {
 
   componentDidMount(){
     $("#gallery").justifiedGallery({
-      rowHeight : 300,
+      rowHeight : 250,
       lastRow : 'justify',
-      margins : 9,
+      margins : 15,
+      border: 150,
       cssAnimation: true,
       captions : false
     });
@@ -22,6 +23,7 @@ class PhotoCollection extends React.Component {
 
   render() {
     let photos = this.props.photos;
+    let noPhotos;
     let photoCollectionItems = []
     if (!(Object.keys(photos).length === 0 && photos.constructor === Object)) {
       photoCollectionItems = values(photos).map(photo =>
@@ -32,9 +34,14 @@ class PhotoCollection extends React.Component {
           />
       );
     }
+
+    if (photos.length === 0) {
+      noPhotos = "You haven't taken any pictures yet!";
+    }
     return (
       <div id="gallery"
         className='image-grid'>
+        <h2 className="no-photo-message">{noPhotos}</h2>
         {photoCollectionItems}
       </div>
     );
