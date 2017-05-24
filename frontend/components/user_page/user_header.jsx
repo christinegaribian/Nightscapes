@@ -12,7 +12,6 @@ class UserHeader extends React.Component {
     if (user === undefined) {
       user = [];
     }
-
     return (
       <div className="user-header">
         <img className="user-header-avatar"
@@ -33,7 +32,9 @@ class UserHeader extends React.Component {
             <li>{user.follower_count}<br />Followers</li>
           </ul>
 
-          <p className="user-bio">>> {user.bio}</p>
+          <p className="user-bio">
+            {!!user.bio ? `>> ${user.bio}` : ""}
+          </p>
         </div>
       </div>
     );
