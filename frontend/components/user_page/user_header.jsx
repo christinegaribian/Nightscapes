@@ -15,16 +15,19 @@ class UserHeader extends React.Component {
       <div className="user-header">
         <img className="user-header-avatar"
           src={user.user_img_url}
-        />
-        <h1 className="user-header-username">
-          {user.username}
-        </h1>
-        <ul className="user-header-stats">
-          <li>{user.photo_count}<br />Photos</li>
-          <li>{user.views}<br />Views</li>
-          <li>{user.follower_count}<br />Followers</li>
-        </ul>
-        <FollowButtonContainer targetUser={this.props.targetUser}/>
+          />
+        <div className="user-header-info">
+          <div className="user-header-username-follow">
+            <h1>{user.username}</h1>
+            <FollowButtonContainer targetUser={this.props.targetUser}/>
+          </div>
+          
+          <ul className="user-header-stats">
+            <li>{user.photo_count}<br />Photos</li>
+            <li>{user.views}<br />Views</li>
+            <li>{user.follower_count}<br />Followers</li>
+          </ul>
+        </div>
       </div>
     );
   }
