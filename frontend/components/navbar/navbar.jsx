@@ -92,8 +92,8 @@ class Navbar extends React.Component {
           <Link to={`/users/${currentUser.id}`}>
             <img src={currentUser.user_img_url}
               className="user-img-url"/>
+            <h1>{currentUser.username}</h1>
           </Link>
-          <h1>{currentUser.username}</h1>
 
           <i className="fa fa-cloud-upload"
             aria-hidden="true"

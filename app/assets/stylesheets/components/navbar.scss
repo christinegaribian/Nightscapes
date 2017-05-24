@@ -34,8 +34,9 @@
     cursor: pointer;
   }
 
-  .right h1 {
-
+  .right a {
+    display: flex;
+    align-items: center;
   }
 }
 
