@@ -72,7 +72,7 @@ class PhotoCollectionItem extends React.Component {
     const { open } = this.state;
     let {id, img_url, title, description} = this.props.photo;
     return (
-      <li className="grid-item" onClick={this.onOpenModal}>
+      <a className="grid-item" onClick={this.onOpenModal}>
         <img src={img_url} alt={title} />
         <p>{title}</p>
         <Modal isOpen={open}
@@ -81,7 +81,7 @@ class PhotoCollectionItem extends React.Component {
           style={my_custom_style}>
           <img src={img_url} alt={title} className="grid-item-modal-image"/>
         </Modal>
-      </li>
+      </a>
     );
   }
 };

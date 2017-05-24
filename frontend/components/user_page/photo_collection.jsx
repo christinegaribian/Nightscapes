@@ -2,15 +2,25 @@ import React from 'react';
 import PhotoCollectionItem from './photo_collection_item';
 import { values } from 'lodash';
 // import JustifiedLayout from 'justified-layout';
-import Masonry from 'react-masonry-component';
-
-var masonryOptions = {
-    transitionDuration: 0
-};
+// import Masonry from 'react-masonry-component';
+//
+// var masonryOptions = {
+//     transitionDuration: 0
+// };
+// import {justifiedGallery} from 'justified-gallery';
 
 class PhotoCollection extends React.Component {
   constructor(props) {
     super(props);
+  }
+
+  componentDidMount(){
+    $("#gallery").justifiedGallery({
+      rowHeight : 300,
+      lastRow : 'justify',
+      margins : 9,
+      cssAnimation: true,
+    });
   }
 
   render() {
@@ -26,15 +36,11 @@ class PhotoCollection extends React.Component {
       );
     }
     return (
-      <Masonry
-        className={'image-grid'}
-        elementType={'ul'}
-        options={masonryOptions}>
+      <div id="gallery"
+        className='image-grid'>
           {photoCollectionItems}
-      </Masonry>
+      </div>
     );
-
-
   }
 }
 // <li>{user.follower_count}<br />Followers</li>

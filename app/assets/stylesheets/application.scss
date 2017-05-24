@@ -14,3 +14,7 @@
  *= require_self
  *= require font-awesome
  */
+ @import "reset.scss";
+ @import "base.scss";
+ @import "components/*";
+ @import "justifiedGallery.min.scss";
