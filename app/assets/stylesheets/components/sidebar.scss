@@ -52,6 +52,7 @@
   height: 60px;
   text-align: center;
   padding: 10px;
+  font-size: 1.5vmin;
 }
 
 .user-box li:first-child {
@@ -70,6 +71,10 @@
   background: black;
   border: 1px solid gray;
   padding: 20px;
+}
+
+.follow-box-item {
+  margin: 8% 0;
 }
 
 .follow-box-title {

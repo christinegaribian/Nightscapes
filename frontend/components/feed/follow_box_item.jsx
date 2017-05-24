@@ -39,10 +39,6 @@ class FollowBoxItem extends React.Component {
           </Link>
           <FollowButtonContainer currentUserId={this.props.currentUserId} targetUser={this.props.user} />
         </div>
-
-        <div className="follow-item-lower">
-
-        </div>
       </div>
     );
   }
@@ -51,4 +47,8 @@ class FollowBoxItem extends React.Component {
 // <ul className="follow-item-images">
 //   {images}
 // </ul>
+
+// <div className="follow-item-lower">
+//
+// </div>
 export default FollowBoxItem;
