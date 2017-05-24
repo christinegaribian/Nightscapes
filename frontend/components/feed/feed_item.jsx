@@ -19,17 +19,17 @@ const my_custom_style = {
     zIndex                     : '1'
   },
   content : {
+    outline : 'none',
     position                   : 'absolute',
     fontFamily                 : '"Julius Sans One", sans-serif',
-    left                       : '40px',
-    right                      : '40px',
+    left                       : '80px',
+    right                      : '80px',
+    top : '',
+    bottom : '',
     border                     : 'none',
     background                 : 'black',
     overflow                   : 'auto',
     WebkitOverflowScrolling    : 'touch'
-  },
-  'content:hover' : {
-    cursor : 'pointer'
   }
 }
 
