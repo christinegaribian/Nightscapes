@@ -10,11 +10,18 @@
   width: 100%;
 }
 
+.user-header-info {
+  width: 40%
+}
+
 .user-header-username-follow {
   display: flex;
-  width: 90%;
+  width: 100%;
   justify-content: space-between;
   align-items: flex-end;
+  h1 {
+    font-size: 3.7vmin
+  }
 }
 
 .user-header-avatar {

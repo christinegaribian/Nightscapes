@@ -1,0 +1,24 @@
+
+.follow-button {
+  padding: 9px 9px;
+  // margin-bottom: 10px;
+  // width: 33%;
+  border-radius: 8px;
+  // border: 1px solid #cccccc;
+  background-color: black;
+  color: #cccccc;
+  font-size: 1.1vmin;
+  cursor: pointer;
+  // font-weight: 400;
+  font-family: inherit;
+}
+
+
+.follow-button:hover {
+  border: 1px solid #FFFFFF;
+  color: #FFFFFF;
+  box-shadow: 0px 0px 0px 1px;
+}
+.follow-button:focus{
+    outline: none;
+}

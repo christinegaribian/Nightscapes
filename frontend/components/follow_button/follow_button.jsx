@@ -31,11 +31,11 @@ class FollowButton extends React.Component {
       if (this.props.currentUserId !== this.props.targetUser.id){
         if (this.state.followerIds.includes(this.props.currentUserId)){
           return (
-            <button id="unfollow" className="follow-button unfollow" onClick={this.toggleFollow}>Unfollow!</button>
+            <button id="unfollow" className="follow-button unfollow" onClick={this.toggleFollow}>Unfollow</button>
           );
         } else {
           return (
-            <button id="follow" className="follow-button follow" onClick={this.toggleFollow}>Follow!</button>
+            <button id="follow" className="follow-button follow" onClick={this.toggleFollow}>Follow</button>
           );
         }
       }
