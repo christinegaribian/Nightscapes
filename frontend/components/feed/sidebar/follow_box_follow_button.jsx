@@ -1,5 +1,4 @@
 import React from 'react';
-// import {idsSelector} from '../../util/selectors';
 
 class FollowBoxFollowButton extends React.Component {
   constructor(props){

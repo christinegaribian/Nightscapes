@@ -3,12 +3,8 @@ import { receiveTargetUser } from './user_actions';
 
 export const CREATE_FOLLOW = 'CREATE_FOLLOW';
 export const DELETE_FOLLOW = 'DELETE_FOLLOW';
-
-// export const  REQUEST_NEW_FOLLOWERS = "REQUEST_NEW_FOLLOWERS";
 export const   RECEIVE_FOLLOWERS = "RECEIVE_FOLLOWERS";
 export const   RECEIVE_FOLLOWER = "RECEIVE_FOLLOWER";
-
-
 
 export const createFollow = follow => ({
   type: CREATE_FOLLOW,
@@ -45,12 +41,6 @@ export const requestNewFollowers = () => dispatch => (
   FollowAPIUtil.fetchAllUsers()
     .then(users => dispatch(receiveFollowers(users)))
 )
-
-//
-//
-// export const requestNewFollowers = () => ({
-//   type: REQUEST_NEW_FOLLOWERS
-// });
 
 export const receiveFollowers = (followers) => ({
   type: RECEIVE_FOLLOWERS,

@@ -1,6 +1,5 @@
 import { connect } from 'react-redux';
 import Feed from './feed';
-// import { withRouter } from 'react-router-dom';
 import { requestFeedPhotos
        } from '../../actions/photo_actions';
 import { selectAllPhotos } from '../../reducers/selectors';

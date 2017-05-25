@@ -11,8 +11,6 @@ class EditProfileForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.update = this.update.bind(this);
     this.upload = this.upload.bind(this);
-    // this.handleImageDrop = this.handleImageDrop.bind(this);
-    // this.handleImageDrop = this.handleImageDrop.bind(this);
     this.state = {
       bio: "",
       img_url: ""
@@ -34,16 +32,10 @@ class EditProfileForm extends React.Component {
     this.props.updateUser(this.state).then(() => {
       uploadScope.props.closeModal();
     })
-    //
-    // setTimeout(() => {
-    //
-    //   this.props.closeModal();
-    // }, 5000)
   }
 
 
   upload(files){
-    // files.preventDefault();
     let file = files[0];
 
     let upload = request.post(CLOUDINARY_UPLOAD_URL)
@@ -62,14 +54,13 @@ class EditProfileForm extends React.Component {
         }
       });
     }
-    // this.props.closeModal();
 
     update(field) {
       return e => this.setState({
         [field]: e.currentTarget.value
       });
     }
-    // onSubmit={this.handleSubmit}
+
     render(){
       let currentUser = this.props.currentUser;
 
@@ -111,20 +102,5 @@ class EditProfileForm extends React.Component {
     }
   }
 
-  // handleImageDrop(files) {
-  //   this.setState({
-  //     uploadedFile: files[0]
-  //   });
-  // }
-
-
-  //
-  // <div >
-  // FORM THIS IS IT
-  //
-  // 1) UPLOAD NEW PROF PIC
-  // 2) EDIT BIO (ALREADY FILLED)
-  // 3) SAVE BUTTON
-  // </div>
 
   export default EditProfileForm;

@@ -1,4 +1,3 @@
-
 import { connect } from 'react-redux';
 import FollowBoxFollowButton from './follow_box_follow_button';
 import { followUserFromFollowBox,

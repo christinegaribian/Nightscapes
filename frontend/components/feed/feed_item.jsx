@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Modal from 'react-modal';
-import PhotoDetailContainer from '../photo_detail/photo_detail_container';
+import PhotoDetail from '../photo_detail/photo_detail';
+
 const my_custom_style = {
   overlay : {
     position          : 'fixed',
@@ -87,7 +88,7 @@ class FeedItem extends React.Component {
           contentLabel="Modal"
           style={my_custom_style}>
 
-          <PhotoDetailContainer
+          <PhotoDetail
             photo={this.props.photo}
             className="modal-picture"
             />
@@ -108,10 +109,5 @@ class FeedItem extends React.Component {
     );
   }
 };
-
-
-//   <Link to={`/photos/${id}`} onClick={this.onOpenModal}>
-//   <img src={img_url} alt={title}/>
-// </Link>
 
 export default FeedItem;

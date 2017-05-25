@@ -69,12 +69,5 @@ class PhotoCollection extends React.Component {
     );
   }
 }
-// <li>{user.follower_count}<br />Followers</li>
-// aspectRatio={photo.width / photo.height}
-
-// <JustifiedLayout className="justified-layout" containerWidth={900}>
-//   {photoCollectionItems}
-// </JustifiedLayout>
-
 
 export default PhotoCollection;

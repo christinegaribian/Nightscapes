@@ -1,5 +1,4 @@
 import React from 'react';
-// import UserHeaderContainer from '../user_page/user_header_container';
 import UserBox from './user_box';
 import FollowBoxContainer from './follow_box_container';
 
@@ -32,10 +31,5 @@ class FeedSidebar extends React.Component {
     )
   }
 }
-
-// // <span className="about">
-//   <h1>About Nightscapes:</h1>
-//   <p>Nightscapes was born from ......</p>
-// </span>
 
 export default FeedSidebar;

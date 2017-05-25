@@ -1,6 +1,5 @@
 import { connect } from 'react-redux';
 import Discover from './discover';
-// import { withRouter } from 'react-router-dom';
 import { requestAllPhotos
        } from '../../actions/photo_actions';
 import { selectAllPhotos } from '../../reducers/selectors';

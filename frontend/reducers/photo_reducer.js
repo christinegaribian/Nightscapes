@@ -5,8 +5,6 @@ import {
   RECEIVE_SINGLE_PHOTO,
   RECEIVE_ERRORS
 } from '../actions/photo_actions';
-// ?  RECEIVE_NEW_PHOTO,
-
 
 const PhotoReducer = (state = {}, action) => {
   Object.freeze(state);

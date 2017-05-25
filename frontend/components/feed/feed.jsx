@@ -14,7 +14,7 @@ class Feed extends React.Component {
   }
 
   loadFunc(){
-    console.log('loading');
+    // console.log('loading');
   }
 
   render(){

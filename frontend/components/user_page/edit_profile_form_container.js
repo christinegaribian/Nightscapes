@@ -1,7 +1,5 @@
 import { connect } from 'react-redux';
 import EditProfileForm from './edit_profile_form';
-// import { withRouter } from 'react-router-dom';
-// import { postPhoto, receiveErrors } from '../../actions/photo_actions';
 import {updateUser} from '../../actions/user_actions.js';
 
 const mapStateToProps = (ownProps, {closeModal}) => ({

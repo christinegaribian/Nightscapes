@@ -1,5 +1,4 @@
 import React from 'react';
-// import {Link} from 'react-router-dom';
 import UserHeaderContainer from './user_header_container';
 import UserHeader from './user_header';
 import PhotoCollectionContainer from './photo_collection_container';
@@ -28,7 +27,6 @@ class UserPage extends React.Component {
       this.props.requestTargetUserPhotos(newTargetUserId);
     }
   }
-  // this.props.history.push(`/user/${newTargetUserId}`)
 
 
   render(){

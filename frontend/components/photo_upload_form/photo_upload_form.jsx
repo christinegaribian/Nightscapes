@@ -8,7 +8,6 @@ const CLOUDINARY_UPLOAD_URL = 'https://api.cloudinary.com/v1_1/dl091hw7z/upload'
 // later change these to private
 
 
-//add thumbnail
 class PhotoUploadForm extends React.Component {
   constructor(props){
     super(props);
