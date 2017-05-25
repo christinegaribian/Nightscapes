@@ -14,7 +14,7 @@ class Feed extends React.Component {
   }
 
   loadFunc(){
-    alert('loading');
+    console.log('loading');
   }
 
   render(){
@@ -28,7 +28,7 @@ class Feed extends React.Component {
           pageStart={0}
           loadMore={this.loadFunc}
           hasMore={true || false}
-          loader={<div className="loader">Loading ...</div>}
+          loader={<div className="loader"></div>}
           >
           <ul className="feed">
             {feedItems}

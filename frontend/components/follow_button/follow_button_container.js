@@ -7,8 +7,8 @@ import { followUser,
 import {idsSelector} from '../../util/selectors';
 
 const mapStateToProps = (state, ownProps) => ({
-  currentUserId: state.session.currentUser.id,
-  targetUser: ownProps.targetUser
+  targetUserId: ownProps.targetUserId,
+  followingIds: idsSelector(state.session.currentUser.following)
 });
 // followerIds: idsSelector(state.targetUser.followers)
 

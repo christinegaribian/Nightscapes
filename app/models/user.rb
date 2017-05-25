@@ -42,10 +42,6 @@ class User < ApplicationRecord
     self.save!
     self
   end
-  # 
-  # def current_user_follow?(user)
-  #   self.followers.where(follower_id: user.id).exists?
-  # end
 
 	def password=(password)
 		self.password_digest = BCrypt::Password.create(password)
@@ -64,7 +60,6 @@ class User < ApplicationRecord
 
 	def reset_session_token!
 		self.session_token = new_session_token
-		# ensure_session_token_uniqueness
 		self.save
 		self.session_token
 	end
@@ -78,11 +73,4 @@ class User < ApplicationRecord
 	def new_session_token
 		SecureRandom.urlsafe_base64
 	end
-  #
-	# def ensure_session_token_uniqueness
-  #   debugger
-	# 	while User.find_by(session_token: self.session_token)
-	# 		self.session_token = new_session_token
-	# 	end
-	# end
 end

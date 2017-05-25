@@ -35,7 +35,7 @@ export const requestNewFollowers = () => dispatch => (
     .then(users => dispatch(receiveNewFollowers(users)))
 )
 
-// 
+//
 //
 // export const requestNewFollowers = () => ({
 //   type: REQUEST_NEW_FOLLOWERS

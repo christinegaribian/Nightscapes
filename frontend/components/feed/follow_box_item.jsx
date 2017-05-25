@@ -1,7 +1,5 @@
 import React from 'react';
 import FollowButtonContainer from '../follow_button/follow_button_container';
-// import { hashHistory } 0from 'react-router';
-// import FollowBoxItemImage from './follow_box_item_image';
 import { Link } from 'react-router-dom';
 
 class FollowBoxItem extends React.Component {
@@ -17,11 +15,7 @@ class FollowBoxItem extends React.Component {
       photo_count
     } = this.props.user;
 
-    // let images = samples.map((image) => (
-    //   <li key={image.id} className="follow-item-image">
-    //     <FollowBoxItemImage details={image} key={image.id}/>
-    //  </li>
-    // ));
+
     return(
       <div className="follow-box-item">
         <div className="follow-item-upper">
@@ -32,18 +26,11 @@ class FollowBoxItem extends React.Component {
               <span className="photo-count">{photo_count} Photos</span>
             </div>
           </Link>
-          <FollowButtonContainer currentUserId={this.props.currentUserId} targetUser={this.props.user} />
+          <FollowButtonContainer targetUserId={this.props.user.id} />
         </div>
       </div>
     );
   }
 }
 
-// <ul className="follow-item-images">
-//   {images}
-// </ul>
-
-// <div className="follow-item-lower">
-//
-// </div>
 export default FollowBoxItem;

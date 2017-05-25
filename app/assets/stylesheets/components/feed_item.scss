@@ -28,6 +28,10 @@
 }
 
 
+.feed-item-header .feed-item-user {
+  display: none;
+}
+
 .feed-item-user:hover {
   color: black;
   cursor: pointer;

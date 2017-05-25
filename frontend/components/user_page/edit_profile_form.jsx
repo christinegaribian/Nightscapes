@@ -22,7 +22,8 @@ class EditProfileForm extends React.Component {
   componentDidMount(){
     this.setState({
       id: this.props.targetUser.id,
-      user_img_url: this.props.targetUser.user_img_url
+      user_img_url: this.props.targetUser.user_img_url,
+      bio: this.props.targetUser.bio
     })
   }
 

@@ -4,36 +4,42 @@ class FollowButton extends React.Component {
   constructor(props){
     super(props);
 
-    this.state = { followerIds: [] }
+    // this.state = { followingIds: [] }
     this.toggleFollow = this.toggleFollow.bind(this);
     this.followButton = this.followButton.bind(this);
+    // this.state = {
+    //   following: false
+    // }
   }
 
   // componentWillUpdate(){
   //   debugger
+  // // }
+  //
+  // componentWillReceiveProps(newProps){
+  //   if (!!newProps.currentUser.id) {
+  //     const followingIds = newProps.currentUser.followees.map(
+  //       (following) => following.id
+  //     );
+  //     this.setState({followingIds});
+  //   }
   // }
 
-  componentWillReceiveProps(newProps){
-    if (!!newProps.targetUser.id) {
-      const followerIds = newProps.targetUser.followers.map(
-        (follower) => follower.id
-      );
-      this.setState({followerIds});
-    }
+  componentWillReceiveProps(nextProps){
+    this.setState({following: true})
   }
 
   toggleFollow(){
-    if (this.state.followerIds.includes(this.props.currentUserId)){
-      this.props.unfollowUser(this.props.targetUser.id);
+    if (this.props.followingIds.includes(this.props.targetUserId)){
+      this.props.unfollowUser(this.props.targetUserId);
     } else {
-      this.props.followUser(this.props.targetUser.id);
+      this.props.followUser(this.props.targetUserId);
     }
   }
 
   followButton(){
-    if (this.props.targetUser.id){
-      if (this.props.currentUserId !== this.props.targetUser.id){
-        if (this.state.followerIds.includes(this.props.currentUserId)){
+    if (this.props.targetUserId){
+        if (this.props.followingIds.includes(this.props.targetUserId)){
           return (
             <button id="unfollow" className="follow-button unfollow" onClick={this.toggleFollow}>Unfollow</button>
           );
@@ -42,7 +48,6 @@ class FollowButton extends React.Component {
             <button id="follow" className="follow-button follow" onClick={this.toggleFollow}>Follow</button>
           );
         }
-      }
     }
   }
 
