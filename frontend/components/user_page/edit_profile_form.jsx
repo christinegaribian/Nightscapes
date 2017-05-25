@@ -50,8 +50,6 @@ class EditProfileForm extends React.Component {
     .field('file', file);
     let uploadscope = this;
     upload.end((err, response) => {
-      debugger
-
       if (response.body.secure_url !== '' && !err){
         this.props.updateUser({
           id: uploadscope.props.targetUser.id,
