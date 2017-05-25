@@ -178,4 +178,17 @@ span.photo-count {
   border: 1px solid gray;
   padding: 20px;
   background: black;
+  display: flex;
+  justify-content: space-around;
+
+  i {
+    color: white;
+    font-size: 3vmin;
+  }
+
+  i:hover {
+    background: black;
+    opacity: 0.3;
+    transition: all 0.3s ease-in-out;
+  }
 }

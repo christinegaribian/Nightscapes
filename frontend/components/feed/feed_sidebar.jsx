@@ -16,10 +16,17 @@ class FeedSidebar extends React.Component {
         <FollowBoxContainer className="follow-header"
           targetUser={this.props.currentUser}/>
         <div className="personal-info">
+          <a href="https://github.com/christinegaribian/Nightscapes" target="_blank">
+            <i className="fa fa-github" aria-hidden="true"></i>
+          </a>
 
-          <p>Check out the Github</p>
-          <p>Check out my LinkedIn</p>
-          <p>Check out my Site</p>
+          <a href="https://www.linkedin.com/in/christinegaribian/" target="_blank" >
+            <i className="fa fa-linkedin-square" aria-hidden="true"></i>
+          </a>
+
+          <a href="#">
+            <i className="fa fa-user-circle" aria-hidden="true"></i>
+          </a>
         </div>
       </div>
     )
