@@ -8,8 +8,7 @@ const my_custom_style = {
     left              : 0,
     right             : 0,
     bottom            : 0,
-    height             : '100%',
-    width             : '100%',
+
     backgroundColor   : 'rgba(10, 10, 15, 0.8)',
     display           : 'flex',
     alignItems       : 'center',
@@ -22,7 +21,7 @@ const my_custom_style = {
     position                   : 'absolute',
     fontFamily                 : '"Julius Sans One", sans-serif',
     left                       : '',
-    top                        : '',
+    top                        : '15vmin',
     right                      : '',
     bottom                     : '',
     background                 : 'black',
