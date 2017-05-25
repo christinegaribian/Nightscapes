@@ -87,9 +87,10 @@ class Navbar extends React.Component {
             />
           <p >NIGHTSCAPES</p>
         </div>
-        <Link to={'/discover'}> Discover </Link>
 
         <div className="right">
+          <Link to={'/discover'}> Discover </Link>
+
           <Link to={`/users/${currentUser.id}`}>
             <img src={currentUser.user_img_url}
               className="user-img-url"/>
