@@ -29,9 +29,9 @@ class EditProfileForm extends React.Component {
 
   handleSubmit(e){
     e.preventDefault();
-    let upload = this;
+    let uploadScope = this;
     this.props.updateUser(this.state).then(() => {
-      upload.props.closeModal();
+      uploadScope.props.closeModal();
     })
     //
     // setTimeout(() => {
@@ -42,7 +42,6 @@ class EditProfileForm extends React.Component {
 
 
   upload(files){
-    debugger
     // files.preventDefault();
     let file = files[0];
 
@@ -51,10 +50,12 @@ class EditProfileForm extends React.Component {
     .field('file', file);
     let uploadscope = this;
     upload.end((err, response) => {
+      debugger
+
       if (response.body.secure_url !== '' && !err){
         this.props.updateUser({
-          id: this.props.currentUser.id,
-          img_url: this.response.body.secure_url
+          id: uploadscope.props.targetUser.id,
+          user_img_url: response.body.secure_url
         }).then(
           () => {
             uploadscope.props.closeModal();
@@ -86,19 +87,24 @@ class EditProfileForm extends React.Component {
                 ></input>
             </div>
 
-            <div className="profile-button-container">
-              <Dropzone className="file-drop"
-                multiple={false}
-                accept="image/*"
-                onDrop={this.upload}>
-                <button
-                  className="change-profile-button"
-                  >
-                  Upload Profile Picture
-                </button>
-              </Dropzone>
+            <div className="edit-profile-buttons">
+              <div className="profile-button-container">
+                <Dropzone className="file-drop"
+                  multiple={false}
+                  accept="image/*"
+                  onDrop={this.upload}>
+                  <button
+                    className="change-profile-button"
+                    >
+                    Upload Profile Picture
+                  </button>
+                </Dropzone>
+              </div>
+              <input type="submit"
+                     value="Save"
+                     id="edit-profile-submit"
+                     onClick={this.handleSubmit}/>
             </div>
-            <input type="submit" value="Save" />
           </form>
         </section>
 

@@ -8,6 +8,7 @@
 
 .bio-container {
   text-align: left;
+  width: 73%;
 
   input[type="text"] {
     background: white;
@@ -19,9 +20,26 @@
   height: 100%;
 }
 
-.profile-button-container {
-  text-align: center;
-  button, input[type="submit"] {
-    width: 80%;
+.edit-profile-buttons {
+  .profile-button-container {
+    text-align: center;
+
+    .file-drop {
+      padding-right: 0;
+
+      button {
+        width: 100%;
+        padding: 20px;
+      }
+
+      button:focus {
+        outline: none
+      }
+    }
+  }
+
+  #edit-profile-submit {
+    width: 100%;
+    padding: 20px;
   }
 }

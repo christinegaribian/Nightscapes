@@ -9,6 +9,10 @@ class FollowButton extends React.Component {
     this.followButton = this.followButton.bind(this);
   }
 
+  // componentWillUpdate(){
+  //   debugger
+  // }
+
   componentWillReceiveProps(newProps){
     if (!!newProps.targetUser.id) {
       const followerIds = newProps.targetUser.followers.map(
@@ -19,7 +23,6 @@ class FollowButton extends React.Component {
   }
 
   toggleFollow(){
-    debugger
     if (this.state.followerIds.includes(this.props.currentUserId)){
       this.props.unfollowUser(this.props.targetUser.id);
     } else {
