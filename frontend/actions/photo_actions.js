@@ -15,6 +15,14 @@ export const requestAllPhotos = () => (dispatch) => {
   ));
 }
 
+export const requestFeedPhotos = (id) => (dispatch) => {
+  return PhotoAPIUtil.fetchFeedPhotos(id)
+    .then(photos => (
+    dispatch(receiveAllPhotos(photos))
+  ));
+}
+
+
 export const requestSinglePhoto = (id) => (dispatch) => {
   return PhotoAPIUtil.fetchSinglePhoto(id).then(photo => {
     dispatch(receiveSinglePhoto(photo));

@@ -67,6 +67,12 @@ class FeedItem extends React.Component {
     } else {
       user_url = "";
     }
+    if (!user) {
+      let user = {
+        username: "",
+        img_url: ""
+      }
+    }
     return (
       <li className="feed-item">
         <img src={img_url}

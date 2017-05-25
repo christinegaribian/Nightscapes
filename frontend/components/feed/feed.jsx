@@ -8,18 +8,8 @@ class Feed extends React.Component {
   }
 
   componentDidMount(){
-    this.props.requestAllPhotos();
+    this.props.requestFeedPhotos(this.props.currentUser.id);
   }
-
-  // postImage(url){
-  //   var photo = {
-  //     user_id: this.props.currentUser.id,
-  //     img_url: url,
-  //
-  //   }
-  //   this.props.postPhoto(photo);
-  // }
-
 
 
   render(){

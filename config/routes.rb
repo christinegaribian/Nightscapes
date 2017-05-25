@@ -7,6 +7,7 @@ Rails.application.routes.draw do
       resource :follow, only: [:destroy, :create]
       resources :photos, only: [:create]
       get '/photos', to: 'photos#user_index'
+      get '/feed', to: 'photos#feed_index'
     end
     resource :session, only: [:create, :destroy, :show]
     resources :photos, except: [:create]

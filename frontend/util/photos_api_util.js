@@ -5,6 +5,13 @@ export const fetchAllPhotos = () => (
 	})
 );
 
+export const fetchFeedPhotos = (id) => (
+	$.ajax({
+		method: 'GET',
+		url: `/api/users/${id}/feed`
+	})
+);
+
 export const fetchUserPhotos  = (id) => (
 	$.ajax({
 		method: 'GET',

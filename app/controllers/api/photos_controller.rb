@@ -21,6 +21,10 @@ class Api::PhotosController < ApplicationController
     @photos = Photo.where('user_id = ?', params[:user_id])
   end
 
+  def feed_index
+    @photos = Photo.includes(:user).where(user: current_user.followees)
+  end
+
   def update
 
   end

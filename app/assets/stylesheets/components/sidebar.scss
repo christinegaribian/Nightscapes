@@ -28,7 +28,7 @@
 
 .user-box-user:hover {
   background: gray;
-
+  transition: 0.1s ease-in-out;
   div {
     color: black;
   }
