@@ -1,7 +1,7 @@
 import React from 'react';
-import {idsSelector} from '../../util/selectors';
+// import {idsSelector} from '../../util/selectors';
 
-class FollowButton extends React.Component {
+class FollowBoxFollowButton extends React.Component {
   constructor(props){
     super(props);
 
@@ -41,4 +41,4 @@ class FollowButton extends React.Component {
   }
 }
 
-export default FollowButton;
+export default FollowBoxFollowButton;

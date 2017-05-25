@@ -10,7 +10,7 @@ const RootReducer = combineReducers({
   photos: PhotoReducer,
   errors: ErrorReducer,
   targetUser: UserReducer,
-  new_followers: NewFollowersReducer
+  newFollowers: NewFollowersReducer
 });
 
 export default RootReducer;

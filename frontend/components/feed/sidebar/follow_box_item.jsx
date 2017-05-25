@@ -1,5 +1,5 @@
 import React from 'react';
-import FollowButtonContainer from '../follow_button/follow_button_container';
+import FollowButtonFollowContainer from './follow_box_follow_button_container';
 import { Link } from 'react-router-dom';
 
 class FollowBoxItem extends React.Component {
@@ -15,7 +15,6 @@ class FollowBoxItem extends React.Component {
       photo_count
     } = this.props.user;
 
-
     return(
       <div className="follow-box-item">
         <div className="follow-item-upper">
@@ -26,7 +25,7 @@ class FollowBoxItem extends React.Component {
               <span className="photo-count">{photo_count} Photos</span>
             </div>
           </Link>
-          <FollowButtonContainer targetUserId={this.props.user.id} />
+          <FollowButtonFollowContainer targetUser={this.props.user} />
         </div>
       </div>
     );

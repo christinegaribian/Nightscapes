@@ -1,6 +1,6 @@
 import React from 'react';
 import FeedItem from './feed_item';
-import FeedSidebar from './feed_sidebar';
+import FeedSidebar from './sidebar/feed_sidebar';
 import InfiniteScroll from 'react-infinite-scroller';
 
 class Feed extends React.Component {

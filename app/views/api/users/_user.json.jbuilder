@@ -6,3 +6,4 @@ json.extract! user, :id,
                     :photo_count,
                     :follower_count
 json.following user.followees, :id
+json.followers user.followers, :id

@@ -1,5 +1,6 @@
 import React from 'react';
 import FollowBoxItem from './follow_box_item';
+import { values } from 'lodash';
 
 class FollowBox extends React.Component {
   constructor(props) {
@@ -13,7 +14,7 @@ class FollowBox extends React.Component {
   render() {
     let potentials = [];
     if (this.props.newFollowers.length !== 0) {
-      potentials = this.props.newFollowers.map((user) => (
+      potentials = values(this.props.newFollowers).map((user) => (
         <FollowBoxItem key={user.id} user={user} currentUserId={this.props.currentUser.id}/>
       ));
     }

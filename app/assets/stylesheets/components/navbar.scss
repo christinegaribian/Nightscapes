@@ -30,8 +30,10 @@
     justify-content: flex-start;
   }
 
-  .left:hover {
-    cursor: pointer;
+  .left {
+    img:hover, p:hover {
+      cursor: pointer;
+    }
   }
 
   .right a {

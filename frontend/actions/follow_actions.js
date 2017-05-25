@@ -4,8 +4,9 @@ import { receiveTargetUser } from './user_actions';
 export const CREATE_FOLLOW = 'CREATE_FOLLOW';
 export const DELETE_FOLLOW = 'DELETE_FOLLOW';
 
-export const  REQUEST_NEW_FOLLOWERS = "REQUEST_NEW_FOLLOWERS";
-export const   RECEIVE_NEW_FOLLOWERS = "RECEIVE_NEW_FOLLOWERS";
+// export const  REQUEST_NEW_FOLLOWERS = "REQUEST_NEW_FOLLOWERS";
+export const   RECEIVE_FOLLOWERS = "RECEIVE_FOLLOWERS";
+export const   RECEIVE_FOLLOWER = "RECEIVE_FOLLOWER";
 
 
 
@@ -30,9 +31,19 @@ export const unfollowUser = id => dispatch => (
     .then(user => dispatch(receiveTargetUser(user)))
 )
 
+export const followUserFromFollowBox = id => dispatch => (
+  FollowAPIUtil.follow(id)
+  .then(user => dispatch(receiveFollower(user)))
+);
+
+export const unfollowUserFromFollowBox = id => dispatch => (
+  FollowAPIUtil.unfollow(id)
+    .then(user => dispatch(receiveFollower(user)))
+)
+
 export const requestNewFollowers = () => dispatch => (
   FollowAPIUtil.fetchAllUsers()
-    .then(users => dispatch(receiveNewFollowers(users)))
+    .then(users => dispatch(receiveFollowers(users)))
 )
 
 //
@@ -41,7 +52,12 @@ export const requestNewFollowers = () => dispatch => (
 //   type: REQUEST_NEW_FOLLOWERS
 // });
 
-export const receiveNewFollowers = (newFollowers) => ({
-  type: RECEIVE_NEW_FOLLOWERS,
-  newFollowers
+export const receiveFollowers = (followers) => ({
+  type: RECEIVE_FOLLOWERS,
+  followers
+});
+
+export const receiveFollower = (follower) => ({
+  type: RECEIVE_FOLLOWER,
+  follower
 });

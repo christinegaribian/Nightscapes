@@ -11,8 +11,6 @@ const mapStateToProps = (state, ownProps) => ({
   currentUserId: state.session.currentUser.id,
    followerIds: idsSelector(state.targetUser.followers)
 });
-// followerIds: idsSelector(state.targetUser.followers)
-// followerIds: idsSelector(ownProps.targetUser.followers),
 
 const mapDispatchToProps = (dispatch) =>  ({
     followUser: (id) => dispatch(followUser(id)),
