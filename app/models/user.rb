@@ -42,6 +42,10 @@ class User < ApplicationRecord
     self.save!
     self
   end
+  # 
+  # def current_user_follow?(user)
+  #   self.followers.where(follower_id: user.id).exists?
+  # end
 
 	def password=(password)
 		self.password_digest = BCrypt::Password.create(password)

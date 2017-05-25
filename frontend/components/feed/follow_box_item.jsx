@@ -7,11 +7,6 @@ import { Link } from 'react-router-dom';
 class FollowBoxItem extends React.Component {
   constructor(props) {
     super(props);
-    this.handleUserFollowClick = this.handleUserFollowClick.bind(this);
-  }
-
-  handleUserFollowClick(e) {
-    hashHistory.push('/user/'+this.props.user.id);
   }
 
   render() {

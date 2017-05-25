@@ -19,6 +19,7 @@ class FollowButton extends React.Component {
   }
 
   toggleFollow(){
+    debugger
     if (this.state.followerIds.includes(this.props.currentUserId)){
       this.props.unfollowUser(this.props.targetUser.id);
     } else {
