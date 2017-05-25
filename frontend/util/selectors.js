@@ -1,3 +1,14 @@
-export const idsSelector = (followers) => (followers.map(
-  (follower) => follower.id
-));
+export const idsSelector = (followers) => {
+  if (followers){
+    return (
+      followers.map(
+        (follower) => follower.id
+      )
+    )
+  }
+}
+
+// 
+// (followers.map(
+//   (follower) => follower.id
+// ));

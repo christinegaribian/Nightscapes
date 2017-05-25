@@ -7,10 +7,12 @@ import { followUser,
 import {idsSelector} from '../../util/selectors';
 
 const mapStateToProps = (state, ownProps) => ({
-  targetUserId: ownProps.targetUserId,
-  followingIds: idsSelector(state.session.currentUser.following)
+  targetUser: ownProps.targetUser,
+  currentUserId: state.session.currentUser.id,
+   followerIds: idsSelector(state.targetUser.followers)
 });
 // followerIds: idsSelector(state.targetUser.followers)
+// followerIds: idsSelector(ownProps.targetUser.followers),
 
 const mapDispatchToProps = (dispatch) =>  ({
     followUser: (id) => dispatch(followUser(id)),

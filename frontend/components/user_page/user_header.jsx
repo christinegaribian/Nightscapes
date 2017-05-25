@@ -22,7 +22,7 @@ class UserHeader extends React.Component {
             <h1>{user.username}</h1>
             <div>
               <EditProfileButton targetUser={this.props.targetUser} currentUser={this.props.currentUser}/>
-              <FollowButtonContainer targetUserId={this.props.targetUser.id}/>
+              <FollowButtonContainer targetUser={this.props.targetUser}/>
             </div>
           </div>
 
