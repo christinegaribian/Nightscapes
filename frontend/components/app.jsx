@@ -16,6 +16,7 @@ const App = () => (
       <ProtectedRoute path="/users/:userId" component={HomeContainer}/>
       <ProtectedRoute path="/photos/:photoId" component={HomeContainer}/>
       <ProtectedRoute path="/upload" component={HomeContainer}/>
+      <ProtectedRoute path="/discover" component={HomeContainer}/>      
       <ProtectedRoute path="/" component={HomeContainer} />
     </Switch>
   </div>

@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import Feed from './feed';
+import Discover from './discover';
 // import { withRouter } from 'react-router-dom';
 import { requestAllPhotos
        } from '../../actions/photo_actions';
@@ -20,4 +20,4 @@ const mapDispatchToProps = (dispatch, ownProps) => {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Feed);
+)(Discover);

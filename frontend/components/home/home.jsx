@@ -6,6 +6,7 @@ import UserPageContainer from '../user_page/user_page_container';
 import PhotoUploadFormContainer from '../photo_upload_form/photo_upload_form_container';
 import PhotoDetailContainer from '../photo_detail/photo_detail_container';
 import { Switch, Route } from 'react-router'
+import DiscoverContainer from '../discover/discover_container';
 
 class Home extends React.Component {
   constructor(props){
@@ -19,6 +20,7 @@ class Home extends React.Component {
         <NavbarContainer />
         <Switch>
           <Route path='/users/:userId' component={UserPageContainer}/>
+          <Route path='/discover' component={DiscoverContainer}/>
           <Route path='/photos/:photoId' component={PhotoDetailContainer}/>
           <Route exact path='/' component={FeedContainer}/>
           // <Route path='/home' component={FeedContainer}/>
