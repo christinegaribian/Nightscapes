@@ -31,23 +31,18 @@ class Feed extends React.Component {
       <FeedItem photo={photo} key={photo.created_at} />
     ));
     return (
-      <div className="feed-container">
-        <ul className="feed">
-          {feedItems}
-        </ul>
-        
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <h5 className="copyright">
-          Photos courtesy of NASA's
-          <a target="_blank" href="https://apod.nasa.gov/apod/archivepix.html">     Astonomy Image of the Day
-          </a>
-        </h5>
-
-        <FeedSidebar currentUser={this.props.currentUser}/>
+      <div>
+        <div className="feed-container">
+          <ul className="feed">
+            {feedItems}
+          </ul>
+          <FeedSidebar currentUser={this.props.currentUser}/>
+        </div>
+          <h5 className="copyright">
+            Photos courtesy of NASA's
+            <a target="_blank" href="https://apod.nasa.gov/apod/archivepix.html">     Astonomy Image of the Day
+            </a>
+          </h5>
       </div>
     );
   }

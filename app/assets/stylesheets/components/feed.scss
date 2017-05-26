@@ -13,22 +13,14 @@
 .feed-container {
   display: flex;
 }
-//
-// .feed-sidebar {
-//   margin-top: 130px;
-//   //
-//   // .user-header {
-//   //   margin-left: 0;
-//   //   font-size: 2vmin;
-//   //   margin: 0;
-//   //
-//   //
-//   //
-//   //   .ButtonContainer {
-//   //     display: none;
-//   //   }
-//   //
-//   //
-//   //
-//   // }
-// }
+
+@media all and (max-width: 1069px) {
+  .feed-sidebar {
+    display: none;
+  }
+
+  .feed {
+    width: 100%;
+    margin: 100px;
+  }
+}
