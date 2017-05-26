@@ -13,6 +13,7 @@ Flux architectural framework.
 
 
 ### **Photo Uploads**
+
 Users can upload photos through a custom upload modal which makes an API
 call to Cloudinary. The upload request
 returns a url to the scaled-down version of the image, which is then stored
@@ -21,11 +22,11 @@ image delivery, noticeably improve site load-time.
 
 ### **Follows**
 
+![](./docs/gifs/user_page_follow.gif)
+
 Follows are stored as a table joining users to itself. Upon login, an API
 call is made to the database, and the resulting set of users that the
-current user is following are stored in the front-end until the session is
-destroyed.
-
+current user is following are stored in the front-end.
 
 A user can can be followed through either the profile page or the feed sidebar.
 Since a user's followers are passed in as props to the user page component,
@@ -35,6 +36,8 @@ count and button action text for that user.
 The feed sidebar has a random assortment of five profiles that the current
 user is not following. Toggling a follow button from here automatically
 updates the feed and sidebar.
+
+![](./docs/gifs/user_page_feed_sidebar_follow.gif)
 
 This is the user controller's method for picking these profiles, using Rails' Active
 Record Query Interface:
@@ -51,6 +54,8 @@ end
 The Discover Page displays random photos for the user to peruse. The
  Justified Gallery package allows the images to be dynamically reordered
  and resized.
+
+
 ![](./docs/gifs/discover.gif)
 
 ## Future Plans
