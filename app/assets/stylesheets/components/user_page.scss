@@ -24,19 +24,19 @@
   }
 }
 
+
+.user-header a {
+  margin-right: 50px;
+}
 .user-header-avatar {
-  width: 10%;
-  margin-right: 2%;
-  // margin-bottom: 10px;
+  max-width: 200px;
+  max-height: 200px;
 }
 
 .user-header-stats {
   display: flex;
-  // width: 40%;
   border: 1px solid grey;
   margin: 20px 0;
-  //
-
   li {
     font-size: 80%;
     flex: 1;
