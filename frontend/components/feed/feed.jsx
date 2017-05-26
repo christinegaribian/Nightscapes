@@ -14,7 +14,8 @@ class Feed extends React.Component {
   }
 
   componentWillReceiveProps(nextProps){
-    if (this.props.currentUser.following.length != nextProps.currentUser.following.length ) {
+    if (this.props.currentUser.following.length &&
+      (this.props.currentUser.following.length != nextProps.currentUser.following.length )) {
       this.props.requestFeedPhotos(this.props.currentUser.id);
     }
   }
