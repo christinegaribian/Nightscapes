@@ -11,7 +11,7 @@ class Discover extends React.Component {
   componentWillUnmount(){
     this.props.clearPhotos();
   }
-  
+
   componentDidMount(){
     this.props.requestAllPhotos().then(() => {
       $("#gallery").justifiedGallery({
@@ -60,8 +60,7 @@ class Discover extends React.Component {
         </div>
         <h5 className="copyright">
           Photos courtesy of NASA's
-          <a href="https://apod.nasa.gov/apod/archivepix.html">
-            Astonomy Image of the Day
+          <a target="_blank" href="https://apod.nasa.gov/apod/archivepix.html">     Astonomy Image of the Day
           </a>
         </h5>
       </div>

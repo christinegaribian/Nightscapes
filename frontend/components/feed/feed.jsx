@@ -43,6 +43,16 @@ class Feed extends React.Component {
           <ul className="feed">
             {feedItems}
           </ul>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <h5 className="copyright">
+            Photos courtesy of NASA's
+            <a target="_blank" href="https://apod.nasa.gov/apod/archivepix.html">     Astonomy Image of the Day
+            </a>
+          </h5>
         </InfiniteScroll>
 
         <FeedSidebar currentUser={this.props.currentUser}/>
