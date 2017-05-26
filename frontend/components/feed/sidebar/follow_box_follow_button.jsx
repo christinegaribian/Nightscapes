@@ -18,15 +18,16 @@ class FollowBoxFollowButton extends React.Component {
 
   followButton(){
     if (this.props.targetUser.id){
-      if (this.props.targetUser.id != this.props.currentUserId)
-      if (this.props.followerIds.includes(this.props.currentUserId)){
-        return (
-          <button id="unfollow" className="follow-button unfollow" onClick={this.toggleFollow}>Unfollow</button>
-        );
-      } else {
-        return (
-          <button id="follow" className="follow-button follow" onClick={this.toggleFollow}>Follow</button>
-        );
+      if (this.props.targetUser.id != this.props.currentUserId){
+        if (this.props.followerIds.includes(this.props.currentUserId)){
+          return (
+            <button id="unfollow" className="follow-button unfollow" onClick={this.toggleFollow}>Unfollow</button>
+          );
+        } else {
+          return (
+            <button id="follow" className="follow-button follow" onClick={this.toggleFollow}>Follow</button>
+          );
+        }
       }
     }
   }

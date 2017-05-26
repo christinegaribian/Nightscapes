@@ -1,9 +1,10 @@
+
 export const follow = id => (
-  APIUtil.changeFollowStatus(id, "POST")
+  changeFollowStatus(id, "POST")
 );
 
 export const unfollow = id => (
-  APIUtil.changeFollowStatus(id, "DELETE")
+  changeFollowStatus(id, "DELETE")
 );
 
 export const changeFollowStatus = (id, method) => (

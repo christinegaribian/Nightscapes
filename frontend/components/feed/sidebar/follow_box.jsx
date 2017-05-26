@@ -14,7 +14,7 @@ class FollowBox extends React.Component {
   render() {
     let potentials = [];
     if (this.props.newFollowers.length !== 0) {
-      potentials = values(this.props.newFollowers).map((user) => (
+      potentials = this.props.newFollowers.map((user) => (
         <FollowBoxItem key={user.id} user={user} currentUserId={this.props.currentUser.id}/>
       ));
     }

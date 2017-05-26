@@ -7,9 +7,7 @@ const NewFollowersReducer = function(state = [], action){
     case RECEIVE_FOLLOWERS:
       return action.followers;
     case RECEIVE_FOLLOWER:
-      return merge([], state, {
-        [action.follower.id]: action.follower
-      });
+      return state.filter((user) => (user.id !== action.follower.id));
     default:
       return state;
   }

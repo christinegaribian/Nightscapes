@@ -9,7 +9,6 @@ gem 'figaro'
 gem 'pg', '~> 0.18'
 gem 'font-awesome-rails'
 
-gem 'pry-rails'
 gem 'annotate'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.3'
@@ -41,17 +40,20 @@ group :development, :test do
   gem 'byebug', platform: :mri
   gem 'better_errors'
   gem 'binding_of_caller'
-end
-
-
-group :development do
-  # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
+  gem 'pry-rails'
   gem 'web-console', '>= 3.3.0'
-  gem 'listen', '~> 3.0.5'
-  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'listen', '~> 3.0.5'
+
 end
+
+
+# group :development do
+#   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
+#
+# end
 
 group :production do
   gem 'rails_12factor'

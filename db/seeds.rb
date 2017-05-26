@@ -7,9 +7,20 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-guest_user = User.create(
-  username: "CaptainJaneway",
-  password: "password",
-  user_img_url: 'http://members.tripod.com/~Neelix_4/janeway1.jpg',
-  user_site_url: 'http://memory-alpha.wikia.com/wiki/Kathryn_Janeway'
+# guest_user = User.create(
+#   username: "CaptainJaneway",
+#   password: "password",
+#   user_img_url: 'http://members.tripod.com/~Neelix_4/janeway1.jpg',
+#   user_site_url: 'http://memory-alpha.wikia.com/wiki/Kathryn_Janeway'
+#   )
+
+  User.destroy_all
+  Photo.destroy_all
+  Follow.destroy_all
+
+  User.create(
+    username: "captainjaneway",
+    password: "password",
+    user_img_url: 'http://memory-alpha.wikia.com/wiki/Kathryn_Janeway',
+    user_site_url: 'http://memory-alpha.wikia.com/wiki/Kathryn_Janeway'
   )

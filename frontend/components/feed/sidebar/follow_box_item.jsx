@@ -14,8 +14,8 @@ class FollowBoxItem extends React.Component {
       user_img_url,
       photo_count
     } = this.props.user;
-
     return(
+
       <div className="follow-box-item">
         <div className="follow-item-upper">
           <Link to={`/users/${id}`} className="follow-info-container">
