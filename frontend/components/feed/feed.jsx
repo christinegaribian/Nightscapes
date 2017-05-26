@@ -9,6 +9,10 @@ class Feed extends React.Component {
     this.loadFunc = this.loadFunc.bind(this);
   }
 
+  componentWillUnmount(){
+    this.props.clearPhotos();
+  }
+
   componentDidMount( ){
     this.props.requestFeedPhotos(this.props.currentUser.id);
   }

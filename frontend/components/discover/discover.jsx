@@ -12,15 +12,14 @@ class Discover extends React.Component {
     this.props.clearPhotos();
   }
   componentDidMount(){
-    debugger
     this.props.requestAllPhotos().then(() => {
       $("#gallery").justifiedGallery({
-       rowHeight : 250,
-       lastRow : 'justify',
-       margins : 15,
-       border: 150,
-       captions : false
-     });
+        rowHeight : 250,
+        lastRow : 'justify',
+        margins : 15,
+        border: 150,
+        captions : false
+      });
     })
   }
 
@@ -58,6 +57,12 @@ class Discover extends React.Component {
           className='image-grid'>
           {photoCollectionItems}
         </div>
+        <h5 className="copyright">
+          Photos courtesy of NASA's
+          <a href="https://apod.nasa.gov/apod/archivepix.html">
+            Astonomy Image of the Day
+          </a>
+        </h5>
       </div>
     );
   }

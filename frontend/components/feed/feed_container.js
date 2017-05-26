@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import Feed from './feed';
-import { requestFeedPhotos
+import { requestFeedPhotos,
+         receiveAllPhotos
        } from '../../actions/photo_actions';
 import { selectAllPhotos } from '../../reducers/selectors';
 
@@ -14,6 +15,7 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
     requestFeedPhotos: (id) => dispatch(requestFeedPhotos(id)),
+    clearPhotos: () => dispatch(receiveAllPhotos({}))
   };
 };
 
