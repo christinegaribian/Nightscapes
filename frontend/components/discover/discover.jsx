@@ -27,6 +27,7 @@ class Discover extends React.Component {
     $("#gallery").justifiedGallery({
       rowHeight : 250,
       lastRow : 'justify',
+      randomize: 'true',
       margins : 15,
       border: 150,
       captions : false
