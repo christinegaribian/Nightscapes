@@ -26,10 +26,6 @@ class Api::UsersController < ApplicationController
   end
 
   def index
-    # users = User.joins(:followers)
-    # .where("follows.follower_id != '#{current_user.id}' AND users.id != '#{current_user.id}'")
-    # @users = users.shuffle.take(5)
-
     users = User.where.not(id: User.find(current_user.followees.pluck(:id))).where.not(id: current_user.id)
     @users = users.take(4)
   end
