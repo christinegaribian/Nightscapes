@@ -107,7 +107,7 @@ class SessionForm extends React.Component {
           </div>
           <div className="video-background">
               <div className="video-foreground">
-                <iframe src='//gifs.com/embed/iss-timelapse-the-english-channel-and-beyond-pgA10p' frameBorder='0' scrolling='no' width='640px' height='360px' ></iframe>
+                <iframe src='https://gifs.com/embed/iss-timelapse-the-english-channel-and-beyond-pgA10p'></iframe>
               </div>
           </div>
 

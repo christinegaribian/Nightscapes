@@ -78,7 +78,7 @@ input[type="submit"]:hover, button:hover {
   margin-bottom: 90px;
 
   h1 {
-    font-size: 9vmin;
+    font-size: 8vmin;
   }
   h2 {
     font-size: 6vmin;
@@ -115,8 +115,8 @@ input[type="submit"]:hover, button:hover {
 
 
 
-
-* { box-sizing: border-box; }
+//
+// * { box-sizing: border-box; }
 .video-background {
   position: fixed;
   top: 0; right: 0; bottom: 0; left: 0;
@@ -132,23 +132,24 @@ input[type="submit"]:hover, button:hover {
   pointer-events: none;
 }
 
+
+
+// Mobile breakpoints
+
 @media (min-aspect-ratio: 16/9) {
   .video-foreground { height: 300%; top: -100%; }
 }
+
 @media (max-aspect-ratio: 16/9) {
   .video-foreground { width: 300%; left: -100%; }
 }
-@media all and (max-width: 600px) {
-.vid-info { width: 50%; padding: .5rem; }
-.vid-info h1 { margin-bottom: .2rem; }
-}
-@media all and (max-width: 500px) {
-.vid-info .acronym { display: none; }
-}
-
-
 
 @media all and (max-width: 1230px) {
   .button-container { flex-wrap: wrap; }
   .button-container input { width: 100%; }
+  .headings h1 { font-size: 8vmin}
+}
+@media all and (max-width: 800px) {
+  .form-container { width: 60%; margin-bottom: 90px; }
+  .headings { margin-bottom: 0; }
 }
