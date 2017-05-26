@@ -15,15 +15,19 @@ class FeedSidebar extends React.Component {
         <FollowBoxContainer className="follow-header"
           targetUser={this.props.currentUser}/>
         <div className="personal-info">
-          <a href="https://github.com/christinegaribian/Nightscapes" target="_blank">
+          <a href="https://github.com/christinegaribian/Nightscapes"
+            title="Github"
+            target="_blank">
             <i className="fa fa-github" aria-hidden="true"></i>
           </a>
 
-          <a href="https://www.linkedin.com/in/christinegaribian/" target="_blank" >
+          <a href="https://www.linkedin.com/in/christinegaribian/"
+            target="_blank"
+            title="LinkedIn" >
             <i className="fa fa-linkedin-square" aria-hidden="true"></i>
           </a>
 
-          <a href="#">
+          <a href="#" title="Personal Site">
             <i className="fa fa-user-circle" aria-hidden="true"></i>
           </a>
         </div>

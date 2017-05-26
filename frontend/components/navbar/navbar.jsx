@@ -100,7 +100,7 @@ class Navbar extends React.Component {
           <i className="fa fa-cloud-upload"
             aria-hidden="true"
             id="upload-icon"
-            alt="Upload Image"
+            title="Upload Image"
             onClick={this.onOpenModal}
             ></i>
           <Modal isOpen={open}
@@ -116,7 +116,7 @@ class Navbar extends React.Component {
           <i className="fa fa-sign-out"
             aria-hidden="true"
             onClick={this.props.logout}
-            alt="Sign Out"
+            title="Log Out"
             id="logout-icon"
             ></i>
         </div>
