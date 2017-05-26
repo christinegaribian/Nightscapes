@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import Discover from './discover';
-import { requestAllPhotos
+import { requestAllPhotos,
+          receiveAllPhotos
        } from '../../actions/photo_actions';
 import { selectAllPhotos } from '../../reducers/selectors';
 
@@ -12,7 +13,8 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
-    requestAllPhotos: () => dispatch(requestAllPhotos())
+    requestAllPhotos: () => dispatch(requestAllPhotos()),
+    clearPhotos: () => dispatch(receiveAllPhotos({}))
   };
 };
 

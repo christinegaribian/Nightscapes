@@ -8,15 +8,20 @@ class Discover extends React.Component {
     super(props);
   }
 
+  componentWillUnmount(){
+    this.props.clearPhotos();
+  }
   componentDidMount(){
-    this.props.requestAllPhotos();
-    $("#gallery").justifiedGallery({
-      rowHeight : 250,
-      lastRow : 'justify',
-      margins : 15,
-      border: 150,
-      captions : false
-    });
+    debugger
+    this.props.requestAllPhotos().then(() => {
+      $("#gallery").justifiedGallery({
+       rowHeight : 250,
+       lastRow : 'justify',
+       margins : 15,
+       border: 150,
+       captions : false
+     });
+    })
   }
 
   componentDidUpdate() {
