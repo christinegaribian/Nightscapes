@@ -15,7 +15,7 @@ class PhotoCollection extends React.Component {
       rowHeight : 250,
       lastRow : 'justify',
       margins : 15,
-      randomize: 'true',
+      randomize: true,
       border: 150,
       captions : false
     });
