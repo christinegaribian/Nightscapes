@@ -3,8 +3,8 @@
 ![](./docs/gifs/splash.gif)
 
 Nightscapes is an online astrophotography community inspired by the popular
-photo-sharing website, 500px. Despite its multi-page look and feel, it only
-uses a single, initial HTTP request. The back-end utilizes Ruby on Rails
+photo-sharing website, 500px. Despite its multi-page look and feel, it
+uses only a single HTTP request. The back-end utilizes Ruby on Rails
 with a PostgreSQL database, and the front-end is built with the React.js/
 Flux architectural framework.
 
@@ -37,10 +37,10 @@ The feed sidebar has a random assortment of five profiles that the current
 user is not following. Toggling a follow button from here automatically
 updates the feed and sidebar.
 
-![](./docs/gifs/user_page_feed_sidebar_follow.gif)
+![](./docs/gifs/feed_sidebar_follow.gif)
 
-This is the user controller's method for picking these profiles, using Rails' Active
-Record Query Interface:
+The profiles are selected with Rails' Active Record Query Interface,
+in the users controller:
 
 ```ruby
 def index
@@ -51,7 +51,7 @@ end
 ```
 
 ### **Discover**
-The Discover Page displays random photos for the user to peruse. The
+The Discover Page displays a gallery of photos from Nightscapes for the user to peruse. The
  Justified Gallery package allows the images to be dynamically reordered
  and resized.
 
@@ -59,9 +59,9 @@ The Discover Page displays random photos for the user to peruse. The
 ![](./docs/gifs/discover.gif)
 
 ## Future Plans
-### **Infinite Scroll**
-### **Tag-Based Search**
-### **Likes**
-### **Comments**
-### **Notifications**
-### **Direct Messaging**
+- [ ] **Infinite Scroll**
+- [ ] **Tag-Based Search**
+- [ ] **Likes**
+- [ ] **Comments**
+- [ ] **Notifications**
+- [ ] **Direct Messaging**
