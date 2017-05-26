@@ -7,7 +7,8 @@ import { selectAllPhotos } from '../../reducers/selectors';
 
 const mapStateToProps = (state) => ({
   currentUser: state.session.currentUser,
-  photos: selectAllPhotos(state)
+  photos: selectAllPhotos(state),
+  newFollowers: state.newFollowers
 });
 
 const mapDispatchToProps = (dispatch, ownProps) => {

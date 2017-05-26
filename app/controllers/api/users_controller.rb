@@ -31,7 +31,7 @@ class Api::UsersController < ApplicationController
     # @users = users.shuffle.take(5)
 
     users = User.where.not(id: User.find(current_user.followees.pluck(:id))).where.not(id: current_user.id)
-    @users = users.take(5)
+    @users = users.take(4)
   end
 
   private

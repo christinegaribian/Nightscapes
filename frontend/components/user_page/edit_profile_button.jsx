@@ -26,7 +26,7 @@ const my_custom_style = {
     bottom                     : '30%',
     border                     : '1px solid white',
     background                 : 'black',
-    overflow                   : 'auto',
+    overflow                   : 'none',
     WebkitOverflowScrolling    : 'touch',
     borderRadius               : '10px',
     outline                    : 'none',

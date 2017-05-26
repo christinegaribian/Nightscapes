@@ -29,7 +29,7 @@ const my_custom_style = {
     bottom : '',
     border                     : 'none',
     background                 : 'black',
-    overflow                   : 'auto',
+    overflow                   : 'none',
     WebkitOverflowScrolling    : 'touch'
   }
 }

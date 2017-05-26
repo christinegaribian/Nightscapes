@@ -22,6 +22,7 @@ const UserReducer = (state = {}, action) => {
     case CREATE_FOLLOW:
       newState['follower_count']++;
       return newState;
+  
     case DELETE_FOLLOW:
       newState['follower_count']--;
       return newState;
