@@ -123,6 +123,14 @@ user14 =  User.create(
 
 
 
+  Photo.create(
+    title: "",
+    description: "",
+    img_url: "",
+    user_id: user1.id,
+    width: 900,
+    height: 676
+  )
 
 
 
@@ -133,7 +141,32 @@ user14 =  User.create(
 
 
 
-# User 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# User 7
 
 Photo.create(
   title: "Oxygen",
