@@ -89,12 +89,13 @@ class Navbar extends React.Component {
         </div>
 
         <div className="right">
-          <Link to={'/discover'}> Discover </Link>
+          <Link to={'/discover'}   title="New Photos"> Discover </Link>
 
           <Link to={`/users/${currentUser.id}`}>
             <img src={currentUser.user_img_url}
-              className="user-img-url"/>
-            <h1>{currentUser.username}</h1>
+              className="user-img-url"
+              title="Profile Page"/>
+            <h1   title="Profile Page">{currentUser.username}</h1>
           </Link>
 
           <i className="fa fa-cloud-upload"
