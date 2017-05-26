@@ -1,7 +1,6 @@
 import React from 'react';
 import FeedItem from './feed_item';
 import FeedSidebar from './sidebar/feed_sidebar';
-import InfiniteScroll from 'react-infinite-scroller';
 
 class Feed extends React.Component {
   constructor(props){
@@ -24,7 +23,7 @@ class Feed extends React.Component {
   }
 
   loadFunc(){
-    // console.log('loading');
+    console.log('loading');
   }
 
   render(){
@@ -33,27 +32,20 @@ class Feed extends React.Component {
     ));
     return (
       <div className="feed-container">
-
-        <InfiniteScroll
-          pageStart={0}
-          loadMore={this.loadFunc}
-          hasMore={true || false}
-          loader={<div className="loader"></div>}
-          >
-          <ul className="feed">
-            {feedItems}
-          </ul>
-          <br/>
-          <br/>
-          <br/>
-          <br/>
-          <br/>
-          <h5 className="copyright">
-            Photos courtesy of NASA's
-            <a target="_blank" href="https://apod.nasa.gov/apod/archivepix.html">     Astonomy Image of the Day
-            </a>
-          </h5>
-        </InfiniteScroll>
+        <ul className="feed">
+          {feedItems}
+        </ul>
+        
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <h5 className="copyright">
+          Photos courtesy of NASA's
+          <a target="_blank" href="https://apod.nasa.gov/apod/archivepix.html">     Astonomy Image of the Day
+          </a>
+        </h5>
 
         <FeedSidebar currentUser={this.props.currentUser}/>
       </div>
