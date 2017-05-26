@@ -1,15 +1,12 @@
-# Nightscapes
+# [**Nightscapes**](https://nightscapes.herokuapp.com)
 
-[Heroku link][heroku]
+Nightscapes is an online astrophotography community inspired by the popular photo-sharing website, 500px. a single-page, full-stack web application with a multi-page look and feel. It utilizes Ruby on Rails on the back-end, a PostgreSQL database, and React.js with a Flux architectural framework on the front-end.
 
-[Trello link][trello]
+## **Features and Implementation**
 
-[heroku]: https://nightscapes.herokuapp.com/
-[trello]: https://trello.com/b/vwohinzI/nightscapes
+### **User Registration**
 
-## Minimum Viable Product
-
-Nightscapes is an online community based on astrophotography. It is inspired by the popular photo-sharing website, 500px, a single-page, full-stack web application with a multi-page look and feel. It utilizes Ruby on Rails on the back-end, a PostgreSQL database, and React.js with a Flux architectural framework on the front-end.
+![](./docs/gifs/splash.gif)
 
 By the end of Week 9, this app will, at a minimum, satisfy the following criteria with smooth, bug-free navigation, adequate seed data and sufficient CSS styling:
 
