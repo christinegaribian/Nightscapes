@@ -2,66 +2,61 @@
 
 ![](./docs/gifs/splash.gif)
 
-Nightscapes is an online astrophotography community inspired by the popular photo-sharing website, 500px. a single-page, full-stack web application with a multi-page look and feel. It utilizes Ruby on Rails on the back-end, a PostgreSQL database, and React.js with a Flux architectural framework on the front-end.
+Nightscapes is an online astrophotography community inspired by the popular
+photo-sharing website, 500px. Despite its multi-page look and feel, it only
+uses a single, initial HTTP request. The back-end utilizes Ruby on Rails
+with a PostgreSQL database, and the front-end is built with the React.js/
+Flux architectural framework.
+
 
 ## **Features and Implementation**
 
-### **User Registration**
+
 ### **Photo Uploads**
+Users can upload photos through a custom upload modal which makes an API
+call to Cloudinary. The upload request
+returns a url to the scaled-down version of the image, which is then stored
+on the server. These smaller images, plus Cloudinary's high-speed
+image delivery, noticeably improve site load-time.
+
 ### **Follows**
-### **Profile Page**
+
+Follows are stored as a table joining users to itself. Upon login, an API
+call is made to the database, and the resulting set of users that the
+current user is following are stored in the front-end until the session is
+destroyed.
+
+
+A user can can be followed through either the profile page or the feed sidebar.
+Since a user's followers are passed in as props to the user page component,
+following a user through their page immediately re-renders the updated followers
+count and button action text for that user.
+
+The feed sidebar has a random assortment of five profiles that the current
+user is not following. Toggling a follow button from here automatically
+updates the feed and sidebar.
+
+This is the user controller's method for picking these profiles, using Rails' Active
+Record Query Interface:
+
+```ruby
+def index
+  users = User.where.not(id: User.find(current_user.followees.pluck(:id)))
+              .where.not(id: current_user.id)
+  @users = users.shuffle.take(5)
+end
+```
+
 ### **Discover**
+The Discover Page displays random photos for the user to peruse. The
+ Justified Gallery package allows the images to be dynamically reordered
+ and resized.
+![](./docs/gifs/discover.gif)
 
-
-
-## Design Docs
-  * [View Wireframes][wireframes]
-  * [React Components][components]
-  * [API endpoints][api-endpoints]
-  * [DB schema][schema]
-  * [Sample State][sample-state]
-
-  [wireframes]: docs/wireframes
-  [components]: docs/component-hierarchy.md
-  [sample-state]: docs/sample-state.md
-  [api-endpoints]: docs/api-endpoints.md
-  [schema]: docs/schema.md
-
-
-
-## Implementation Timeline
-
-### Phase 1: Backend setup and Front End User Authentication (2 days)
-
-  **Objective:** Functioning rails project with front-end Authentication
-
-### Phase 2: Navbar, Photos CR(UD), Feed (2 days)
-
-  **Objective:** Once the user has logged in, the navbar redirects to home, user and upload photo pages. Photos can be created and viewed through the API. Feed renders.
-
-### Phase 3: Photo CR(UD) (2 days)
-
-  **Objective:** Clicking on a photo renders the photo with its associated details.
-
-### Phase 4: User Profile Page (1 day)
-
-  **Objective:** User page displays navbar, user information, and the user's photo collection in a grid.
-
-### Phase 5: Follows (1 day)
-
-  **Objective:** Clicking 'followers'/'following' brings up the follow popup, which users can use to follow/unfollow each other.
-
-### Phase 6: - Pagination / infinite scroll for Feed Index (1 day)
-
-  **Objective:** Add infinite scroll to Feed
-
-
-### Bonus Features (TBD)
-  - [ ] Infinite Scroll
-  - [ ] Feed Sidebar
-  - [ ] Discover
-  - [ ] Likes
-  - [ ] Comments
-  - [ ] Tag-Based Search for Users/Photos
-  - [ ] Notifications
-  - [ ] Edit Profile
+## Future Plans
+### **Infinite Scroll**
+### **Tag-Based Search**
+### **Likes**
+### **Comments**
+### **Notifications**
+### **Direct Messaging**

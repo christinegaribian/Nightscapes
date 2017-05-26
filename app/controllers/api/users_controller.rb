@@ -26,7 +26,8 @@ class Api::UsersController < ApplicationController
   end
 
   def index
-    users = User.where.not(id: User.find(current_user.followees.pluck(:id))).where.not(id: current_user.id)
+    users = User.where.not(id: User.find(current_user.followees.pluck(:id)))
+                .where.not(id: current_user.id)
     @users = users.shuffle.take(5)
   end
 

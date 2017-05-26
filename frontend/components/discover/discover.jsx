@@ -11,6 +11,7 @@ class Discover extends React.Component {
   componentWillUnmount(){
     this.props.clearPhotos();
   }
+  
   componentDidMount(){
     this.props.requestAllPhotos().then(() => {
       $("#gallery").justifiedGallery({
