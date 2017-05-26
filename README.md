@@ -12,14 +12,6 @@ Flux architectural framework.
 ## **Features and Implementation**
 
 
-### **Photo Uploads**
-
-Users can upload photos through a custom upload modal which makes an API
-call to Cloudinary. The upload request
-returns a url to the scaled-down version of the image, which is then stored
-on the server. These smaller images, plus Cloudinary's high-speed
-image delivery, noticeably improve site load-time.
-
 ### **Follows**
 
 ![](./docs/gifs/user_page_follow.gif)
@@ -57,6 +49,17 @@ The Discover Page displays a gallery of photos from Nightscapes for the user to 
 
 
 ![](./docs/gifs/discover.gif)
+
+
+### **Photo Uploads**
+
+Users can upload photos through a custom upload modal which makes an API
+call to Cloudinary. The upload request
+returns a url to the scaled-down version of the image, which is then stored
+on the server. These smaller images, plus Cloudinary's high-speed
+image delivery, noticeably improve site load-time.
+
+![](./docs/gifs/upload.gif)
 
 ## Future Plans
 - [ ] **Infinite Scroll**
