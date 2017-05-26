@@ -8,6 +8,14 @@
   <% end %>
 </script>
 
+<!-- Cloudinary Upload Preset -->
+<script type="text/javascript">
+  window.cloudinaryOptions = {
+    upload_preset: '<%= ENV['UPLOAD_PRESET'] %>'
+  }
+</script>
+
+<!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css?family=Istok+Web|Julius+Sans+One|Jura|Nixie+One|Sintony|Vast+Shadow" rel="stylesheet">
 <script src="//use.edgefonts.net/changa-one.js"></script>
 

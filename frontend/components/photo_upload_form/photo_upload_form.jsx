@@ -3,11 +3,6 @@ import Dropzone from 'react-dropzone';
 import request from 'superagent';
 import { Redirect } from 'react-router';
 
-const CLOUDINARY_UPLOAD_PRESET = 'iyrokfbk';
-const CLOUDINARY_UPLOAD_URL = 'https://api.cloudinary.com/v1_1/dl091hw7z/upload';
-// later change these to private
-
-
 class PhotoUploadForm extends React.Component {
   constructor(props){
     super(props);
@@ -50,14 +45,11 @@ class PhotoUploadForm extends React.Component {
       return;
     }
 
-    let upload = request.post(CLOUDINARY_UPLOAD_URL)
-    .field('upload_preset', CLOUDINARY_UPLOAD_PRESET)
+    let upload = request.post('https://api.cloudinary.com/v1_1/dl091hw7z/upload')
+    .field('upload_preset', window.cloudinaryOptions.upload_preset)
     .field('file', file);
 
     upload.end((err, response) => {
-      if (err) {
-        console.error(err);
-      }
       if (response.body.secure_url !== '' && !err){
         this.props.postPhoto({
           user_id: this.props.currentUser.id,
