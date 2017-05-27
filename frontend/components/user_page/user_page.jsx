@@ -11,6 +11,7 @@ class UserPage extends React.Component {
 
   componentWillUnmount(){
     this.props.clearTargetUser();
+    this.props.clearPhotos();
   }
 
   componentDidMount() {
