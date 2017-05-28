@@ -14,7 +14,7 @@ class UserHeader extends React.Component {
     }
     return (
       <div className="user-header">
-        <a href={user.user_site_url} target="_blank"><img className="user-header-avatar"
+        <a href={user.user_site_url} target="_blank" title="Personal Site"><img className="user-header-avatar"
           src={user.user_img_url}
           /></a>
         <div className="user-header-info">
