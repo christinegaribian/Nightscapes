@@ -107,7 +107,7 @@ class SessionForm extends React.Component {
           </div>
           <div className="video-background">
               <div className="video-foreground">
-                <video autoplay loop height="100%" src="https://res.cloudinary.com/dl091hw7z/video/upload/v1495951859/planet_rtctmq.mp4" width="100%">
+                <video autoPlay loop height="100%" src="https://res.cloudinary.com/dl091hw7z/video/upload/v1495951859/planet_rtctmq.mp4" width="100%">
                   Your browser does not support the video tag.
                 </video>
               </div>
