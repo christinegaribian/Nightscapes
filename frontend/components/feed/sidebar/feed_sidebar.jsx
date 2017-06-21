@@ -27,7 +27,7 @@ class FeedSidebar extends React.Component {
             <i className="fa fa-linkedin-square" aria-hidden="true"></i>
           </a>
 
-          <a href="#" title="Personal Site">
+          <a href="http://www.christine.garibian.codes" title="Personal Site">
             <i className="fa fa-user-circle" aria-hidden="true"></i>
           </a>
         </div>
