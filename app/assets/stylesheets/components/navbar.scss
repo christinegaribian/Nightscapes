@@ -58,3 +58,10 @@ i:hover, .user-img-url:hover {
 .logo {
   width: 5%;
 }
+
+@media only screen and (max-width: 670px) {
+  .navbar {
+      font-size: 2vw;
+    }
+}
+

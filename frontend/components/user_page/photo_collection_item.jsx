@@ -18,16 +18,17 @@ const my_custom_style = {
 
   },
   content : {
-    position                   : 'absolute',
     fontFamily                 : '"Julius Sans One", sans-serif',
     left                       : '',
-    top                        : '15vmin',
+    top                        : '',
     right                      : '',
     bottom                     : '',
-    background                 : 'black',
-    border                     : 'none',
     overflow                   : 'none',
-    WebkitOverflowScrolling    : 'touch'
+    WebkitOverflowScrolling    : 'touch',
+    padding                    : '0',
+    border                     : 'none',
+    background                 : 'none',
+    marginTop                  : '4vh'
   },
   'content:hover' : {
     cursor : 'pointer'
